@@ -4,7 +4,7 @@ using TMapViews.Models;
 
 namespace TMapViews.iOS
 {
-    internal class TMKAnnotation : MKAnnotation, ITMapPin
+    public class TMKAnnotation : MKAnnotation, ITMapPin
     {
         public TMKAnnotation() { }
 
@@ -15,10 +15,12 @@ namespace TMapViews.iOS
         }
 
         private CLLocationCoordinate2D _coordinate;
+        private double _overlayRadius;
+
         public override CLLocationCoordinate2D Coordinate => _coordinate;
 
         public TLocation Location { get => Coordinate.ToTLocation(); set => SetCoordinate(value.GetCLLocationCoordinate2D()); }
-        public double OverlayRadius { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public double OverlayRadius { get => _overlayRadius; set => _overlayRadius = value; }
 
     }
 }

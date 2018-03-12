@@ -46,6 +46,8 @@
     <Compile Include="TMKAnnotation.cs" />
     <Compile Include="TMKMapView.cs" />
     <Compile Include="TMKMapViewDelegate.cs" />
+    <Compile Include="TMKOverlay.cs" />
+    <Compile Include="TPinAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TMapViews.Models\TMapViews.Models.csproj">

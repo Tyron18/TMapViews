@@ -42,13 +42,13 @@ namespace TMapViews.iOS
             }
         }
 
-        private ObservableCollection<ITMapPin> _itemSource;
-        public ObservableCollection<ITMapPin> ItemSource
+        private ObservableCollection<ITMapPin> _pinItemSource;
+        public ObservableCollection<ITMapPin> PinItemSource
         {
-            get => _itemSource;
+            get => _pinItemSource;
             set
             {
-                _itemSource = value;
+                _pinItemSource = value;
                 UpdatePins();
             }
         }
@@ -77,7 +77,7 @@ namespace TMapViews.iOS
             ClearMap();
             if (ShouldShowPins)
             {
-                foreach (var pin in ItemSource)
+                foreach (var pin in PinItemSource)
                     AddAnnotation(pin);
             }
         }
