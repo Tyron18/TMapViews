@@ -42,12 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
+    <Compile Include="Models\Binding2DLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TMKAnnotation.cs" />
-    <Compile Include="TMKMapView.cs" />
-    <Compile Include="TMKMapViewDelegate.cs" />
-    <Compile Include="TMKOverlay.cs" />
-    <Compile Include="TPinAdapter.cs" />
+    <Compile Include="Models\Binding3DLocation.cs" />
+    <Compile Include="Models\BindingMKAnnotation.cs" />
+    <Compile Include="Views\BindingMKMapView.cs" />
+    <Compile Include="Delegates\BindingMKMapViewDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TMapViews.Models\TMapViews.Models.csproj">

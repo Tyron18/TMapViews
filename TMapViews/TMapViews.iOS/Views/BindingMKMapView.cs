@@ -11,9 +11,9 @@ using UIKit;
 
 namespace TMapViews.iOS
 {
-    public class TMKMapView : MKMapView
+    public class BindingMKMapView : MKMapView
     {
-        public TMKMapView()
+        public BindingMKMapView()
         {
             var gestureRecognizer = new UITapGestureRecognizer(this.OnMapClicked);
             AddGestureRecognizer(gestureRecognizer);
@@ -31,8 +31,8 @@ namespace TMapViews.iOS
             }
         }
 
-        private TLocation _centerMapLocation;
-        public TLocation CenterMapLocation
+        private ITLocation _centerMapLocation;
+        public ITLocation CenterMapLocation
         {
             get => _centerMapLocation;
             set
@@ -42,8 +42,8 @@ namespace TMapViews.iOS
             }
         }
 
-        private ObservableCollection<ITMapPin> _pinItemSource;
-        public ObservableCollection<ITMapPin> PinItemSource
+        private ObservableCollection<IBindingMapPin> _pinItemSource;
+        public ObservableCollection<IBindingMapPin> PinItemSource
         {
             get => _pinItemSource;
             set
@@ -82,14 +82,14 @@ namespace TMapViews.iOS
             }
         }
 
-        private void AddAnnotation(ITMapPin pin)
+        private void AddAnnotation(IBindingMapPin pin)
         {
             lock (pin)
             {
                 var overlay = MKCircle.Circle(pin.Location.GetCLLocationCoordinate2D(), pin.OverlayRadius);
                 AddOverlay(overlay);
 
-                var pinAnntation = new TMKAnnotation(pin);
+                var pinAnntation = new BindingMKAnnotation(pin);
                 AddAnnotation(pinAnntation);
             }
         }

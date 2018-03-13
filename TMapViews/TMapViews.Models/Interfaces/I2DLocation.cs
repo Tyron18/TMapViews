@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TMapViews.Models
 {
-    public interface ITMapPin
+    public interface I2DLocation
     {
-        TLocation Location { get; set; }
-        double OverlayRadius { get; set; }
+        double Latitude { get; set; }
+        double Longitude { get; set; }
     }
 }
