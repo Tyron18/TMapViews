@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
 using MapKit;
-using TMapViews.iOS.Models;
 using TMapViews.Models;
 using UIKit;
 
@@ -27,6 +24,28 @@ namespace TMapViews.iOS
             {
                 _shouldShowPins = value;
                 UpdatePins();
+            }
+        }
+
+        MKCoordinateSpan _zoomLevel;
+        public MKCoordinateSpan ZoomLevel
+        {
+            get => _zoomLevel;
+            set
+            {
+                _zoomLevel = value;
+                CenterMap();
+            }
+        }
+
+        private bool _shouldShowOverlays;
+        public bool ShouldShowOverlays
+        {
+            get => _shouldShowOverlays;
+            set
+            {
+                _shouldShowOverlays = value;
+                UpdateOverlays();
             }
         }
 
@@ -63,13 +82,12 @@ namespace TMapViews.iOS
             }
         }
 
+        public new BindingMKMapViewDelegate Delegate { get => base.Delegate as BindingMKMapViewDelegate; set => base.Delegate = value; }
 
         public ICommand MapClick { get; set; }
 
         public override MKMapType MapType { get => base.MapType; set => base.MapType = value; }
         public override bool ShowsUserLocation { get => base.ShowsUserLocation; set => base.ShowsUserLocation = value; }
-        public MKCoordinateSpan ZoomLevel { get; set; }
-        public bool ShouldShowOverlays { get; private set; }
 
         private void CenterMap()
         {
@@ -105,8 +123,8 @@ namespace TMapViews.iOS
 
         private void AddBindingOverlay(IBindingMapOverlay overlay)
         {
-            if (overlay is BindingMKOverlay)
-                AddOverlay(overlay);
+            if (overlay is BindingMKOverlay mkOverlay)
+                AddOverlay(mkOverlay);
             else
                 throw new InvalidCastException($"Cannot convert type {overlay.GetType()} to MKOverlay");
         }
