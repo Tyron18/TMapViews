@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Windows.Input;
-using CoreLocation;
 using MapKit;
+using TMapViews.iOS.Models;
 using TMapViews.Models;
 using UIKit;
 
@@ -31,8 +30,8 @@ namespace TMapViews.iOS
             }
         }
 
-        private ITLocation _centerMapLocation;
-        public ITLocation CenterMapLocation
+        private Binding2DLocation _centerMapLocation;
+        public Binding2DLocation CenterMapLocation
         {
             get => _centerMapLocation;
             set
@@ -42,22 +41,35 @@ namespace TMapViews.iOS
             }
         }
 
-        private ObservableCollection<IBindingMapPin> _pinItemSource;
-        public ObservableCollection<IBindingMapPin> PinItemSource
+        private ObservableCollection<IBindingMapPin> _annotationSource;
+        public ObservableCollection<IBindingMapPin> AnnotationSource
         {
-            get => _pinItemSource;
+            get => _annotationSource;
             set
             {
-                _pinItemSource = value;
+                _annotationSource = value;
                 UpdatePins();
             }
         }
+
+        private ObservableCollection<IBindingMapOverlay> _overlaySource;
+        public ObservableCollection<IBindingMapOverlay> OverlaySource
+        {
+            get => _overlaySource;
+            set
+            {
+                _overlaySource = value;
+                UpdateOverlays();
+            }
+        }
+
 
         public ICommand MapClick { get; set; }
 
         public override MKMapType MapType { get => base.MapType; set => base.MapType = value; }
         public override bool ShowsUserLocation { get => base.ShowsUserLocation; set => base.ShowsUserLocation = value; }
         public MKCoordinateSpan ZoomLevel { get; set; }
+        public bool ShouldShowOverlays { get; private set; }
 
         private void CenterMap()
         {
@@ -65,7 +77,7 @@ namespace TMapViews.iOS
             {
                 var region = new MKCoordinateRegion
                 {
-                    Center = CenterMapLocation.GetCLLocationCoordinate2D(),
+                    Center = CenterMapLocation.ToCLLocation(),
                     Span = ZoomLevel
                 };
                 SetRegion(region, true);
@@ -74,38 +86,44 @@ namespace TMapViews.iOS
 
         private void UpdatePins()
         {
-            ClearMap();
+            RemoveAnnotations(Annotations);
             if (ShouldShowPins)
             {
-                foreach (var pin in PinItemSource)
-                    AddAnnotation(pin);
+                foreach (var pin in AnnotationSource)
+                    AddBindingAnnotation(pin);
             }
         }
-
-        private void AddAnnotation(IBindingMapPin pin)
+        private void UpdateOverlays()
         {
-            lock (pin)
+            RemoveOverlays(Overlays);
+            if (ShouldShowOverlays)
             {
-                var overlay = MKCircle.Circle(pin.Location.GetCLLocationCoordinate2D(), pin.OverlayRadius);
-                AddOverlay(overlay);
-
-                var pinAnntation = new BindingMKAnnotation(pin);
-                AddAnnotation(pinAnntation);
+                foreach (var overlay in OverlaySource)
+                    AddBindingOverlay(overlay);
             }
         }
 
-        private void ClearMap()
+        private void AddBindingOverlay(IBindingMapOverlay overlay)
         {
-            RemoveAnnotations(Annotations);
-            if (Overlays != null)
-                RemoveOverlays(Overlays);
+            if (overlay is BindingMKOverlay)
+                AddOverlay(overlay);
+            else
+                throw new InvalidCastException($"Cannot convert type {overlay.GetType()} to MKOverlay");
         }
 
+        private void AddBindingAnnotation(IBindingMapPin pin)
+        {
+            if (pin is BindingMKAnnotation mkPin)
+                AddAnnotation(mkPin);
+            else
+                throw new InvalidCastException($"Cannot converter type {pin.GetType()} to MKAnnotation");
+        }
+        
         private void OnMapClicked(UITapGestureRecognizer gesture)
         {
             if (MapClick != null)
             {
-                var loc = ConvertPoint(gesture.LocationInView(this), this).ToTLocation();
+                var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
                 if (MapClick.CanExecute(loc))
                     MapClick.Execute(loc);
             }

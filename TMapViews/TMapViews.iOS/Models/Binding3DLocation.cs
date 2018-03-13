@@ -1,5 +1,4 @@
 ﻿using CoreLocation;
-using MapKit;
 using TMapViews.Models.Interfaces;
 
 namespace TMapViews.iOS

@@ -1,10 +1,7 @@
 ﻿using CoreLocation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TMapViews.Models;
 
-namespace TMapViews.iOS.Models
+namespace TMapViews.iOS
 {
     public class Binding2DLocation : I2DLocation
     {
