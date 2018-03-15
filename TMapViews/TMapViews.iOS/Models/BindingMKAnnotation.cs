@@ -5,7 +5,7 @@ using TMapViews.Models;
 
 namespace TMapViews.iOS
 {
-    public class BindingMKAnnotation : MKAnnotation, IBindingMapPin
+    public class BindingMKAnnotation : MKAnnotation, IBindingMapAnnotation
     {
         private CLLocationCoordinate2D _coordinate;
 

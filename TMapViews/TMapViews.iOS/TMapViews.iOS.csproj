@@ -48,7 +48,7 @@
     <Compile Include="Models\BindingMKAnnotation.cs" />
     <Compile Include="Views\BindingMKMapView.cs" />
     <Compile Include="Delegates\BindingMKMapViewDelegate.cs" />
-    <Compile Include="Views\BindingMKOverlay.cs" />
+    <Compile Include="Models\BindingMKOverlay.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TMapViews.Models\TMapViews.Models.csproj">

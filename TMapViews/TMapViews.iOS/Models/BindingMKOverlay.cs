@@ -4,7 +4,7 @@ using TMapViews.Models;
 
 namespace TMapViews.iOS
 {
-    public class BindingMKOverlay : MKOverlay, IBindingMapOverlay
+    public class BindingMKOverlay : MKOverlay, IBindingMapAnnotation
     {
         private CLLocationCoordinate2D _coordinate;
 
@@ -12,6 +12,6 @@ namespace TMapViews.iOS
 
         public override CLLocationCoordinate2D Coordinate => _coordinate;
 
-        public I2DLocation Center { get => Binding2DLocation.FromCLLocation(Coordinate); set => _coordinate = (value as Binding2DLocation).ToCLLocation(); }
+        public I2DLocation Location { get => Binding2DLocation.FromCLLocation(Coordinate); set => _coordinate = (value as Binding2DLocation).ToCLLocation(); }
     }
 }

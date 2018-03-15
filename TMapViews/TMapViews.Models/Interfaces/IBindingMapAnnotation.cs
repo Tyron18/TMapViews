@@ -4,8 +4,8 @@ using System.Text;
 
 namespace TMapViews.Models
 {
-    public interface IBindingMapOverlay
+    public interface IBindingMapAnnotation
     {
-        I2DLocation Center { get; set; }
+        I2DLocation Location { get; set; }
     }
 }

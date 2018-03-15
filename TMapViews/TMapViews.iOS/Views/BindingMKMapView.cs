@@ -60,25 +60,14 @@ namespace TMapViews.iOS
             }
         }
 
-        private ObservableCollection<IBindingMapPin> _annotationSource;
-        public ObservableCollection<IBindingMapPin> AnnotationSource
+        private ObservableCollection<IBindingMapAnnotation> _annotationSource;
+        public ObservableCollection<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
             set
             {
                 _annotationSource = value;
                 UpdatePins();
-            }
-        }
-
-        private ObservableCollection<IBindingMapOverlay> _overlaySource;
-        public ObservableCollection<IBindingMapOverlay> OverlaySource
-        {
-            get => _overlaySource;
-            set
-            {
-                _overlaySource = value;
-                UpdateOverlays();
             }
         }
 
@@ -111,28 +100,13 @@ namespace TMapViews.iOS
                     AddBindingAnnotation(pin);
             }
         }
-        private void UpdateOverlays()
-        {
-            RemoveOverlays(Overlays);
-            if (ShouldShowOverlays)
-            {
-                foreach (var overlay in OverlaySource)
-                    AddBindingOverlay(overlay);
-            }
-        }
 
-        private void AddBindingOverlay(IBindingMapOverlay overlay)
-        {
-            if (overlay is BindingMKOverlay mkOverlay)
-                AddOverlay(mkOverlay);
-            else
-                throw new InvalidCastException($"Cannot convert type {overlay.GetType()} to MKOverlay");
-        }
-
-        private void AddBindingAnnotation(IBindingMapPin pin)
+        private void AddBindingAnnotation(IBindingMapAnnotation pin)
         {
             if (pin is BindingMKAnnotation mkPin)
                 AddAnnotation(mkPin);
+            else if (pin is BindingMKOverlay mkOverlay)
+                AddAnnotation(mkOverlay);
             else
                 throw new InvalidCastException($"Cannot converter type {pin.GetType()} to MKAnnotation");
         }
