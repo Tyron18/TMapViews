@@ -11,8 +11,10 @@ namespace TMapViews.iOS
     {
         public BindingMKMapView()
         {
-            var gestureRecognizer = new UITapGestureRecognizer(this.OnMapClicked);
-            AddGestureRecognizer(gestureRecognizer);
+            var mapClickRecognizer = new UITapGestureRecognizer(OnMapClicked);
+            AddGestureRecognizer(mapClickRecognizer);
+            var mapLongClickRecognizer = new UILongPressGestureRecognizer(OnMapLongClick);
+            AddGestureRecognizer(mapLongClickRecognizer);
         }
 
         private bool _shouldShowPins = true;
@@ -36,18 +38,6 @@ namespace TMapViews.iOS
             {
                 _zoomLevel = value;
                 CenterMap();
-            }
-        }
-
-        private bool _shouldShowOverlays;
-
-        public bool ShouldShowOverlays
-        {
-            get => _shouldShowOverlays;
-            set
-            {
-                _shouldShowOverlays = value;
-                UpdateOverlays();
             }
         }
 
@@ -78,6 +68,7 @@ namespace TMapViews.iOS
         public new BindingMKMapViewDelegate Delegate { get => base.Delegate as BindingMKMapViewDelegate; set => base.Delegate = value; }
 
         public ICommand MapClick { get; set; }
+        public ICommand MapLongClick { get; set; }
 
         public override MKMapType MapType { get => base.MapType; set => base.MapType = value; }
         public override bool ShowsUserLocation { get => base.ShowsUserLocation; set => base.ShowsUserLocation = value; }
@@ -117,12 +108,16 @@ namespace TMapViews.iOS
 
         private void OnMapClicked(UITapGestureRecognizer gesture)
         {
-            if (MapClick != null)
-            {
-                var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
-                if (MapClick.CanExecute(loc))
-                    MapClick.Execute(loc);
-            }
+            var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
+            if (MapClick?.CanExecute(loc) ?? false)
+                MapClick.Execute(loc);
+        }
+
+        private void OnMapLongClick(UILongPressGestureRecognizer gesture)
+        {
+            var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
+            if (MapLongClick?.CanExecute(loc) ?? false)
+                MapLongClick.Execute(loc);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Android.Locations;
+﻿using Android.Gms.Maps.Model;
+using Android.Locations;
 using Android.Runtime;
 using System;
 using TMapViews.Models.Interfaces;
@@ -23,6 +24,6 @@ namespace TMapViews.Droid.Models
 
         public double VerticalAccuracy => base.VerticalAccuracyMeters;
 
-        double I3DLocation.Speed => base.Speed;
+        public new double Speed => base.Speed;
     }
 }

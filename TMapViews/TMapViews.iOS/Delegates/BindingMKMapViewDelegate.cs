@@ -21,6 +21,12 @@ namespace TMapViews.iOS
         /// </summary>
         public ICommand AnnotationDeselected { get; set; }
 
+        public ICommand MyLocationClick { get; set; }
+        public ICommand MarkerDrag { get; set; }
+        public ICommand MarkerDragEnd { get; set; }
+        public ICommand MarkerDragStart { get; set; }
+        public ICommand CameraMoved { get; set; }
+
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
             if (LocationChanged != null)
@@ -33,11 +39,40 @@ namespace TMapViews.iOS
 
         public sealed override void DidSelectAnnotationView(MKMapView mapView, MKAnnotationView view)
         {
-            if (AnnotationSelected != null)
+            if (view.Annotation is BindingMKAnnotation annotation)
             {
-                var annotation = view.Annotation as IMKAnnotation;
-                if (AnnotationSelected.CanExecute(annotation))
+                if (AnnotationSelected?.CanExecute(annotation) ?? false)
                     AnnotationSelected.Execute(annotation);
+            }
+            else if (view.Annotation == mapView.UserLocation)
+            {
+                var loc = Binding2DLocation.FromCLLocation(view.Annotation.Coordinate);
+                if (MyLocationClick?.CanExecute(loc) ?? false)
+                    MyLocationClick.Execute(loc);
+            }
+        }
+
+        public override void ChangedDragState(MKMapView mapView, MKAnnotationView annotationView, MKAnnotationViewDragState newState, MKAnnotationViewDragState oldState)
+        {
+            if (annotationView.Annotation is BindingMKAnnotation annotation)
+            {
+                switch (newState)
+                {
+                    case MKAnnotationViewDragState.Starting:
+                        if (MarkerDragStart?.CanExecute(annotation) ?? false)
+                            MarkerDragStart.Execute(annotation);
+                        break;
+
+                    case MKAnnotationViewDragState.Ending:
+                        if (MarkerDragEnd?.CanExecute(annotation) ?? false)
+                            MarkerDragEnd.Execute(annotation);
+                        break;
+
+                    case MKAnnotationViewDragState.Dragging:
+                        if (MarkerDrag?.CanExecute(annotation) ?? false)
+                            MarkerDrag.Execute(annotation);
+                        break;
+                }
             }
         }
 
@@ -49,6 +84,13 @@ namespace TMapViews.iOS
                 if (AnnotationDeselected.CanExecute(annotation))
                     AnnotationDeselected.Execute(annotation);
             }
+        }
+
+        public override void RegionChanged(MKMapView mapView, bool animated)
+        {
+            var pos = new Binding3DLocation(mapView.Camera.CenterCoordinate.Latitude, mapView.Camera.CenterCoordinate.Longitude, mapView.Camera.Altitude);
+            if (CameraMoved?.CanExecute(pos) ?? false)
+                CameraMoved.Execute(pos);
         }
     }
 }

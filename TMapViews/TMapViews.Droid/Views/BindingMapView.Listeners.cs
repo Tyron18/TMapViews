@@ -9,7 +9,6 @@ namespace TMapViews.Droid.Views
 {
     public partial class BindingMapView :
         IOnCameraMoveListener,
-        IOnCameraMoveStartedListener,
         IOnCircleClickListener,
         IOnGroundOverlayClickListener,
         IOnInfoWindowClickListener,
@@ -27,7 +26,6 @@ namespace TMapViews.Droid.Views
         private void SetListeners()
         {
             GoogleMap.SetOnCameraMoveListener(this);
-            GoogleMap.SetOnCameraMoveStartedListener(this);
             GoogleMap.SetOnCircleClickListener(this);
             GoogleMap.SetOnGroundOverlayClickListener(this);
             GoogleMap.SetOnInfoWindowClickListener(this);
@@ -70,14 +68,14 @@ namespace TMapViews.Droid.Views
 
         public void OnCameraMove()
         {
-            if (CameraMoved?.CanExecute(null) ?? false)
-                CameraMoved.Execute(null);
-        }
-
-        public void OnCameraMoveStarted(int reason)
-        {
-            if (CameraMoveStarted?.CanExecute(reason) ?? false)
-                CameraMoveStarted.Execute(reason);
+            var loc = new Binding3DLocation("")
+            {
+                Latitude = GoogleMap.CameraPosition.Target.Latitude,
+                Longitude = GoogleMap.CameraPosition.Target.Longitude,
+                Altitude = GoogleMap.CameraPosition.Zoom
+            };
+            if (CameraMoved?.CanExecute(loc) ?? false)
+                CameraMoved.Execute(loc);
         }
 
         public void OnCircleClick(Circle circle)

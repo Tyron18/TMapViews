@@ -5,7 +5,6 @@ namespace TMapViews.Droid.Views
     public partial class BindingMapView
     {
         public ICommand CameraMoved { get; set; }
-        public ICommand CameraMoveStarted { get; set; }
         public ICommand InfoWindowClick { get; set; }
         public ICommand InfoWindowClose { get; set; }
         public ICommand InfoWindowLongClick { get; set; }
