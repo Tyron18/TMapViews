@@ -1,29 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Windows.Input;
-using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
-using Android.Views;
-using Android.Widget;
+using System;
+using System.Collections.ObjectModel;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
-using static Android.Gms.Maps.GoogleMap;
 
 namespace TMapViews.Droid.Views
 {
-    public class BindingMapView : MapView,
-        IOnMapReadyCallback,
-        IOnMapClickListener,
-        IOnMarkerClickListener
+    public partial class BindingMapView : MapView,
+        IOnMapReadyCallback
     {
         public BindingMapView(Context context) : base(context)
         {
@@ -63,7 +53,8 @@ namespace TMapViews.Droid.Views
 
         public IBindingMapAdapter Adapter { get; set; }
 
-        int _mapType = 1;
+        private int _mapType = 1;
+
         public int MapType
         {
             get => _mapType;
@@ -75,7 +66,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _showUserLocation;
+        private bool _showUserLocation;
+
         public bool MyLocationEnabled
         {
             get => _showUserLocation;
@@ -87,7 +79,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _rotateGesturesEnabled;
+        private bool _rotateGesturesEnabled;
+
         public bool RotateGesturesEnabled
         {
             get => _rotateGesturesEnabled;
@@ -99,7 +92,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _tiltGesturesEnabled;
+        private bool _tiltGesturesEnabled;
+
         public bool TiltGesturesEnabled
         {
             get => _tiltGesturesEnabled;
@@ -111,7 +105,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _scrollGesturesEnabled;
+        private bool _scrollGesturesEnabled;
+
         public bool ScrollGesturesEnabled
         {
             get => _scrollGesturesEnabled;
@@ -123,7 +118,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _zoomControlsEnabled;
+        private bool _zoomControlsEnabled;
+
         public bool ZoomControlsEnabled
         {
             get => _zoomControlsEnabled;
@@ -135,7 +131,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _zoomGesturesEnabled;
+        private bool _zoomGesturesEnabled;
+
         public bool ZoomGesturesEnabled
         {
             get => _zoomGesturesEnabled;
@@ -147,7 +144,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _myLocationButtonEnabled;
+        private bool _myLocationButtonEnabled;
+
         public bool MyLocationButtonEnabled
         {
             get => _myLocationButtonEnabled;
@@ -159,7 +157,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        bool _annotationsVisible;
+        private bool _annotationsVisible;
+
         public bool AnnotationsVisible
         {
             get => _annotationsVisible;
@@ -170,7 +169,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        Binding2DLocation _centerMapLocation;
+        private Binding2DLocation _centerMapLocation;
+
         public Binding2DLocation CenterMapLocation
         {
             get => _centerMapLocation;
@@ -187,12 +187,8 @@ namespace TMapViews.Droid.Views
 
         public bool IsReady { get; set; }
 
-        public ICommand MapClick { get; set; }
-        public ICommand MarkerClick { get; set; }
-        public ICommand LocationChanged { get; set; }
-
-
         private ObservableCollection<IBindingMapAnnotation> _annotationSource;
+
         public ObservableCollection<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
@@ -217,19 +213,22 @@ namespace TMapViews.Droid.Views
                         var marker = GoogleMap.AddMarker(Adapter.GetMarkerOptionsForPin(mMarker));
                         marker.Tag = mMarker;
                     }
-                    else if (annotation is IBindingMapAnnotation)
+                    else if (annotation is BindingMapOverlay mOverlay)
                     {
-                        Adapter.AddBindingMapOverlay(GoogleMap, annotation);
+                        var overlay = Adapter.AddBindingMapOverlay(GoogleMap, annotation);
+                        if (overlay is Circle circle)
+                            circle.Tag = mOverlay;
+                        else if (overlay is Polygon polygon)
+                            polygon.Tag = mOverlay;
+                        else if (overlay is Polyline polyLine)
+                            polyLine.Tag = mOverlay;
+                        else if (overlay is GroundOverlay groundOverlay)
+                            groundOverlay.Tag = mOverlay;
+                        else
+                            throw new OverlayAdapterException(overlay);
                     }
                 }
             }
-        }
-
-        public void OnMapClick(LatLng point)
-        {
-            var loc = Binding2DLocation.FromLatLng(point);
-            if (MapClick?.CanExecute(loc) ?? false)
-                MapClick.Execute(loc);
         }
 
         public void OnMapReady(GoogleMap googleMap)
@@ -240,15 +239,8 @@ namespace TMapViews.Droid.Views
             GoogleMap.MyLocationChange += OnLocationChanged;
             if (CenterMapLocation != null)
                 CenterOn(CenterMapLocation);
-            GoogleMap.SetOnMapClickListener(this);
-            GoogleMap.SetOnMarkerClickListener(this);
+            SetListeners();
             UpdateAnnotations();
-        }
-
-        private void OnLocationChanged(object sender, MyLocationChangeEventArgs e)
-        {
-            if (e.Location is Binding3DLocation loc && (LocationChanged?.CanExecute(loc) ?? false))
-                LocationChanged.Execute(loc);
         }
 
         private void UpdateUiSettings()
@@ -264,18 +256,6 @@ namespace TMapViews.Droid.Views
                 GoogleMap.UiSettings.ZoomControlsEnabled = ZoomControlsEnabled;
                 GoogleMap.UiSettings.ZoomGesturesEnabled = ZoomGesturesEnabled;
             }
-        }
-
-        public bool OnMarkerClick(Marker marker)
-        {
-            var mAnnotation = marker.Tag;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (MarkerClick?.CanExecute(anno) ?? false))
-            {
-                MarkerClick.Execute(anno);
-                return true;
-            }
-            return false;
         }
     }
 }

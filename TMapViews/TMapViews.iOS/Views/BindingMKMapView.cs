@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MapKit;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using MapKit;
 using TMapViews.Models;
 using UIKit;
 
@@ -27,7 +27,8 @@ namespace TMapViews.iOS
             }
         }
 
-        MKCoordinateSpan _zoomLevel;
+        private MKCoordinateSpan _zoomLevel;
+
         public MKCoordinateSpan ZoomLevel
         {
             get => _zoomLevel;
@@ -39,6 +40,7 @@ namespace TMapViews.iOS
         }
 
         private bool _shouldShowOverlays;
+
         public bool ShouldShowOverlays
         {
             get => _shouldShowOverlays;
@@ -50,6 +52,7 @@ namespace TMapViews.iOS
         }
 
         private Binding2DLocation _centerMapLocation;
+
         public Binding2DLocation CenterMapLocation
         {
             get => _centerMapLocation;
@@ -61,6 +64,7 @@ namespace TMapViews.iOS
         }
 
         private ObservableCollection<IBindingMapAnnotation> _annotationSource;
+
         public ObservableCollection<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
@@ -110,7 +114,7 @@ namespace TMapViews.iOS
             else
                 throw new InvalidCastException($"Cannot converter type {pin.GetType()} to MKAnnotation");
         }
-        
+
         private void OnMapClicked(UITapGestureRecognizer gesture)
         {
             if (MapClick != null)

@@ -5,7 +5,7 @@ namespace TMapViews.iOS
 {
     public class Binding2DLocation : I2DLocation
     {
-        public double Latitude { get; set ; }
+        public double Latitude { get; set; }
         public double Longitude { get; set; }
 
         public static Binding2DLocation FromCLLocation(CLLocationCoordinate2D coordinate) =>

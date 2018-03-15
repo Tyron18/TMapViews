@@ -10,10 +10,12 @@ namespace TMapViews.iOS
         /// Executes when user location changes, passing an I3DLocation object.
         /// </summary>
         public ICommand LocationChanged { get; set; }
+
         /// <summary>
         /// Executes when an annotation is selected, passing an IMKAnnotation object.
         /// </summary>
         public ICommand AnnotationSelected { get; set; }
+
         /// <summary>
         /// Executes when an annotation is deselected, passing an IMKAnnotation object.
         /// </summary>
@@ -41,7 +43,7 @@ namespace TMapViews.iOS
 
         public sealed override void DidDeselectAnnotationView(MKMapView mapView, MKAnnotationView view)
         {
-            if(AnnotationDeselected != null)
+            if (AnnotationDeselected != null)
             {
                 var annotation = view.Annotation as IMKAnnotation;
                 if (AnnotationDeselected.CanExecute(annotation))

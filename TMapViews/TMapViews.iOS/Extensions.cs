@@ -1,6 +1,4 @@
-﻿using CoreLocation;
-
-namespace TMapViews.iOS
+﻿namespace TMapViews.iOS
 {
     public static class Extensions
     {

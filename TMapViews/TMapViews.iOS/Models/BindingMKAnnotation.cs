@@ -1,6 +1,5 @@
 ﻿using CoreLocation;
 using MapKit;
-using TMapViews.iOS.Models;
 using TMapViews.Models;
 
 namespace TMapViews.iOS
@@ -9,7 +8,9 @@ namespace TMapViews.iOS
     {
         private CLLocationCoordinate2D _coordinate;
 
-        public BindingMKAnnotation() { }
+        public BindingMKAnnotation()
+        {
+        }
 
         public override CLLocationCoordinate2D Coordinate { get => _coordinate; }
 

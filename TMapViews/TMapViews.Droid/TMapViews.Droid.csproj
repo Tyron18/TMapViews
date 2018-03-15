@@ -81,9 +81,13 @@
     <Compile Include="Models\Binding2DLocation.cs" />
     <Compile Include="Models\Binding3DLocation.cs" />
     <Compile Include="Models\BindingMapMarker.cs" />
+    <Compile Include="Models\BindingMapOverlay.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BindingMapView.Commands.cs" />
     <Compile Include="Views\BindingMapView.cs" />
+    <Compile Include="Views\BindingMapView.Listeners.cs" />
+    <Compile Include="Views\OverlayAdapterException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
