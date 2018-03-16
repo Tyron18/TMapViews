@@ -14,12 +14,16 @@ namespace TMapViews.iOS
         /// <summary>
         /// Executes when an annotation is selected, passing an IMKAnnotation object.
         /// </summary>
-        public ICommand AnnotationSelected { get; set; }
+        public ICommand MarkerSelected { get; set; }
+
+        public ICommand OverlaySelected { get; set; }
 
         /// <summary>
         /// Executes when an annotation is deselected, passing an IMKAnnotation object.
         /// </summary>
-        public ICommand AnnotationDeselected { get; set; }
+        public ICommand MarkerDeselected { get; set; }
+
+        public ICommand OverlayDeslected { get; set; }
 
         public ICommand MyLocationClick { get; set; }
         public ICommand MarkerDrag { get; set; }
@@ -41,8 +45,13 @@ namespace TMapViews.iOS
         {
             if (view.Annotation is BindingMKAnnotation annotation)
             {
-                if (AnnotationSelected?.CanExecute(annotation) ?? false)
-                    AnnotationSelected.Execute(annotation);
+                if (MarkerSelected?.CanExecute(annotation) ?? false)
+                    MarkerSelected.Execute(annotation);
+            }
+            else if (view.Annotation is BindingMKOverlay overlay)
+            {
+                if (OverlaySelected?.CanExecute(overlay) ?? false)
+                    OverlaySelected.Execute(overlay);
             }
             else if (view.Annotation == mapView.UserLocation)
             {
@@ -78,11 +87,15 @@ namespace TMapViews.iOS
 
         public sealed override void DidDeselectAnnotationView(MKMapView mapView, MKAnnotationView view)
         {
-            if (AnnotationDeselected != null)
+            if (view.Annotation is BindingMKAnnotation annotation)
             {
-                var annotation = view.Annotation as IMKAnnotation;
-                if (AnnotationDeselected.CanExecute(annotation))
-                    AnnotationDeselected.Execute(annotation);
+                if (MarkerDeselected?.CanExecute(annotation) ?? false)
+                    MarkerDeselected.Execute(annotation);
+            }
+            else if (view.Annotation is BindingMKOverlay overlay)
+            {
+                if (OverlayDeslected?.CanExecute(overlay) ?? false)
+                    OverlayDeslected.Execute(overlay);
             }
         }
 
