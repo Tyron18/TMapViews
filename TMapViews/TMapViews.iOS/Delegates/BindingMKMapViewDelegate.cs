@@ -7,28 +7,54 @@ namespace TMapViews.iOS
     public class BindingMKMapViewDelegate : MKMapViewDelegate
     {
         /// <summary>
-        /// Executes when user location changes, passing an I3DLocation object.
+        /// Executes when user location changes. Passes a <paramref name="I3DLocation"/>.
         /// </summary>
         public ICommand LocationChanged { get; set; }
 
         /// <summary>
-        /// Executes when an annotation is selected, passing an IMKAnnotation object.
+        /// Executes when an annotation is selected. Passes a <paramref name="BindingMkAnnotation"/>.
         /// </summary>
         public ICommand MarkerSelected { get; set; }
 
+        /// <summary>
+        /// Executes when an annotation is selected. Passes a <paramref name="BindingMKOverlay"/>.
+        /// </summary>
         public ICommand OverlaySelected { get; set; }
 
         /// <summary>
-        /// Executes when an annotation is deselected, passing an IMKAnnotation object.
+        /// Executes when an annotation is deselected. Passes a <paramref name="BindingMkAnnotation"/>.
         /// </summary>
         public ICommand MarkerDeselected { get; set; }
 
+        /// <summary>
+        /// Executes when an overlay is deselected. Passes a <paramref name="BindingMKOverlay"/>.
+        /// </summary>
         public ICommand OverlayDeslected { get; set; }
 
+        /// <summary>
+        /// Executes when the user location annotation is clicked. Passes a
+        /// <paramref name="Binding2DLocation"/>.
+        /// </summary>
         public ICommand MyLocationClick { get; set; }
+
+        /// <summary>
+        /// Executes when a marker is dragged. Passes a <paramref name="BindingMkAnnotation"/>.
+        /// </summary>
         public ICommand MarkerDrag { get; set; }
+
+        /// <summary>
+        /// Executes when a marker stops being dragged. Passes a <paramref name="BindingMKAnnotation"/>.
+        /// </summary>
         public ICommand MarkerDragEnd { get; set; }
+
+        /// <summary>
+        /// Executes when a marker starts being dragged. Passes a <paramref name="BindingMKAnnotation"/>.
+        /// </summary>
         public ICommand MarkerDragStart { get; set; }
+
+        /// <summary>
+        /// Executes when the camera moves. Passes a <paramref name="Binding3DLocation"/>.
+        /// </summary>
         public ICommand CameraMoved { get; set; }
 
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
@@ -99,7 +125,7 @@ namespace TMapViews.iOS
             }
         }
 
-        public override void RegionChanged(MKMapView mapView, bool animated)
+        public sealed override void RegionChanged(MKMapView mapView, bool animated)
         {
             var pos = new Binding3DLocation(mapView.Camera.CenterCoordinate.Latitude, mapView.Camera.CenterCoordinate.Longitude, mapView.Camera.Altitude);
             if (CameraMoved?.CanExecute(pos) ?? false)

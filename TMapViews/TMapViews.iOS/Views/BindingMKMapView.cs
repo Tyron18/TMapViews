@@ -67,7 +67,15 @@ namespace TMapViews.iOS
 
         public new BindingMKMapViewDelegate Delegate { get => base.Delegate as BindingMKMapViewDelegate; set => base.Delegate = value; }
 
+        /// <summary>
+        /// Executes when user taps a location on the map. Passes a <paramref name="I2DLocation"/>
+        /// </summary>
         public ICommand MapClick { get; set; }
+
+        /// <summary>
+        /// Executes when user performs a long tap on a location on the map.
+        /// Passes a <paramref name="I2DLocation"/>
+        /// </summary>
         public ICommand MapLongClick { get; set; }
 
         public override MKMapType MapType { get => base.MapType; set => base.MapType = value; }
