@@ -1,9 +1,6 @@
 using Android.Content;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Droid.Views;
-using MvvmCross.Platform;
 using TMapViews.Example.Core;
 
 namespace TMapViews.Example.Droid

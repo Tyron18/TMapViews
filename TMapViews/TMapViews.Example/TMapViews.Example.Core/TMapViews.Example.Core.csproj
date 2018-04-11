@@ -36,9 +36,8 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\MainContainerViewModel.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\SecondViewModel.cs" />
+    <Compile Include="ViewModels\MultipleMapLocationsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converters\" />
@@ -60,6 +59,12 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
+      <Project>{159d0897-7607-4e7d-80d7-d4f6f15fa14d}</Project>
+      <Name>TMapViews.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

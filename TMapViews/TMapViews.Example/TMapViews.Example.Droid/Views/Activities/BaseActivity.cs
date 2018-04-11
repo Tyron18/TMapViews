@@ -5,7 +5,7 @@ using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace TMapViews.Example.Droid.Views
 {
-    public abstract class BaseActivity<TViewModel> : MvxCachingFragmentCompatActivity<TViewModel>
+    public abstract class BaseActivity<TViewModel> : MvxAppCompatActivity<TViewModel>
         where TViewModel : class, IMvxViewModel
     {
         protected abstract int ActivityLayoutId { get; }

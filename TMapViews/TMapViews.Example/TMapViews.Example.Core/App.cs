@@ -13,7 +13,7 @@ namespace TMapViews.Example.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<FirstViewModel>();
+            RegisterNavigationServiceAppStart<MultipleMapLocationsViewModel>();
         }
     }
 }
