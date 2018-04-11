@@ -1,5 +1,6 @@
 ﻿using Android.Gms.Maps.Model;
 using Android.Locations;
+using Android.Runtime;
 using System;
 using System.Linq;
 using TMapViews.Droid.Models;
@@ -20,7 +21,11 @@ namespace TMapViews.Droid.Views
         IOnMarkerClickListener,
         IOnMarkerDragListener,
         IOnMyLocationButtonClickListener,
-        IOnMyLocationClickListener
+        IOnMyLocationClickListener,
+        IOnCircleClickListener,
+        IOnGroundOverlayClickListener,
+        IOnPolygonClickListener,
+        IOnPolylineClickListener
     {
         private void SetListeners()
         {
@@ -34,6 +39,10 @@ namespace TMapViews.Droid.Views
             GoogleMap.SetOnMarkerDragListener(this);
             GoogleMap.SetOnMyLocationButtonClickListener(this);
             GoogleMap.SetOnMyLocationClickListener(this);
+            GoogleMap.SetOnCircleClickListener(this);
+            GoogleMap.SetOnGroundOverlayClickListener(this);
+            GoogleMap.SetOnPolygonClickListener(this);
+            GoogleMap.SetOnPolylineClickListener(this);
         }
 
         public bool OnMarkerClick(Marker marker)
@@ -164,6 +173,46 @@ namespace TMapViews.Droid.Views
             var loc = location.ToBinding3DLocation();
             if (MyLocationClick?.CanExecute(loc) ?? false)
                 MyLocationClick.Execute(loc);
+        }
+
+        public void OnCircleClick(Circle overlay)
+        {
+            var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno
+                && (OverlayClicked?.CanExecute(anno) ?? false))
+            {
+                OverlayClicked.Execute(anno);
+            }
+        }
+
+        public void OnGroundOverlayClick(GroundOverlay overlay)
+        {
+            var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno
+                && (OverlayClicked?.CanExecute(anno) ?? false))
+            {
+                OverlayClicked.Execute(anno);
+            }
+        }
+
+        public void OnPolygonClick(Polygon overlay)
+        {
+            var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno
+                && (OverlayClicked?.CanExecute(anno) ?? false))
+            {
+                OverlayClicked.Execute(anno);
+            }
+        }
+
+        public void OnPolylineClick(Polyline overlay)
+        {
+            var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno
+                && (OverlayClicked?.CanExecute(anno) ?? false))
+            {
+                OverlayClicked.Execute(anno);
+            }
         }
     }
 }
