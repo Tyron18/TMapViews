@@ -17,6 +17,5 @@ namespace TMapViews.Droid.Views
         public ICommand MarkerDragStart { get; set; }
         public ICommand MyLocationButtonClick { get; set; }
         public ICommand MyLocationClick { get; set; }
-        public ICommand OverlayClicked { get; set; }
     }
 }

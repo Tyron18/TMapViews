@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Runtime;
+using System;
 using System.Runtime.Serialization;
 
 namespace TMapViews.Droid.Views
@@ -6,13 +7,13 @@ namespace TMapViews.Droid.Views
     [Serializable]
     internal class OverlayAdapterException : System.Exception
     {
-        private Java.Lang.Object overlay;
+        private IJavaObject overlay;
 
         public OverlayAdapterException()
         {
         }
 
-        public OverlayAdapterException(Java.Lang.Object overlay)
+        public OverlayAdapterException(IJavaObject overlay)
         {
             this.overlay = overlay;
         }

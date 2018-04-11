@@ -1,14 +1,15 @@
 ﻿using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using Android.Runtime;
 using TMapViews.Droid.Models;
-using TMapViews.Models;
+using TMapViews.Models.Interfaces;
 
 namespace TMapViews.Droid.Adapters
 {
     public interface IBindingMapAdapter
     {
-        Java.Lang.Object AddBindingMapOverlay(GoogleMap googleMap, IBindingMapAnnotation overlay);
+        IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay);
 
-        MarkerOptions GetMarkerOptionsForPin(BindingMapMarker pin);
+        MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin);
     }
 }

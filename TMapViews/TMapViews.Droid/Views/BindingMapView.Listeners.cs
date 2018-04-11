@@ -1,16 +1,17 @@
 ﻿using Android.Gms.Maps.Model;
 using Android.Locations;
 using System;
+using System.Linq;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
+using TMapViews.Models.Interfaces;
+using TMapViews.Models.Models;
 using static Android.Gms.Maps.GoogleMap;
 
 namespace TMapViews.Droid.Views
 {
     public partial class BindingMapView :
         IOnCameraMoveListener,
-        IOnCircleClickListener,
-        IOnGroundOverlayClickListener,
         IOnInfoWindowClickListener,
         IOnInfoWindowCloseListener,
         IOnInfoWindowLongClickListener,
@@ -19,15 +20,11 @@ namespace TMapViews.Droid.Views
         IOnMarkerClickListener,
         IOnMarkerDragListener,
         IOnMyLocationButtonClickListener,
-        IOnMyLocationClickListener,
-        IOnPolygonClickListener,
-        IOnPolylineClickListener
+        IOnMyLocationClickListener
     {
         private void SetListeners()
         {
             GoogleMap.SetOnCameraMoveListener(this);
-            GoogleMap.SetOnCircleClickListener(this);
-            GoogleMap.SetOnGroundOverlayClickListener(this);
             GoogleMap.SetOnInfoWindowClickListener(this);
             GoogleMap.SetOnInfoWindowCloseListener(this);
             GoogleMap.SetOnInfoWindowLongClickListener(this);
@@ -37,13 +34,11 @@ namespace TMapViews.Droid.Views
             GoogleMap.SetOnMarkerDragListener(this);
             GoogleMap.SetOnMyLocationButtonClickListener(this);
             GoogleMap.SetOnMyLocationClickListener(this);
-            GoogleMap.SetOnPolygonClickListener(this);
-            GoogleMap.SetOnPolylineClickListener(this);
         }
 
         public bool OnMarkerClick(Marker marker)
         {
-            var mAnnotation = marker.Tag;
+            var mAnnotation = (marker.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
                 && (MarkerClick?.CanExecute(anno) ?? false))
             {
@@ -55,46 +50,32 @@ namespace TMapViews.Droid.Views
 
         private void OnLocationChanged(object sender, MyLocationChangeEventArgs e)
         {
-            if (e.Location is Binding3DLocation loc && (LocationChanged?.CanExecute(loc) ?? false))
+            var loc = e.Location.ToBinding3DLocation();
+            if (LocationChanged?.CanExecute(loc) ?? false)
                 LocationChanged.Execute(loc);
         }
 
         public void OnMapClick(LatLng point)
         {
-            var loc = Binding2DLocation.FromLatLng(point);
+            var loc = point.ToBinding2DLocation();
             if (MapClick?.CanExecute(loc) ?? false)
                 MapClick.Execute(loc);
         }
 
         public void OnCameraMove()
         {
-            var loc = new Binding3DLocation("")
-            {
-                Latitude = GoogleMap.CameraPosition.Target.Latitude,
-                Longitude = GoogleMap.CameraPosition.Target.Longitude,
-                Altitude = GoogleMap.CameraPosition.Zoom
-            };
+            var loc = new Binding3DLocation(
+                latitude: GoogleMap.CameraPosition.Target.Latitude,
+                longitude: GoogleMap.CameraPosition.Target.Longitude,
+                altitude: GoogleMap.CameraPosition.Zoom
+            );
             if (CameraMoved?.CanExecute(loc) ?? false)
                 CameraMoved.Execute(loc);
         }
 
-        public void OnCircleClick(Circle circle)
-        {
-            if (circle.Tag is BindingMapOverlay mOverlay
-                && (OverlayClicked?.CanExecute(mOverlay) ?? false))
-                OverlayClicked.Execute(mOverlay);
-        }
-
-        public void OnGroundOverlayClick(GroundOverlay groundOverlay)
-        {
-            if (groundOverlay.Tag is BindingMapOverlay mOverlay
-                && (OverlayClicked?.CanExecute(mOverlay) ?? false))
-                OverlayClicked.Execute(mOverlay);
-        }
-
         public void OnInfoWindowClick(Marker marker)
         {
-            var mAnnotation = marker.Tag;
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
                 && (InfoWindowClick?.CanExecute(anno) ?? false))
             {
@@ -104,7 +85,7 @@ namespace TMapViews.Droid.Views
 
         public void OnInfoWindowClose(Marker marker)
         {
-            var mAnnotation = marker.Tag;
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
                 && (InfoWindowClose?.CanExecute(anno) ?? false))
             {
@@ -114,7 +95,7 @@ namespace TMapViews.Droid.Views
 
         public void OnInfoWindowLongClick(Marker marker)
         {
-            var mAnnotation = marker.Tag;
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
                 && (InfoWindowLongClick?.CanExecute(anno) ?? false))
             {
@@ -124,38 +105,47 @@ namespace TMapViews.Droid.Views
 
         public void OnMapLongClick(LatLng point)
         {
-            var loc = Binding2DLocation.FromLatLng(point);
+            var loc = point.ToBinding2DLocation();
             if (MapLongClick?.CanExecute(loc) ?? false)
                 MapLongClick.Execute(loc);
         }
 
         public void OnMarkerDrag(Marker marker)
         {
-            var mAnnotation = marker.Tag;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (MarkerDrag?.CanExecute(anno) ?? false))
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno)
             {
-                MarkerDrag.Execute(anno);
+                anno.Location = marker.Position.ToBinding2DLocation();
+                if (MarkerDrag?.CanExecute(anno) ?? false)
+                {
+                    MarkerDrag.Execute(anno);
+                }
             }
         }
 
         public void OnMarkerDragEnd(Marker marker)
         {
-            var mAnnotation = marker.Tag;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (MarkerDragEnd?.CanExecute(anno) ?? false))
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno)
             {
-                MarkerDragEnd.Execute(anno);
+                anno.Location = marker.Position.ToBinding2DLocation();
+                if (MarkerDragEnd?.CanExecute(anno) ?? false)
+                {
+                    MarkerDragEnd.Execute(anno);
+                }
             }
         }
 
         public void OnMarkerDragStart(Marker marker)
         {
-            var mAnnotation = marker.Tag;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (MarkerDragStart?.CanExecute(anno) ?? false))
+            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
+            if (mAnnotation is IBindingMapAnnotation anno)
             {
-                MarkerDragStart.Execute(anno);
+                anno.Location = marker.Position.ToBinding2DLocation();
+                if (MarkerDragStart?.CanExecute(anno) ?? false)
+                {
+                    MarkerDragStart.Execute(anno);
+                }
             }
         }
 
@@ -171,23 +161,9 @@ namespace TMapViews.Droid.Views
 
         public void OnMyLocationClick(Location location)
         {
-            var loc = location as Binding3DLocation;
+            var loc = location.ToBinding3DLocation();
             if (MyLocationClick?.CanExecute(loc) ?? false)
                 MyLocationClick.Execute(loc);
-        }
-
-        public void OnPolygonClick(Polygon polygon)
-        {
-            if (polygon.Tag is BindingMapOverlay mOverlay
-                && (OverlayClicked?.CanExecute(mOverlay) ?? false))
-                OverlayClicked.Execute(mOverlay);
-        }
-
-        public void OnPolylineClick(Polyline polyline)
-        {
-            if (polyline.Tag is BindingMapOverlay mOverlay
-                && (OverlayClicked?.CanExecute(mOverlay) ?? false))
-                OverlayClicked.Execute(mOverlay);
         }
     }
 }

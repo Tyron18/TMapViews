@@ -1,14 +1,21 @@
-﻿using Android.Content;
+﻿using Android.App;
+using Android.Content;
+using Android.Gms.Common;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
+using Java.Lang;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
+using TMapViews.Models.Interfaces;
+using TMapViews.Models.Models;
 
 namespace TMapViews.Droid.Views
 {
@@ -41,7 +48,7 @@ namespace TMapViews.Droid.Views
                 base.OnResume();
         }
 
-        public void GetMapAsync(IBindingMapAdapter adapter, Bundle savedInstanceState = null)
+        public void GetMapAsync(IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
         {
             Adapter = adapter;
             OnCreate(savedInstanceState);
@@ -49,8 +56,24 @@ namespace TMapViews.Droid.Views
             OnResume();
         }
 
-        public GoogleMap GoogleMap { get; private set; }
+        /// <summary>
+        /// Attempts to initialize maps.
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns>Returns a result code from Android.Gms.Common.ResultCode where a 0 is a success.</returns>
+        public int Initialize(Activity context, IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
+        {
+            MapsInitializer.Initialize(context);
+            var resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(context);
 
+            if (resultCode == ConnectionResult.Success)
+            {
+                GetMapAsync(adapter, savedInstanceState);
+            }
+            return resultCode;
+        }
+
+        public GoogleMap GoogleMap { get; private set; }
         public IBindingMapAdapter Adapter { get; set; }
 
         private int _mapType = 1;
@@ -157,7 +180,7 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        private bool _annotationsVisible;
+        private bool _annotationsVisible = true;
 
         public bool AnnotationsVisible
         {
@@ -183,13 +206,13 @@ namespace TMapViews.Droid.Views
 
         public float Zoom { get; set; } = 17f;
 
-        private void CenterOn(Binding2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.LatLng, zoom ?? Zoom));
+        private void CenterOn(Binding2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.ToLatLng(), zoom ?? Zoom));
 
         public bool IsReady { get; set; }
 
-        private ObservableCollection<IBindingMapAnnotation> _annotationSource;
+        private IEnumerable<IBindingMapAnnotation> _annotationSource;
 
-        public ObservableCollection<IBindingMapAnnotation> AnnotationSource
+        public IEnumerable<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
             set
@@ -208,27 +231,59 @@ namespace TMapViews.Droid.Views
             {
                 foreach (var annotation in AnnotationSource)
                 {
-                    if (annotation is BindingMapMarker mMarker)
+                    if (annotation is IBindingMapOverlay mOverlay)
                     {
-                        var marker = GoogleMap.AddMarker(Adapter.GetMarkerOptionsForPin(mMarker));
-                        marker.Tag = mMarker;
-                    }
-                    else if (annotation is BindingMapOverlay mOverlay)
-                    {
-                        var overlay = Adapter.AddBindingMapOverlay(GoogleMap, annotation);
+                        var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
+                        var overlay = AddOverlay(overlayOptions);
                         if (overlay is Circle circle)
-                            circle.Tag = mOverlay;
+                            circle.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
                         else if (overlay is Polygon polygon)
-                            polygon.Tag = mOverlay;
+                            polygon.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
                         else if (overlay is Polyline polyLine)
-                            polyLine.Tag = mOverlay;
+                            polyLine.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
                         else if (overlay is GroundOverlay groundOverlay)
-                            groundOverlay.Tag = mOverlay;
+                            groundOverlay.Tag  = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
                         else
                             throw new OverlayAdapterException(overlay);
                     }
+                    else if (annotation is IBindingMapAnnotation mMarker)
+                    {
+                        var marker = GoogleMap.AddMarker(Adapter.GetMarkerOptionsForPin(annotation));
+                        marker.Tag = new AnnotationTag
+                        {
+                            Annotation = annotation
+                        };
+                    }
+
                 }
             }
+        }
+
+        private IJavaObject AddOverlay(IJavaObject overlayOptions)
+        {
+            if (overlayOptions is CircleOptions circle)
+                return GoogleMap.AddCircle(circle);
+            if (overlayOptions is PolygonOptions poly)
+                return GoogleMap.AddPolygon(poly);
+            if (overlayOptions is PolylineOptions line)
+                return GoogleMap.AddPolyline(line);
+            if (overlayOptions is GroundOverlayOptions gOverlay)
+                return GoogleMap.AddGroundOverlay(gOverlay);
+            if (overlayOptions is TileOverlayOptions tOverlay)
+                return GoogleMap.AddTileOverlay(tOverlay);
+            throw new OverlayAdapterException(overlayOptions);
         }
 
         public void OnMapReady(GoogleMap googleMap)
@@ -237,6 +292,7 @@ namespace TMapViews.Droid.Views
             UpdateUiSettings();
             IsReady = true;
             GoogleMap.MyLocationChange += OnLocationChanged;
+            OnResume();
             if (CenterMapLocation != null)
                 CenterOn(CenterMapLocation);
             SetListeners();

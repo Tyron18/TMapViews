@@ -1,4 +1,4 @@
-﻿namespace TMapViews.Models
+﻿namespace TMapViews.Models.Interfaces
 {
     public interface IBindingMapAnnotation
     {
