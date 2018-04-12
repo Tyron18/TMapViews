@@ -213,8 +213,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\BaseViewController.cs" />
-    <Compile Include="Views\FirstViewController.cs" />
-    <Compile Include="Views\SecondViewController.cs" />
     <BundleResource Include="Resources\Icon@2x.png" />
     <BundleResource Include="Resources\Icon-60@2x.png" />
     <BundleResource Include="Resources\Icon-72.png" />
@@ -235,6 +233,12 @@
     <BundleResource Include="Resources\Default-Portrait@2x.png" />
     <BundleResource Include="Resources\Default-Landscape@2x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
+    <Compile Include="Views\MultipleMapLocationsView.cs" />
+    <BundleResource Include="Resources\Images\marker_c.png" />
+    <BundleResource Include="Resources\Images\marker_d.png" />
+    <BundleResource Include="Resources\Images\marker_a.png" />
+    <BundleResource Include="Resources\Images\marker_b.png" />
+    <BundleResource Include="Resources\Images\marker_e.png" />
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -289,9 +293,18 @@
   <ItemGroup>
     <Folder Include="Controls\" />
     <Folder Include="Converters\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\TMapViews.iOS\TMapViews.iOS.csproj">
+      <Project>{CC15D61E-979C-4EE3-9577-8968DF030A0E}</Project>
+      <Name>TMapViews.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
+      <Project>{159D0897-7607-4E7D-80D7-D4F6F15FA14D}</Project>
+      <Name>TMapViews.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TMapViews.Example.Core\TMapViews.Example.Core.csproj">
       <Project>{f2a402ab-e203-4dcc-91a3-b3a349425f5a}</Project>
       <Name>TMapViews.Example.Core</Name>
