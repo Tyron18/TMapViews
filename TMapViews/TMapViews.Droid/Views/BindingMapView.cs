@@ -204,9 +204,27 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        public float Zoom { get; set; } = 17f;
+        public float Zoom { get; set; } = 0.2f;
 
-        private void CenterOn(Binding2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.ToLatLng(), zoom ?? Zoom));
+        private void CenterOn(Binding2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.ToLatLng(), GetGoogleMapZoom(zoom ?? Zoom)));
+
+        private float GetGoogleMapZoom(float degrees)
+        {
+            DisplayMetrics metrics = new DisplayMetrics();
+            if (((Activity)Context).WindowManager?.DefaultDisplay != null)
+                ((Activity)Context).WindowManager?.DefaultDisplay.GetMetrics(metrics);
+            else
+                metrics = null;
+
+            double dp = 410;
+            if(metrics != null )
+            {
+                var shortestMeasure = metrics.WidthPixels > metrics.HeightPixels ? metrics.HeightPixels : metrics.WidthPixels;
+                dp = shortestMeasure / metrics.Density;
+            }
+            var x = (float)System.Math.Log((dp * 45)/(degrees*32) , 2);
+            return x;
+        }
 
         public bool IsReady { get; set; }
 
