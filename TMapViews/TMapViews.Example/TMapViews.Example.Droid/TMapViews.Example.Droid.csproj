@@ -182,7 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
-    <Compile Include="Converters\ParseDoubleValueConverter.cs" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -217,6 +216,7 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
     <Folder Include="Resources\anim\" />
   </ItemGroup>
   <ItemGroup>

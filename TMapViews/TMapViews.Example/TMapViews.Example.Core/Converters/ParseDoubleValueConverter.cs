@@ -2,7 +2,7 @@
 using System.Globalization;
 using MvvmCross.Platform.Converters;
 
-namespace TMapViews.Example.Droid.Converters
+namespace TMapViews.Example.Core.Converters
 {
     // For more information on how to use Value Converter see:
     // https://mvvmcross.com/docs/value-converters

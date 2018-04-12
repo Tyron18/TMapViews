@@ -145,7 +145,7 @@ namespace TMapViews.Example.Core.ViewModels
     public class ExampleBindingAnnotation : IBindingMapAnnotation
     {
         Binding2DLocation location;
-        public I2DLocation Location { get => location; set => location = value as Binding2DLocation; }
+        public Binding2DLocation Location { get => location; set => location = value as Binding2DLocation; }
 
 
         public int Id { get; set; }

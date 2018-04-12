@@ -12,15 +12,13 @@ using Android.Runtime;
 using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
-using Java.Lang;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Droid.Views.Attributes;
 using TMapViews.Droid;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Views;
+using TMapViews.Example.Core.Converters;
 using TMapViews.Example.Core.ViewModels;
-using TMapViews.Example.Droid.Converters;
-using TMapViews.Models;
 using TMapViews.Models.Interfaces;
 
 namespace TMapViews.Example.Droid.Views.Fragments
@@ -39,7 +37,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
             _mapView = view.FindViewById<BindingMapView>(Resource.Id.binding_map_view);
-            _mapView.Zoom = 3;
+            _mapView.Zoom = 70;
             _mapAdapter = new MultpileMapMarkersAdapter(this.Activity);
 
             _info = view.FindViewById<LinearLayout>(Resource.Id.layout_info);
