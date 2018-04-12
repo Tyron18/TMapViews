@@ -1,6 +1,7 @@
 ﻿using MapKit;
 using System.Windows.Input;
 using TMapViews.Models.Interfaces;
+using TMapViews.Models.Models;
 
 namespace TMapViews.iOS
 {
@@ -14,12 +15,12 @@ namespace TMapViews.iOS
         /// <summary>
         /// Executes when an annotation is selected. Passes a <paramref name="BindingMkAnnotation"/>.
         /// </summary>
-        public ICommand MarkerSelected { get; set; }
+        public ICommand MarkerClick { get; set; }
 
         /// <summary>
         /// Executes when an annotation is selected. Passes a <paramref name="BindingMKOverlay"/>.
         /// </summary>
-        public ICommand OverlaySelected { get; set; }
+        public ICommand OverlayClicked { get; set; }
 
         /// <summary>
         /// Executes when an annotation is deselected. Passes a <paramref name="BindingMkAnnotation"/>.
@@ -71,17 +72,17 @@ namespace TMapViews.iOS
         {
             if (view.Annotation is BindingMKAnnotation annotation)
             {
-                if (MarkerSelected?.CanExecute(annotation) ?? false)
-                    MarkerSelected.Execute(annotation);
+                if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
+                    MarkerClick.Execute(annotation.Annotation);
             }
             else if (view.Annotation is BindingMKOverlay overlay)
             {
-                if (OverlaySelected?.CanExecute(overlay) ?? false)
-                    OverlaySelected.Execute(overlay);
+                if (OverlayClicked?.CanExecute(overlay) ?? false)
+                    OverlayClicked.Execute(overlay);
             }
             else if (view.Annotation == mapView.UserLocation)
             {
-                var loc = Binding2DLocation.FromCLLocation(view.Annotation.Coordinate);
+                var loc = view.Annotation.Coordinate.ToBinding2DLocation();
                 if (MyLocationClick?.CanExecute(loc) ?? false)
                     MyLocationClick.Execute(loc);
             }

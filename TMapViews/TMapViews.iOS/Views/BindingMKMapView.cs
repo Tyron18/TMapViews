@@ -3,6 +3,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using TMapViews.Models;
+using TMapViews.Models.Interfaces;
+using TMapViews.Models.Models;
 using UIKit;
 
 namespace TMapViews.iOS
@@ -29,9 +31,9 @@ namespace TMapViews.iOS
             }
         }
 
-        private MKCoordinateSpan _zoomLevel;
+        private double _zoomLevel = 0.2;
 
-        public MKCoordinateSpan ZoomLevel
+        public double ZoomLevel
         {
             get => _zoomLevel;
             set
@@ -87,8 +89,8 @@ namespace TMapViews.iOS
             {
                 var region = new MKCoordinateRegion
                 {
-                    Center = CenterMapLocation.ToCLLocation(),
-                    Span = ZoomLevel
+                    Center = CenterMapLocation.ToCLLocationCoordinate2D(),
+                    Span = new MKCoordinateSpan(ZoomLevel, ZoomLevel)
                 };
                 SetRegion(region, true);
             }
@@ -106,24 +108,19 @@ namespace TMapViews.iOS
 
         private void AddBindingAnnotation(IBindingMapAnnotation pin)
         {
-            if (pin is BindingMKAnnotation mkPin)
-                AddAnnotation(mkPin);
-            else if (pin is BindingMKOverlay mkOverlay)
-                AddAnnotation(mkOverlay);
-            else
-                throw new InvalidCastException($"Cannot converter type {pin.GetType()} to MKAnnotation");
+            AddAnnotation(new BindingMKAnnotation(pin));
         }
 
         private void OnMapClicked(UITapGestureRecognizer gesture)
         {
-            var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
+            var loc = ConvertPoint(gesture.LocationInView(this), this).ToBinding2DLocation();
             if (MapClick?.CanExecute(loc) ?? false)
                 MapClick.Execute(loc);
         }
 
         private void OnMapLongClick(UILongPressGestureRecognizer gesture)
         {
-            var loc = Binding2DLocation.FromCLLocation(ConvertPoint(gesture.LocationInView(this), this));
+            var loc = ConvertPoint(gesture.LocationInView(this), this).ToBinding2DLocation();
             if (MapLongClick?.CanExecute(loc) ?? false)
                 MapLongClick.Execute(loc);
         }
