@@ -57,7 +57,7 @@ namespace TMapViews.iOS
         /// Executes when the camera moves. Passes a <paramref name="Binding3DLocation"/>.
         /// </summary>
         public ICommand CameraMoved { get; set; }
-
+        
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
             if (LocationChanged != null)
@@ -73,18 +73,27 @@ namespace TMapViews.iOS
             if (view.Annotation is BindingMKAnnotation annotation)
             {
                 if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
+                {
                     MarkerClick.Execute(annotation.Annotation);
+                    view.Selected = false;
+                }
             }
             else if (view.Annotation is BindingMKOverlay overlay)
             {
                 if (OverlayClicked?.CanExecute(overlay) ?? false)
+                {
                     OverlayClicked.Execute(overlay);
+                    view.Selected = false;
+                }
             }
             else if (view.Annotation == mapView.UserLocation)
             {
                 var loc = view.Annotation.Coordinate.ToBinding2DLocation();
                 if (MyLocationClick?.CanExecute(loc) ?? false)
+                {
                     MyLocationClick.Execute(loc);
+                    view.Selected = false;
+                }
             }
         }
 
