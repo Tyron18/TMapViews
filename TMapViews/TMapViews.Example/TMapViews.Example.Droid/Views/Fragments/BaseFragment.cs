@@ -1,8 +1,7 @@
 using Android.OS;
 using Android.Views;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Droid.Support.V4;
+using MvvmCross.Platforms.Android.Views.Fragments;
+using MvvmCross.ViewModels;
 
 namespace TMapViews.Example.Droid.Views
 {

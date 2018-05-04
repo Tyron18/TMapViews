@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using Cirrious.FluentLayouts.Touch;
 using MapKit;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.iOS;
-using MvvmCross.iOS.Views;
-using TMapViews.Example.Core.Converters;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
 using TMapViews.Example.Core.ViewModels;
 using TMapViews.iOS;
-using TMapViews.Models.Interfaces;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views
 {
+    [MvxRootPresentation(WrapInNavigationController =true)]
     public class MultipleMapLocationsView : MvxViewController<MultipleMapLocationsViewModel>
     {
         ExampleBindingMapDelegate _mapDelegate;

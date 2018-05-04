@@ -1,5 +1,7 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.IoC;
+﻿using MvvmCross.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Text;
 using TMapViews.Example.Core.ViewModels;
 
 namespace TMapViews.Example.Core
@@ -8,12 +10,7 @@ namespace TMapViews.Example.Core
     {
         public override void Initialize()
         {
-            CreatableTypes()
-                .EndingWith("Service")
-                .AsInterfaces()
-                .RegisterAsLazySingleton();
-
-            RegisterNavigationServiceAppStart<MultipleMapLocationsViewModel>();
+            RegisterAppStart<MultipleMapLocationsViewModel>();
         }
     }
 }

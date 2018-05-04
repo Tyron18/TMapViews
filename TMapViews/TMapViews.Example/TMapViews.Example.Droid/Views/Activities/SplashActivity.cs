@@ -1,5 +1,6 @@
 using Android.App;
 using Android.Content.PM;
+using Android.OS;
 using MvvmCross.Droid.Support.V7.AppCompat;
 
 // Declarations for Android hardware and software features used by your application go here, for example
@@ -18,5 +19,9 @@ namespace TMapViews.Example.Droid.Views
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreenActivity : MvxSplashScreenAppCompatActivity
     {
+        protected override void RunAppStart(Bundle bundle)
+        {
+            base.RunAppStart(bundle);
+        }
     }
 }

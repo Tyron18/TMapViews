@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Linker

@@ -1,6 +1,6 @@
 using Android.OS;
 using Android.Support.V7.Widget;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace TMapViews.Example.Droid.Views

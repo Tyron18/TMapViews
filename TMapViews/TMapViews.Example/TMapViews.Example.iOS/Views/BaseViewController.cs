@@ -1,6 +1,6 @@
 using Cirrious.FluentLayouts.Touch;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Views;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views
@@ -16,7 +16,6 @@ namespace TMapViews.Example.iOS.Views
 
             View.BackgroundColor = UIColor.White;
 
-            // To customise your navigation bar correctly, refer to the documentation at https://developer.xamarin.com/recipes/ios/content_controls/navigation_controller
             NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
             NavigationController.NavigationBar.Translucent = false;
             NavigationController.NavigationBar.Hidden = false;

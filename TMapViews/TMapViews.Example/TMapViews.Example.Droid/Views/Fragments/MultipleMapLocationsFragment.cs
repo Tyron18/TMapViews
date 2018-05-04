@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using System.Collections.Generic;
 using Android.Content;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Droid.Views.Attributes;
+using MvvmCross.Platforms.Android.Presenters.Attributes;
 using TMapViews.Droid;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Views;
@@ -122,19 +116,19 @@ namespace TMapViews.Example.Droid.Views.Fragments
                 switch (mOverlay.Id)
                 {
                     case 1:
-                        circleOptions.InvokeFillColor(ContextCompat.GetColor(Context, Android.Resource.Color.HoloBlueLight));
+                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
                         break;
                     case 2:
-                        circleOptions.InvokeFillColor(ContextCompat.GetColor(Context, Android.Resource.Color.HoloRedLight));
+                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloRedLight));
                         break;
                     case 3:
-                        circleOptions.InvokeFillColor(ContextCompat.GetColor(Context, Android.Resource.Color.HoloGreenLight));
+                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloGreenLight));
                         break;
                     case 4:
-                        circleOptions.InvokeFillColor(ContextCompat.GetColor(Context, Android.Resource.Color.HoloOrangeLight));
+                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloOrangeLight));
                         break;
                     case 5:
-                        circleOptions.InvokeFillColor(ContextCompat.GetColor(Context, Android.Resource.Color.HoloPurple));
+                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloPurple));
                         break;
                 }
             }

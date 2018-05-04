@@ -1,11 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TMapViews.Models;
+﻿using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 using TMapViews.Models.Interfaces;
 using TMapViews.Models.Models;
 

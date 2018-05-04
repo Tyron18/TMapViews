@@ -2,7 +2,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows.Input;
 using Android.Widget;
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
 
 namespace TMapViews.Example.Droid.Linker
 {

@@ -1,7 +1,5 @@
 ﻿using Android.App;
-using Android.OS;
 using Android.Views;
-using MvvmCross.Droid.Platform;
 using TMapViews.Example.Core.ViewModels;
 
 namespace TMapViews.Example.Droid.Views

@@ -1,29 +1,25 @@
-﻿using System.Net;
-using Foundation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.iOS.Platform;
-using MvvmCross.Platform;
+﻿using Foundation;
+using MvvmCross.Platforms.Ios.Core;
+using System;
+using TMapViews.Example.Core;
 using UIKit;
 
 namespace TMapViews.Example.iOS
 {
     [Register(nameof(AppDelegate))]
-    public class AppDelegate : MvxApplicationDelegate
+    public class AppDelegate : MvxApplicationDelegate<Setup, App>
     {
         UIWindow _window;
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            _window = new UIWindow(UIScreen.MainScreen.Bounds);
+            try
+            {
+                base.FinishedLaunching(application, launchOptions);
+            }catch(Exception e)
+            {
 
-            var setup = new Setup(this, _window);
-            setup.Initialize();
-
-            var startup = Mvx.Resolve<IMvxAppStart>();
-            startup.Start();
-
-            _window.MakeKeyAndVisible();
-
+            }
             return true;
         }
     }

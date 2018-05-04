@@ -26,27 +26,24 @@ namespace TMapViews.Example.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxBind = global::TMapViews.Example.Droid.Resource.Attribute.MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxSource = global::TMapViews.Example.Droid.Resource.Attribute.MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvvmCrossTagId = global::TMapViews.Example.Droid.Resource.Id.MvvmCrossTagId;
-			global::MvvmCross.Binding.Droid.Resource.Id.MvxBindingTagUnique = global::TMapViews.Example.Droid.Resource.Id.MvxBindingTagUnique;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxBind = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxBind;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxBinding_MvxLang = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxLang;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxImageView_MvxSource = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView_MvxSource;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
-			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxBind = global::TMapViews.Example.Droid.Resource.Attribute.MvxBind;
+			global::MvvmCross.Resource.Attribute.MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
+			global::MvvmCross.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
+			global::MvvmCross.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
+			global::MvvmCross.Resource.Id.MvvmCrossTagId = global::TMapViews.Example.Droid.Resource.Id.MvvmCrossTagId;
+			global::MvvmCross.Resource.Id.MvxBindingTagUnique = global::TMapViews.Example.Droid.Resource.Id.MvxBindingTagUnique;
+			global::MvvmCross.Resource.Styleable.MvxBinding = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxBind = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::MvvmCross.Resource.Styleable.MvxBinding_MvxLang = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::MvvmCross.Resource.Styleable.MvxControl = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl;
+			global::MvvmCross.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
+			global::MvvmCross.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::MvvmCross.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Animation.abc_fade_in = global::TMapViews.Example.Droid.Resource.Animation.abc_fade_in;
 			global::MvvmCross.Droid.Support.Design.Resource.Animation.abc_fade_out = global::TMapViews.Example.Droid.Resource.Animation.abc_fade_out;
 			global::MvvmCross.Droid.Support.Design.Resource.Animation.abc_grow_fade_in_from_bottom = global::TMapViews.Example.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -69,7 +66,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
-			global::MvvmCross.Droid.Support.Design.Resource.Attribute.MvxSource = global::TMapViews.Example.Droid.Resource.Attribute.MvxSource;
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.actionBarDivider = global::TMapViews.Example.Droid.Resource.Attribute.actionBarDivider;
 			global::MvvmCross.Droid.Support.Design.Resource.Attribute.actionBarItemBackground = global::TMapViews.Example.Droid.Resource.Attribute.actionBarItemBackground;
@@ -1827,8 +1823,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxImageView = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxImageView_MvxSource = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView_MvxSource;
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Droid.Support.Design.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
@@ -2029,7 +2023,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
-			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.MvxSource = global::TMapViews.Example.Droid.Resource.Attribute.MvxSource;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.actionBarDivider = global::TMapViews.Example.Droid.Resource.Attribute.actionBarDivider;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Attribute.actionBarItemBackground = global::TMapViews.Example.Droid.Resource.Attribute.actionBarItemBackground;
@@ -3788,8 +3781,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxImageView = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxImageView_MvxSource = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView_MvxSource;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Droid.Support.V7.AppCompat.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
@@ -3973,7 +3964,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
-			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxSource = global::TMapViews.Example.Droid.Resource.Attribute.MvxSource;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.MvxTemplateSelector = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplateSelector;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Attribute.fastScrollEnabled = global::TMapViews.Example.Droid.Resource.Attribute.fastScrollEnabled;
@@ -4102,8 +4092,6 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
-			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxImageView = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView;
-			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxImageView_MvxSource = global::TMapViews.Example.Droid.Resource.Styleable.MvxImageView_MvxSource;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
@@ -4217,9 +4205,6 @@ namespace TMapViews.Example.Droid
 			
 			// aapt resource value: 0x7f010179
 			public const int MvxLang = 2130772345;
-			
-			// aapt resource value: 0x7f01017e
-			public const int MvxSource = 2130772350;
 			
 			// aapt resource value: 0x7f01017a
 			public const int MvxTemplate = 2130772346;
@@ -10391,12 +10376,6 @@ namespace TMapViews.Example.Droid
 			
 			// aapt resource value: 0
 			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
-			
-			public static int[] MvxImageView = new int[] {
-					2130772350};
-			
-			// aapt resource value: 0
-			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
 					2130772347,
