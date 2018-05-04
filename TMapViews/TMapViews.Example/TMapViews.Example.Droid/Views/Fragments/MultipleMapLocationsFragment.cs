@@ -1,24 +1,17 @@
 ﻿using System.Collections.Generic;
-using Android.Content;
-using Android.Gms.Maps;
-using Android.Gms.Maps.Model;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
-using TMapViews.Droid;
-using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Views;
 using TMapViews.Example.Core.Converters;
 using TMapViews.Example.Core.ViewModels;
-using TMapViews.Models.Interfaces;
 
 namespace TMapViews.Example.Droid.Views.Fragments
 {
     [MvxFragmentPresentation(typeof(MainContainerViewModel), Resource.Id.content_frame)]
-    public class MultipleMapLocationsFragment : BaseFragment<MultipleMapLocationsViewModel>
+    public partial class MultipleMapLocationsFragment : BaseFragment<MultipleMapLocationsViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_multiple_map_locations;
         private BindingMapView _mapView;
@@ -89,83 +82,6 @@ namespace TMapViews.Example.Droid.Views.Fragments
         {
             base.OnLowMemory();
             _mapView.OnLowMemory();
-        }
-    }
-
-    internal class MultpileMapMarkersAdapter : IBindingMapAdapter
-    {
-        public MultpileMapMarkersAdapter(Context context)
-        {
-            Context = context;
-        }
-
-        public Context Context { get; }
-
-        public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
-        {
-            CircleOptions circleOptions = null;
-
-            if (overlay is ExampleBindingOverlay mOverlay)
-            {
-                circleOptions = new CircleOptions()
-                    .InvokeCenter(mOverlay.Location.ToLatLng())
-                    .InvokeRadius(mOverlay.Radius)
-                    .InvokeStrokeWidth(0)
-                    .Clickable(true);
-
-                switch (mOverlay.Id)
-                {
-                    case 1:
-                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
-                        break;
-                    case 2:
-                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloRedLight));
-                        break;
-                    case 3:
-                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloGreenLight));
-                        break;
-                    case 4:
-                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloOrangeLight));
-                        break;
-                    case 5:
-                        circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloPurple));
-                        break;
-                }
-            }
-
-            return circleOptions;
-        }
-
-        public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
-        {
-            MarkerOptions markerOptions = null;
-
-            if (pin is ExampleBindingAnnotation mPin)
-            {
-                markerOptions = new MarkerOptions();
-                markerOptions.SetPosition(new LatLng(pin.Location.Latitude, pin.Location.Longitude))
-                .SetTitle(mPin.Id.ToString())
-                .Draggable(true);
-                switch (mPin.Id)
-                {
-                    case 1:
-                        markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue));
-                        break;
-                    case 2:
-                        markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueRed));
-                        break;
-                    case 3:
-                        markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueGreen));
-                        break;
-                    case 4:
-                        markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueYellow));
-                        break;
-                    case 5:
-                        markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueViolet));
-                        break;
-                }
-            }
-            return markerOptions;
         }
     }
 }

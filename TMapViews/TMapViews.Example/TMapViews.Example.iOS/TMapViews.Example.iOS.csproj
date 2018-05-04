@@ -238,6 +238,7 @@
     <BundleResource Include="Resources\Images\marker_a.png" />
     <BundleResource Include="Resources\Images\marker_b.png" />
     <BundleResource Include="Resources\Images\marker_e.png" />
+    <Compile Include="Views\MultipleMapLocationsView.MapDelegate.cs" />
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>

@@ -221,6 +221,7 @@
     <Compile Include="Views\Activities\SplashActivity.cs" />
     <Compile Include="Views\Fragments\BaseFragment.cs" />
     <Compile Include="Views\Fragments\MultipleMapLocationsFragment.cs" />
+    <Compile Include="Views\Fragments\MultipleMapLocationsFragment.MapAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_activity.xml">

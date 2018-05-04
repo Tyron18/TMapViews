@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.ViewModels;
+using TMapViews.Example.Core.Models;
 using TMapViews.Models.Interfaces;
 using TMapViews.Models.Models;
 
@@ -134,19 +135,5 @@ namespace TMapViews.Example.Core.ViewModels
             Latitude = obj.Location.Latitude;
             Longitude = obj.Location.Longitude;
         }
-    }
-
-    public class ExampleBindingAnnotation : IBindingMapAnnotation
-    {
-        Binding2DLocation location;
-        public Binding2DLocation Location { get => location; set => location = value as Binding2DLocation; }
-
-
-        public int Id { get; set; }
-    }
-
-    public class ExampleBindingOverlay : ExampleBindingAnnotation, IBindingMapOverlay
-    {
-        public double Radius { get; set; }
     }
 }
