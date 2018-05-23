@@ -81,7 +81,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
         public override void OnLowMemory()
         {
             base.OnLowMemory();
-            _mapView.OnLowMemory();
+            _mapView?.OnLowMemory();
         }
     }
 }

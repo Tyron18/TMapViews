@@ -4109,6 +4109,1668 @@ namespace TMapViews.Example.Droid
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_reverseLayout = global::TMapViews.Example.Droid.Resource.Styleable.RecyclerView_reverseLayout;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_spanCount = global::TMapViews.Example.Droid.Resource.Styleable.RecyclerView_spanCount;
 			global::MvvmCross.Droid.Support.V7.RecyclerView.Resource.Styleable.RecyclerView_stackFromEnd = global::TMapViews.Example.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_fade_in = global::TMapViews.Example.Droid.Resource.Animation.abc_fade_in;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_fade_out = global::TMapViews.Example.Droid.Resource.Animation.abc_fade_out;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::TMapViews.Example.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_popup_enter = global::TMapViews.Example.Droid.Resource.Animation.abc_popup_enter;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_popup_exit = global::TMapViews.Example.Droid.Resource.Animation.abc_popup_exit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::TMapViews.Example.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_slide_in_bottom = global::TMapViews.Example.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_slide_in_top = global::TMapViews.Example.Droid.Resource.Animation.abc_slide_in_top;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_slide_out_bottom = global::TMapViews.Example.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.abc_slide_out_top = global::TMapViews.Example.Droid.Resource.Animation.abc_slide_out_top;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.tooltip_enter = global::TMapViews.Example.Droid.Resource.Animation.tooltip_enter;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Animation.tooltip_exit = global::TMapViews.Example.Droid.Resource.Animation.tooltip_exit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxBind = global::TMapViews.Example.Droid.Resource.Attribute.MvxBind;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxLang = global::TMapViews.Example.Droid.Resource.Attribute.MvxLang;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.MvxTemplate = global::TMapViews.Example.Droid.Resource.Attribute.MvxTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarDivider = global::TMapViews.Example.Droid.Resource.Attribute.actionBarDivider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarItemBackground = global::TMapViews.Example.Droid.Resource.Attribute.actionBarItemBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarPopupTheme = global::TMapViews.Example.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarSize = global::TMapViews.Example.Droid.Resource.Attribute.actionBarSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarSplitStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarTabBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarTabStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionBarTabStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarTabTextStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarTheme = global::TMapViews.Example.Droid.Resource.Attribute.actionBarTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionBarWidgetTheme = global::TMapViews.Example.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionDropDownStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionDropDownStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionLayout = global::TMapViews.Example.Droid.Resource.Attribute.actionLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionMenuTextAppearance = global::TMapViews.Example.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionMenuTextColor = global::TMapViews.Example.Droid.Resource.Attribute.actionMenuTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeBackground = global::TMapViews.Example.Droid.Resource.Attribute.actionModeBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeCloseDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeCopyDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeCutDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeFindDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModePasteDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModePopupWindowStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeShareDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeSplitBackground = global::TMapViews.Example.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionModeStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::TMapViews.Example.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionOverflowButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionOverflowMenuStyle = global::TMapViews.Example.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionProviderClass = global::TMapViews.Example.Droid.Resource.Attribute.actionProviderClass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.actionViewClass = global::TMapViews.Example.Droid.Resource.Attribute.actionViewClass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.activityChooserViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::TMapViews.Example.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alertDialogCenterButtons = global::TMapViews.Example.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alertDialogStyle = global::TMapViews.Example.Droid.Resource.Attribute.alertDialogStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alertDialogTheme = global::TMapViews.Example.Droid.Resource.Attribute.alertDialogTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.allowStacking = global::TMapViews.Example.Droid.Resource.Attribute.allowStacking;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alpha = global::TMapViews.Example.Droid.Resource.Attribute.alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.alphabeticModifiers = global::TMapViews.Example.Droid.Resource.Attribute.alphabeticModifiers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.ambientEnabled = global::TMapViews.Example.Droid.Resource.Attribute.ambientEnabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.arrowHeadLength = global::TMapViews.Example.Droid.Resource.Attribute.arrowHeadLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.arrowShaftLength = global::TMapViews.Example.Droid.Resource.Attribute.arrowShaftLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoSizeMaxTextSize = global::TMapViews.Example.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoSizeMinTextSize = global::TMapViews.Example.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoSizePresetSizes = global::TMapViews.Example.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoSizeStepGranularity = global::TMapViews.Example.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.autoSizeTextType = global::TMapViews.Example.Droid.Resource.Attribute.autoSizeTextType;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.background = global::TMapViews.Example.Droid.Resource.Attribute.background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.backgroundSplit = global::TMapViews.Example.Droid.Resource.Attribute.backgroundSplit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.backgroundStacked = global::TMapViews.Example.Droid.Resource.Attribute.backgroundStacked;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.backgroundTint = global::TMapViews.Example.Droid.Resource.Attribute.backgroundTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.backgroundTintMode = global::TMapViews.Example.Droid.Resource.Attribute.backgroundTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.barLength = global::TMapViews.Example.Droid.Resource.Attribute.barLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.borderlessButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonBarButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonGravity = global::TMapViews.Example.Droid.Resource.Attribute.buttonGravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonPanelSideLayout = global::TMapViews.Example.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonSize = global::TMapViews.Example.Droid.Resource.Attribute.buttonSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonStyle = global::TMapViews.Example.Droid.Resource.Attribute.buttonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonStyleSmall = global::TMapViews.Example.Droid.Resource.Attribute.buttonStyleSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonTint = global::TMapViews.Example.Droid.Resource.Attribute.buttonTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.buttonTintMode = global::TMapViews.Example.Droid.Resource.Attribute.buttonTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraBearing = global::TMapViews.Example.Droid.Resource.Attribute.cameraBearing;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraMaxZoomPreference = global::TMapViews.Example.Droid.Resource.Attribute.cameraMaxZoomPreference;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraMinZoomPreference = global::TMapViews.Example.Droid.Resource.Attribute.cameraMinZoomPreference;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraTargetLat = global::TMapViews.Example.Droid.Resource.Attribute.cameraTargetLat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraTargetLng = global::TMapViews.Example.Droid.Resource.Attribute.cameraTargetLng;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraTilt = global::TMapViews.Example.Droid.Resource.Attribute.cameraTilt;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.cameraZoom = global::TMapViews.Example.Droid.Resource.Attribute.cameraZoom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.checkboxStyle = global::TMapViews.Example.Droid.Resource.Attribute.checkboxStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.checkedTextViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.circleCrop = global::TMapViews.Example.Droid.Resource.Attribute.circleCrop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.closeIcon = global::TMapViews.Example.Droid.Resource.Attribute.closeIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.closeItemLayout = global::TMapViews.Example.Droid.Resource.Attribute.closeItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.collapseContentDescription = global::TMapViews.Example.Droid.Resource.Attribute.collapseContentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.collapseIcon = global::TMapViews.Example.Droid.Resource.Attribute.collapseIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.color = global::TMapViews.Example.Droid.Resource.Attribute.color;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorAccent = global::TMapViews.Example.Droid.Resource.Attribute.colorAccent;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorBackgroundFloating = global::TMapViews.Example.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorButtonNormal = global::TMapViews.Example.Droid.Resource.Attribute.colorButtonNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorControlActivated = global::TMapViews.Example.Droid.Resource.Attribute.colorControlActivated;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorControlHighlight = global::TMapViews.Example.Droid.Resource.Attribute.colorControlHighlight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorControlNormal = global::TMapViews.Example.Droid.Resource.Attribute.colorControlNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorError = global::TMapViews.Example.Droid.Resource.Attribute.colorError;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorPrimary = global::TMapViews.Example.Droid.Resource.Attribute.colorPrimary;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorPrimaryDark = global::TMapViews.Example.Droid.Resource.Attribute.colorPrimaryDark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorScheme = global::TMapViews.Example.Droid.Resource.Attribute.colorScheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.colorSwitchThumbNormal = global::TMapViews.Example.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.commitIcon = global::TMapViews.Example.Droid.Resource.Attribute.commitIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentDescription = global::TMapViews.Example.Droid.Resource.Attribute.contentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetEnd = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetEndWithActions = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetLeft = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetRight = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetStart = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::TMapViews.Example.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.controlBackground = global::TMapViews.Example.Droid.Resource.Attribute.controlBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.customNavigationLayout = global::TMapViews.Example.Droid.Resource.Attribute.customNavigationLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.defaultQueryHint = global::TMapViews.Example.Droid.Resource.Attribute.defaultQueryHint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dialogPreferredPadding = global::TMapViews.Example.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dialogTheme = global::TMapViews.Example.Droid.Resource.Attribute.dialogTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.displayOptions = global::TMapViews.Example.Droid.Resource.Attribute.displayOptions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.divider = global::TMapViews.Example.Droid.Resource.Attribute.divider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dividerHorizontal = global::TMapViews.Example.Droid.Resource.Attribute.dividerHorizontal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dividerPadding = global::TMapViews.Example.Droid.Resource.Attribute.dividerPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dividerVertical = global::TMapViews.Example.Droid.Resource.Attribute.dividerVertical;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.drawableSize = global::TMapViews.Example.Droid.Resource.Attribute.drawableSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.drawerArrowStyle = global::TMapViews.Example.Droid.Resource.Attribute.drawerArrowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dropDownListViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::TMapViews.Example.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.editTextBackground = global::TMapViews.Example.Droid.Resource.Attribute.editTextBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.editTextColor = global::TMapViews.Example.Droid.Resource.Attribute.editTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.editTextStyle = global::TMapViews.Example.Droid.Resource.Attribute.editTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.elevation = global::TMapViews.Example.Droid.Resource.Attribute.elevation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::TMapViews.Example.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.font = global::TMapViews.Example.Droid.Resource.Attribute.font;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontFamily = global::TMapViews.Example.Droid.Resource.Attribute.fontFamily;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderAuthority = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderAuthority;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderCerts = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderCerts;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderFetchStrategy = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderFetchTimeout = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderPackage = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderPackage;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontProviderQuery = global::TMapViews.Example.Droid.Resource.Attribute.fontProviderQuery;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontStyle = global::TMapViews.Example.Droid.Resource.Attribute.fontStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.fontWeight = global::TMapViews.Example.Droid.Resource.Attribute.fontWeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.gapBetweenBars = global::TMapViews.Example.Droid.Resource.Attribute.gapBetweenBars;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.goIcon = global::TMapViews.Example.Droid.Resource.Attribute.goIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.height = global::TMapViews.Example.Droid.Resource.Attribute.height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.hideOnContentScroll = global::TMapViews.Example.Droid.Resource.Attribute.hideOnContentScroll;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.homeAsUpIndicator = global::TMapViews.Example.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.homeLayout = global::TMapViews.Example.Droid.Resource.Attribute.homeLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.icon = global::TMapViews.Example.Droid.Resource.Attribute.icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.iconTint = global::TMapViews.Example.Droid.Resource.Attribute.iconTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.iconTintMode = global::TMapViews.Example.Droid.Resource.Attribute.iconTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.iconifiedByDefault = global::TMapViews.Example.Droid.Resource.Attribute.iconifiedByDefault;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.imageAspectRatio = global::TMapViews.Example.Droid.Resource.Attribute.imageAspectRatio;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.imageAspectRatioAdjust = global::TMapViews.Example.Droid.Resource.Attribute.imageAspectRatioAdjust;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.imageButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.imageButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.indeterminateProgressStyle = global::TMapViews.Example.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.initialActivityCount = global::TMapViews.Example.Droid.Resource.Attribute.initialActivityCount;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.isLightTheme = global::TMapViews.Example.Droid.Resource.Attribute.isLightTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.itemPadding = global::TMapViews.Example.Droid.Resource.Attribute.itemPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.latLngBoundsNorthEastLatitude = global::TMapViews.Example.Droid.Resource.Attribute.latLngBoundsNorthEastLatitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.latLngBoundsNorthEastLongitude = global::TMapViews.Example.Droid.Resource.Attribute.latLngBoundsNorthEastLongitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.latLngBoundsSouthWestLatitude = global::TMapViews.Example.Droid.Resource.Attribute.latLngBoundsSouthWestLatitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.latLngBoundsSouthWestLongitude = global::TMapViews.Example.Droid.Resource.Attribute.latLngBoundsSouthWestLongitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.layout = global::TMapViews.Example.Droid.Resource.Attribute.layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::TMapViews.Example.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listDividerAlertDialog = global::TMapViews.Example.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listItemLayout = global::TMapViews.Example.Droid.Resource.Attribute.listItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listLayout = global::TMapViews.Example.Droid.Resource.Attribute.listLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listMenuViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.listMenuViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPopupWindowStyle = global::TMapViews.Example.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPreferredItemHeight = global::TMapViews.Example.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::TMapViews.Example.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::TMapViews.Example.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::TMapViews.Example.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::TMapViews.Example.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.liteMode = global::TMapViews.Example.Droid.Resource.Attribute.liteMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.logo = global::TMapViews.Example.Droid.Resource.Attribute.logo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.logoDescription = global::TMapViews.Example.Droid.Resource.Attribute.logoDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.mapType = global::TMapViews.Example.Droid.Resource.Attribute.mapType;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.maxButtonHeight = global::TMapViews.Example.Droid.Resource.Attribute.maxButtonHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.measureWithLargestChild = global::TMapViews.Example.Droid.Resource.Attribute.measureWithLargestChild;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.multiChoiceItemLayout = global::TMapViews.Example.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.navigationContentDescription = global::TMapViews.Example.Droid.Resource.Attribute.navigationContentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.navigationIcon = global::TMapViews.Example.Droid.Resource.Attribute.navigationIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.navigationMode = global::TMapViews.Example.Droid.Resource.Attribute.navigationMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.numericModifiers = global::TMapViews.Example.Droid.Resource.Attribute.numericModifiers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.overlapAnchor = global::TMapViews.Example.Droid.Resource.Attribute.overlapAnchor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.paddingBottomNoButtons = global::TMapViews.Example.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.paddingEnd = global::TMapViews.Example.Droid.Resource.Attribute.paddingEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.paddingStart = global::TMapViews.Example.Droid.Resource.Attribute.paddingStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.paddingTopNoTitle = global::TMapViews.Example.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.panelBackground = global::TMapViews.Example.Droid.Resource.Attribute.panelBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.panelMenuListTheme = global::TMapViews.Example.Droid.Resource.Attribute.panelMenuListTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.panelMenuListWidth = global::TMapViews.Example.Droid.Resource.Attribute.panelMenuListWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.popupMenuStyle = global::TMapViews.Example.Droid.Resource.Attribute.popupMenuStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.popupTheme = global::TMapViews.Example.Droid.Resource.Attribute.popupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.popupWindowStyle = global::TMapViews.Example.Droid.Resource.Attribute.popupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.preserveIconSpacing = global::TMapViews.Example.Droid.Resource.Attribute.preserveIconSpacing;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.progressBarPadding = global::TMapViews.Example.Droid.Resource.Attribute.progressBarPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.progressBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.progressBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.queryBackground = global::TMapViews.Example.Droid.Resource.Attribute.queryBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.queryHint = global::TMapViews.Example.Droid.Resource.Attribute.queryHint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.radioButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.radioButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.ratingBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.ratingBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.ratingBarStyleIndicator = global::TMapViews.Example.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.ratingBarStyleSmall = global::TMapViews.Example.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.scopeUris = global::TMapViews.Example.Droid.Resource.Attribute.scopeUris;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.searchHintIcon = global::TMapViews.Example.Droid.Resource.Attribute.searchHintIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.searchIcon = global::TMapViews.Example.Droid.Resource.Attribute.searchIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.searchViewStyle = global::TMapViews.Example.Droid.Resource.Attribute.searchViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.seekBarStyle = global::TMapViews.Example.Droid.Resource.Attribute.seekBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.selectableItemBackground = global::TMapViews.Example.Droid.Resource.Attribute.selectableItemBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::TMapViews.Example.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.showAsAction = global::TMapViews.Example.Droid.Resource.Attribute.showAsAction;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.showDividers = global::TMapViews.Example.Droid.Resource.Attribute.showDividers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.showText = global::TMapViews.Example.Droid.Resource.Attribute.showText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.showTitle = global::TMapViews.Example.Droid.Resource.Attribute.showTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.singleChoiceItemLayout = global::TMapViews.Example.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.spinBars = global::TMapViews.Example.Droid.Resource.Attribute.spinBars;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::TMapViews.Example.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.spinnerStyle = global::TMapViews.Example.Droid.Resource.Attribute.spinnerStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.splitTrack = global::TMapViews.Example.Droid.Resource.Attribute.splitTrack;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.srcCompat = global::TMapViews.Example.Droid.Resource.Attribute.srcCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.state_above_anchor = global::TMapViews.Example.Droid.Resource.Attribute.state_above_anchor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.subMenuArrow = global::TMapViews.Example.Droid.Resource.Attribute.subMenuArrow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.submitBackground = global::TMapViews.Example.Droid.Resource.Attribute.submitBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.subtitle = global::TMapViews.Example.Droid.Resource.Attribute.subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.subtitleTextAppearance = global::TMapViews.Example.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.subtitleTextColor = global::TMapViews.Example.Droid.Resource.Attribute.subtitleTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.subtitleTextStyle = global::TMapViews.Example.Droid.Resource.Attribute.subtitleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.suggestionRowLayout = global::TMapViews.Example.Droid.Resource.Attribute.suggestionRowLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.switchMinWidth = global::TMapViews.Example.Droid.Resource.Attribute.switchMinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.switchPadding = global::TMapViews.Example.Droid.Resource.Attribute.switchPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.switchStyle = global::TMapViews.Example.Droid.Resource.Attribute.switchStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.switchTextAppearance = global::TMapViews.Example.Droid.Resource.Attribute.switchTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAllCaps = global::TMapViews.Example.Droid.Resource.Attribute.textAllCaps;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceListItem = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceListItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceListItemSmall = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::TMapViews.Example.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::TMapViews.Example.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textColorAlertDialogListItem = global::TMapViews.Example.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.textColorSearchUrl = global::TMapViews.Example.Droid.Resource.Attribute.textColorSearchUrl;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.theme = global::TMapViews.Example.Droid.Resource.Attribute.theme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.thickness = global::TMapViews.Example.Droid.Resource.Attribute.thickness;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.thumbTextPadding = global::TMapViews.Example.Droid.Resource.Attribute.thumbTextPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.thumbTint = global::TMapViews.Example.Droid.Resource.Attribute.thumbTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.thumbTintMode = global::TMapViews.Example.Droid.Resource.Attribute.thumbTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tickMark = global::TMapViews.Example.Droid.Resource.Attribute.tickMark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tickMarkTint = global::TMapViews.Example.Droid.Resource.Attribute.tickMarkTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tickMarkTintMode = global::TMapViews.Example.Droid.Resource.Attribute.tickMarkTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tint = global::TMapViews.Example.Droid.Resource.Attribute.tint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tintMode = global::TMapViews.Example.Droid.Resource.Attribute.tintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.title = global::TMapViews.Example.Droid.Resource.Attribute.title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMargin = global::TMapViews.Example.Droid.Resource.Attribute.titleMargin;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMarginBottom = global::TMapViews.Example.Droid.Resource.Attribute.titleMarginBottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMarginEnd = global::TMapViews.Example.Droid.Resource.Attribute.titleMarginEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMarginStart = global::TMapViews.Example.Droid.Resource.Attribute.titleMarginStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMarginTop = global::TMapViews.Example.Droid.Resource.Attribute.titleMarginTop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleMargins = global::TMapViews.Example.Droid.Resource.Attribute.titleMargins;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleTextAppearance = global::TMapViews.Example.Droid.Resource.Attribute.titleTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleTextColor = global::TMapViews.Example.Droid.Resource.Attribute.titleTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.titleTextStyle = global::TMapViews.Example.Droid.Resource.Attribute.titleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::TMapViews.Example.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.toolbarStyle = global::TMapViews.Example.Droid.Resource.Attribute.toolbarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tooltipForegroundColor = global::TMapViews.Example.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tooltipFrameBackground = global::TMapViews.Example.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.tooltipText = global::TMapViews.Example.Droid.Resource.Attribute.tooltipText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.track = global::TMapViews.Example.Droid.Resource.Attribute.track;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.trackTint = global::TMapViews.Example.Droid.Resource.Attribute.trackTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.trackTintMode = global::TMapViews.Example.Droid.Resource.Attribute.trackTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiCompass = global::TMapViews.Example.Droid.Resource.Attribute.uiCompass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiMapToolbar = global::TMapViews.Example.Droid.Resource.Attribute.uiMapToolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiRotateGestures = global::TMapViews.Example.Droid.Resource.Attribute.uiRotateGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiScrollGestures = global::TMapViews.Example.Droid.Resource.Attribute.uiScrollGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiTiltGestures = global::TMapViews.Example.Droid.Resource.Attribute.uiTiltGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiZoomControls = global::TMapViews.Example.Droid.Resource.Attribute.uiZoomControls;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.uiZoomGestures = global::TMapViews.Example.Droid.Resource.Attribute.uiZoomGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.useViewLifecycle = global::TMapViews.Example.Droid.Resource.Attribute.useViewLifecycle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.voiceIcon = global::TMapViews.Example.Droid.Resource.Attribute.voiceIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowActionBar = global::TMapViews.Example.Droid.Resource.Attribute.windowActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowActionBarOverlay = global::TMapViews.Example.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowActionModeOverlay = global::TMapViews.Example.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowFixedHeightMajor = global::TMapViews.Example.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowFixedHeightMinor = global::TMapViews.Example.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowFixedWidthMajor = global::TMapViews.Example.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowFixedWidthMinor = global::TMapViews.Example.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowMinWidthMajor = global::TMapViews.Example.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowMinWidthMinor = global::TMapViews.Example.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.windowNoTitle = global::TMapViews.Example.Droid.Resource.Attribute.windowNoTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Attribute.zOrderOnTop = global::TMapViews.Example.Droid.Resource.Attribute.zOrderOnTop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::TMapViews.Example.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::TMapViews.Example.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::TMapViews.Example.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::TMapViews.Example.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::TMapViews.Example.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::TMapViews.Example.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::TMapViews.Example.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::TMapViews.Example.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_btn_colored_text_material = global::TMapViews.Example.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_color_highlight_material = global::TMapViews.Example.Droid.Resource.Color.abc_color_highlight_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_hint_foreground_material_dark = global::TMapViews.Example.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_hint_foreground_material_light = global::TMapViews.Example.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_input_method_navigation_guard = global::TMapViews.Example.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::TMapViews.Example.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::TMapViews.Example.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_primary_text_material_dark = global::TMapViews.Example.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_primary_text_material_light = global::TMapViews.Example.Droid.Resource.Color.abc_primary_text_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_search_url_text = global::TMapViews.Example.Droid.Resource.Color.abc_search_url_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_search_url_text_normal = global::TMapViews.Example.Droid.Resource.Color.abc_search_url_text_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_search_url_text_pressed = global::TMapViews.Example.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_search_url_text_selected = global::TMapViews.Example.Droid.Resource.Color.abc_search_url_text_selected;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_secondary_text_material_dark = global::TMapViews.Example.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_secondary_text_material_light = global::TMapViews.Example.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_btn_checkable = global::TMapViews.Example.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_default = global::TMapViews.Example.Droid.Resource.Color.abc_tint_default;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_edittext = global::TMapViews.Example.Droid.Resource.Color.abc_tint_edittext;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_seek_thumb = global::TMapViews.Example.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_spinner = global::TMapViews.Example.Droid.Resource.Color.abc_tint_spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.abc_tint_switch_track = global::TMapViews.Example.Droid.Resource.Color.abc_tint_switch_track;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.accent_material_dark = global::TMapViews.Example.Droid.Resource.Color.accent_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.accent_material_light = global::TMapViews.Example.Droid.Resource.Color.accent_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.background_floating_material_dark = global::TMapViews.Example.Droid.Resource.Color.background_floating_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.background_floating_material_light = global::TMapViews.Example.Droid.Resource.Color.background_floating_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.background_material_dark = global::TMapViews.Example.Droid.Resource.Color.background_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.background_material_light = global::TMapViews.Example.Droid.Resource.Color.background_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_disabled_material_light = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_inverse_material_light = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_material_dark = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.bright_foreground_material_light = global::TMapViews.Example.Droid.Resource.Color.bright_foreground_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.button_material_dark = global::TMapViews.Example.Droid.Resource.Color.button_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.button_material_light = global::TMapViews.Example.Droid.Resource.Color.button_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_dark = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_dark_default = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_dark_focused = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_light = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_light_default = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_light_default;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_light_disabled = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_light_focused = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_text_light_pressed = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.common_google_signin_btn_tint = global::TMapViews.Example.Droid.Resource.Color.common_google_signin_btn_tint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::TMapViews.Example.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.dim_foreground_disabled_material_light = global::TMapViews.Example.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.dim_foreground_material_dark = global::TMapViews.Example.Droid.Resource.Color.dim_foreground_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.dim_foreground_material_light = global::TMapViews.Example.Droid.Resource.Color.dim_foreground_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.error_color_material = global::TMapViews.Example.Droid.Resource.Color.error_color_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.foreground_material_dark = global::TMapViews.Example.Droid.Resource.Color.foreground_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.foreground_material_light = global::TMapViews.Example.Droid.Resource.Color.foreground_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.highlighted_text_material_dark = global::TMapViews.Example.Droid.Resource.Color.highlighted_text_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.highlighted_text_material_light = global::TMapViews.Example.Droid.Resource.Color.highlighted_text_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_blue_grey_800 = global::TMapViews.Example.Droid.Resource.Color.material_blue_grey_800;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_blue_grey_900 = global::TMapViews.Example.Droid.Resource.Color.material_blue_grey_900;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_blue_grey_950 = global::TMapViews.Example.Droid.Resource.Color.material_blue_grey_950;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_deep_teal_200 = global::TMapViews.Example.Droid.Resource.Color.material_deep_teal_200;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_deep_teal_500 = global::TMapViews.Example.Droid.Resource.Color.material_deep_teal_500;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_100 = global::TMapViews.Example.Droid.Resource.Color.material_grey_100;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_300 = global::TMapViews.Example.Droid.Resource.Color.material_grey_300;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_50 = global::TMapViews.Example.Droid.Resource.Color.material_grey_50;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_600 = global::TMapViews.Example.Droid.Resource.Color.material_grey_600;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_800 = global::TMapViews.Example.Droid.Resource.Color.material_grey_800;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_850 = global::TMapViews.Example.Droid.Resource.Color.material_grey_850;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.material_grey_900 = global::TMapViews.Example.Droid.Resource.Color.material_grey_900;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.notification_action_color_filter = global::TMapViews.Example.Droid.Resource.Color.notification_action_color_filter;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.notification_icon_bg_color = global::TMapViews.Example.Droid.Resource.Color.notification_icon_bg_color;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.notification_material_background_media_default_color = global::TMapViews.Example.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_dark_material_dark = global::TMapViews.Example.Droid.Resource.Color.primary_dark_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_dark_material_light = global::TMapViews.Example.Droid.Resource.Color.primary_dark_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_material_dark = global::TMapViews.Example.Droid.Resource.Color.primary_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_material_light = global::TMapViews.Example.Droid.Resource.Color.primary_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_text_default_material_dark = global::TMapViews.Example.Droid.Resource.Color.primary_text_default_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_text_default_material_light = global::TMapViews.Example.Droid.Resource.Color.primary_text_default_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_text_disabled_material_dark = global::TMapViews.Example.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.primary_text_disabled_material_light = global::TMapViews.Example.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.ripple_material_dark = global::TMapViews.Example.Droid.Resource.Color.ripple_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.ripple_material_light = global::TMapViews.Example.Droid.Resource.Color.ripple_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.secondary_text_default_material_dark = global::TMapViews.Example.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.secondary_text_default_material_light = global::TMapViews.Example.Droid.Resource.Color.secondary_text_default_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.secondary_text_disabled_material_dark = global::TMapViews.Example.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.secondary_text_disabled_material_light = global::TMapViews.Example.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_disabled_material_light = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_material_dark = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_material_light = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_normal_material_dark = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.switch_thumb_normal_material_light = global::TMapViews.Example.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.tooltip_background_dark = global::TMapViews.Example.Droid.Resource.Color.tooltip_background_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Color.tooltip_background_light = global::TMapViews.Example.Droid.Resource.Color.tooltip_background_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_button_min_height_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_button_min_width_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::TMapViews.Example.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::TMapViews.Example.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::TMapViews.Example.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_control_corner_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_control_corner_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_control_inset_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_control_inset_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_control_padding_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_control_padding_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_min_width_major = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_padding_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::TMapViews.Example.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::TMapViews.Example.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::TMapViews.Example.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::TMapViews.Example.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::TMapViews.Example.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_floating_window_z = global::TMapViews.Example.Droid.Resource.Dimension.abc_floating_window_z;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_panel_menu_list_width = global::TMapViews.Example.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_progress_bar_height_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_search_view_preferred_height = global::TMapViews.Example.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_search_view_preferred_width = global::TMapViews.Example.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_switch_padding = global::TMapViews.Example.Droid.Resource.Dimension.abc_switch_padding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_body_1_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_body_2_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_button_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_caption_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_display_1_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_display_2_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_display_3_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_display_4_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_headline_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_large_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_medium_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_menu_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_small_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_subhead_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_title_material = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::TMapViews.Example.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::TMapViews.Example.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::TMapViews.Example.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::TMapViews.Example.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.compat_control_corner_material = global::TMapViews.Example.Droid.Resource.Dimension.compat_control_corner_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.disabled_alpha_material_dark = global::TMapViews.Example.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.disabled_alpha_material_light = global::TMapViews.Example.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.highlight_alpha_material_colored = global::TMapViews.Example.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.highlight_alpha_material_dark = global::TMapViews.Example.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.highlight_alpha_material_light = global::TMapViews.Example.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.hint_alpha_material_dark = global::TMapViews.Example.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.hint_alpha_material_light = global::TMapViews.Example.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::TMapViews.Example.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::TMapViews.Example.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_action_icon_size = global::TMapViews.Example.Droid.Resource.Dimension.notification_action_icon_size;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_action_text_size = global::TMapViews.Example.Droid.Resource.Dimension.notification_action_text_size;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_big_circle_margin = global::TMapViews.Example.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_content_margin_start = global::TMapViews.Example.Droid.Resource.Dimension.notification_content_margin_start;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_large_icon_height = global::TMapViews.Example.Droid.Resource.Dimension.notification_large_icon_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_large_icon_width = global::TMapViews.Example.Droid.Resource.Dimension.notification_large_icon_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_main_column_padding_top = global::TMapViews.Example.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_media_narrow_margin = global::TMapViews.Example.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_right_icon_size = global::TMapViews.Example.Droid.Resource.Dimension.notification_right_icon_size;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_right_side_padding_top = global::TMapViews.Example.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_small_icon_background_padding = global::TMapViews.Example.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::TMapViews.Example.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_subtext_size = global::TMapViews.Example.Droid.Resource.Dimension.notification_subtext_size;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_top_pad = global::TMapViews.Example.Droid.Resource.Dimension.notification_top_pad;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.notification_top_pad_large_text = global::TMapViews.Example.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_corner_radius = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_horizontal_padding = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_margin = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_margin;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_vertical_padding = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Dimension.tooltip_y_offset_touch = global::TMapViews.Example.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_borderless_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_check_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_check_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_colored_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_radio_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::TMapViews.Example.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::TMapViews.Example.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_cab_background_top_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_control_background_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_control_background_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_dialog_material_background = global::TMapViews.Example.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_edit_text_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_edit_text_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_ab_back_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_clear_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_search_api_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_item_background_holo_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_item_background_holo_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_focused_holo = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_longpressed_holo = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_list_selector_holo_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::TMapViews.Example.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::TMapViews.Example.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ratingbar_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_ratingbar_small_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::TMapViews.Example.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::TMapViews.Example.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_seekbar_track_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_switch_thumb_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_tab_indicator_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_cursor_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::TMapViews.Example.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::TMapViews.Example.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_textfield_search_material = global::TMapViews.Example.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.abc_vector_test = global::TMapViews.Example.Droid.Resource.Drawable.abc_vector_test;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_full_open_on_phone = global::TMapViews.Example.Droid.Resource.Drawable.common_full_open_on_phone;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_dark = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_light = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_dark = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_disabled = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_light = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::TMapViews.Example.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.googleg_disabled_color_18 = global::TMapViews.Example.Droid.Resource.Drawable.googleg_disabled_color_18;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.googleg_standard_color_18 = global::TMapViews.Example.Droid.Resource.Drawable.googleg_standard_color_18;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_action_background = global::TMapViews.Example.Droid.Resource.Drawable.notification_action_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg_low = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg_low;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg_low_normal = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg_low_pressed = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg_normal = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg_normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_bg_normal_pressed = global::TMapViews.Example.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_icon_background = global::TMapViews.Example.Droid.Resource.Drawable.notification_icon_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_template_icon_bg = global::TMapViews.Example.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_template_icon_low_bg = global::TMapViews.Example.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notification_tile_bg = global::TMapViews.Example.Droid.Resource.Drawable.notification_tile_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::TMapViews.Example.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.tooltip_frame_dark = global::TMapViews.Example.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Drawable.tooltip_frame_light = global::TMapViews.Example.Droid.Resource.Drawable.tooltip_frame_light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.ALT = global::TMapViews.Example.Droid.Resource.Id.ALT;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.CTRL = global::TMapViews.Example.Droid.Resource.Id.CTRL;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.FUNCTION = global::TMapViews.Example.Droid.Resource.Id.FUNCTION;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.META = global::TMapViews.Example.Droid.Resource.Id.META;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.MvvmCrossTagId = global::TMapViews.Example.Droid.Resource.Id.MvvmCrossTagId;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.MvxBindingTagUnique = global::TMapViews.Example.Droid.Resource.Id.MvxBindingTagUnique;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.SHIFT = global::TMapViews.Example.Droid.Resource.Id.SHIFT;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.SYM = global::TMapViews.Example.Droid.Resource.Id.SYM;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action0 = global::TMapViews.Example.Droid.Resource.Id.action0;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar = global::TMapViews.Example.Droid.Resource.Id.action_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_activity_content = global::TMapViews.Example.Droid.Resource.Id.action_bar_activity_content;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_container = global::TMapViews.Example.Droid.Resource.Id.action_bar_container;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_root = global::TMapViews.Example.Droid.Resource.Id.action_bar_root;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_spinner = global::TMapViews.Example.Droid.Resource.Id.action_bar_spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_subtitle = global::TMapViews.Example.Droid.Resource.Id.action_bar_subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_bar_title = global::TMapViews.Example.Droid.Resource.Id.action_bar_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_container = global::TMapViews.Example.Droid.Resource.Id.action_container;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_context_bar = global::TMapViews.Example.Droid.Resource.Id.action_context_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_divider = global::TMapViews.Example.Droid.Resource.Id.action_divider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_image = global::TMapViews.Example.Droid.Resource.Id.action_image;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_menu_divider = global::TMapViews.Example.Droid.Resource.Id.action_menu_divider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_menu_presenter = global::TMapViews.Example.Droid.Resource.Id.action_menu_presenter;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_mode_bar = global::TMapViews.Example.Droid.Resource.Id.action_mode_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_mode_bar_stub = global::TMapViews.Example.Droid.Resource.Id.action_mode_bar_stub;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_mode_close_button = global::TMapViews.Example.Droid.Resource.Id.action_mode_close_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.action_text = global::TMapViews.Example.Droid.Resource.Id.action_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.actions = global::TMapViews.Example.Droid.Resource.Id.actions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.activity_chooser_view_content = global::TMapViews.Example.Droid.Resource.Id.activity_chooser_view_content;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.add = global::TMapViews.Example.Droid.Resource.Id.add;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.adjust_height = global::TMapViews.Example.Droid.Resource.Id.adjust_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.adjust_width = global::TMapViews.Example.Droid.Resource.Id.adjust_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.alertTitle = global::TMapViews.Example.Droid.Resource.Id.alertTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.always = global::TMapViews.Example.Droid.Resource.Id.always;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.async = global::TMapViews.Example.Droid.Resource.Id.async;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.auto = global::TMapViews.Example.Droid.Resource.Id.auto;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.beginning = global::TMapViews.Example.Droid.Resource.Id.beginning;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.blocking = global::TMapViews.Example.Droid.Resource.Id.blocking;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.bottom = global::TMapViews.Example.Droid.Resource.Id.bottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.buttonPanel = global::TMapViews.Example.Droid.Resource.Id.buttonPanel;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.cancel_action = global::TMapViews.Example.Droid.Resource.Id.cancel_action;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.checkbox = global::TMapViews.Example.Droid.Resource.Id.checkbox;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.chronometer = global::TMapViews.Example.Droid.Resource.Id.chronometer;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.collapseActionView = global::TMapViews.Example.Droid.Resource.Id.collapseActionView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.contentPanel = global::TMapViews.Example.Droid.Resource.Id.contentPanel;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.custom = global::TMapViews.Example.Droid.Resource.Id.custom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.customPanel = global::TMapViews.Example.Droid.Resource.Id.customPanel;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.dark = global::TMapViews.Example.Droid.Resource.Id.dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.decor_content_parent = global::TMapViews.Example.Droid.Resource.Id.decor_content_parent;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.default_activity_button = global::TMapViews.Example.Droid.Resource.Id.default_activity_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.disableHome = global::TMapViews.Example.Droid.Resource.Id.disableHome;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.edit_query = global::TMapViews.Example.Droid.Resource.Id.edit_query;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.end = global::TMapViews.Example.Droid.Resource.Id.end;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.end_padder = global::TMapViews.Example.Droid.Resource.Id.end_padder;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.expand_activities_button = global::TMapViews.Example.Droid.Resource.Id.expand_activities_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.expanded_menu = global::TMapViews.Example.Droid.Resource.Id.expanded_menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.forever = global::TMapViews.Example.Droid.Resource.Id.forever;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.home = global::TMapViews.Example.Droid.Resource.Id.home;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.homeAsUp = global::TMapViews.Example.Droid.Resource.Id.homeAsUp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.hybrid = global::TMapViews.Example.Droid.Resource.Id.hybrid;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.icon = global::TMapViews.Example.Droid.Resource.Id.icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.icon_group = global::TMapViews.Example.Droid.Resource.Id.icon_group;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.icon_only = global::TMapViews.Example.Droid.Resource.Id.icon_only;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.ifRoom = global::TMapViews.Example.Droid.Resource.Id.ifRoom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.image = global::TMapViews.Example.Droid.Resource.Id.image;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.info = global::TMapViews.Example.Droid.Resource.Id.info;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.italic = global::TMapViews.Example.Droid.Resource.Id.italic;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.light = global::TMapViews.Example.Droid.Resource.Id.light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.line1 = global::TMapViews.Example.Droid.Resource.Id.line1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.line3 = global::TMapViews.Example.Droid.Resource.Id.line3;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.listMode = global::TMapViews.Example.Droid.Resource.Id.listMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.list_item = global::TMapViews.Example.Droid.Resource.Id.list_item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.media_actions = global::TMapViews.Example.Droid.Resource.Id.media_actions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.message = global::TMapViews.Example.Droid.Resource.Id.message;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.middle = global::TMapViews.Example.Droid.Resource.Id.middle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.multiply = global::TMapViews.Example.Droid.Resource.Id.multiply;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.never = global::TMapViews.Example.Droid.Resource.Id.never;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.none = global::TMapViews.Example.Droid.Resource.Id.none;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.normal = global::TMapViews.Example.Droid.Resource.Id.normal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.notification_background = global::TMapViews.Example.Droid.Resource.Id.notification_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.notification_main_column = global::TMapViews.Example.Droid.Resource.Id.notification_main_column;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.notification_main_column_container = global::TMapViews.Example.Droid.Resource.Id.notification_main_column_container;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.parentPanel = global::TMapViews.Example.Droid.Resource.Id.parentPanel;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.progress_circular = global::TMapViews.Example.Droid.Resource.Id.progress_circular;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.progress_horizontal = global::TMapViews.Example.Droid.Resource.Id.progress_horizontal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.radio = global::TMapViews.Example.Droid.Resource.Id.radio;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.right_icon = global::TMapViews.Example.Droid.Resource.Id.right_icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.right_side = global::TMapViews.Example.Droid.Resource.Id.right_side;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.satellite = global::TMapViews.Example.Droid.Resource.Id.satellite;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.screen = global::TMapViews.Example.Droid.Resource.Id.screen;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.scrollIndicatorDown = global::TMapViews.Example.Droid.Resource.Id.scrollIndicatorDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.scrollIndicatorUp = global::TMapViews.Example.Droid.Resource.Id.scrollIndicatorUp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.scrollView = global::TMapViews.Example.Droid.Resource.Id.scrollView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_badge = global::TMapViews.Example.Droid.Resource.Id.search_badge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_bar = global::TMapViews.Example.Droid.Resource.Id.search_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_button = global::TMapViews.Example.Droid.Resource.Id.search_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_close_btn = global::TMapViews.Example.Droid.Resource.Id.search_close_btn;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_edit_frame = global::TMapViews.Example.Droid.Resource.Id.search_edit_frame;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_go_btn = global::TMapViews.Example.Droid.Resource.Id.search_go_btn;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_mag_icon = global::TMapViews.Example.Droid.Resource.Id.search_mag_icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_plate = global::TMapViews.Example.Droid.Resource.Id.search_plate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_src_text = global::TMapViews.Example.Droid.Resource.Id.search_src_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.search_voice_btn = global::TMapViews.Example.Droid.Resource.Id.search_voice_btn;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.select_dialog_listview = global::TMapViews.Example.Droid.Resource.Id.select_dialog_listview;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.shortcut = global::TMapViews.Example.Droid.Resource.Id.shortcut;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.showCustom = global::TMapViews.Example.Droid.Resource.Id.showCustom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.showHome = global::TMapViews.Example.Droid.Resource.Id.showHome;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.showTitle = global::TMapViews.Example.Droid.Resource.Id.showTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.spacer = global::TMapViews.Example.Droid.Resource.Id.spacer;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.split_action_bar = global::TMapViews.Example.Droid.Resource.Id.split_action_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.src_atop = global::TMapViews.Example.Droid.Resource.Id.src_atop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.src_in = global::TMapViews.Example.Droid.Resource.Id.src_in;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.src_over = global::TMapViews.Example.Droid.Resource.Id.src_over;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.standard = global::TMapViews.Example.Droid.Resource.Id.standard;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.status_bar_latest_event_content = global::TMapViews.Example.Droid.Resource.Id.status_bar_latest_event_content;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.submenuarrow = global::TMapViews.Example.Droid.Resource.Id.submenuarrow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.submit_area = global::TMapViews.Example.Droid.Resource.Id.submit_area;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.tabMode = global::TMapViews.Example.Droid.Resource.Id.tabMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.tag_transition_group = global::TMapViews.Example.Droid.Resource.Id.tag_transition_group;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.terrain = global::TMapViews.Example.Droid.Resource.Id.terrain;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.text = global::TMapViews.Example.Droid.Resource.Id.text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.text2 = global::TMapViews.Example.Droid.Resource.Id.text2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.textSpacerNoButtons = global::TMapViews.Example.Droid.Resource.Id.textSpacerNoButtons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.textSpacerNoTitle = global::TMapViews.Example.Droid.Resource.Id.textSpacerNoTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.time = global::TMapViews.Example.Droid.Resource.Id.time;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.title = global::TMapViews.Example.Droid.Resource.Id.title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.titleDividerNoCustom = global::TMapViews.Example.Droid.Resource.Id.titleDividerNoCustom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.title_template = global::TMapViews.Example.Droid.Resource.Id.title_template;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.top = global::TMapViews.Example.Droid.Resource.Id.top;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.topPanel = global::TMapViews.Example.Droid.Resource.Id.topPanel;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.uniform = global::TMapViews.Example.Droid.Resource.Id.uniform;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.up = global::TMapViews.Example.Droid.Resource.Id.up;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.useLogo = global::TMapViews.Example.Droid.Resource.Id.useLogo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.wide = global::TMapViews.Example.Droid.Resource.Id.wide;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.withText = global::TMapViews.Example.Droid.Resource.Id.withText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Id.wrap_content = global::TMapViews.Example.Droid.Resource.Id.wrap_content;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.abc_config_activityDefaultDur = global::TMapViews.Example.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.abc_config_activityShortDur = global::TMapViews.Example.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.cancel_button_image_alpha = global::TMapViews.Example.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.config_tooltipAnimTime = global::TMapViews.Example.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.google_play_services_version = global::TMapViews.Example.Droid.Resource.Integer.google_play_services_version;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::TMapViews.Example.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_bar_title_item = global::TMapViews.Example.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_bar_up_container = global::TMapViews.Example.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_menu_item_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_menu_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_action_menu_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_mode_bar = global::TMapViews.Example.Droid.Resource.Layout.abc_action_mode_bar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_action_mode_close_item_material = global::TMapViews.Example.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_activity_chooser_view = global::TMapViews.Example.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::TMapViews.Example.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::TMapViews.Example.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_alert_dialog_material = global::TMapViews.Example.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_alert_dialog_title_material = global::TMapViews.Example.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_dialog_title_material = global::TMapViews.Example.Droid.Resource.Layout.abc_dialog_title_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_expanded_menu_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::TMapViews.Example.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_list_menu_item_icon = global::TMapViews.Example.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_list_menu_item_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_list_menu_item_radio = global::TMapViews.Example.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_popup_menu_item_layout = global::TMapViews.Example.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_screen_content_include = global::TMapViews.Example.Droid.Resource.Layout.abc_screen_content_include;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_screen_simple = global::TMapViews.Example.Droid.Resource.Layout.abc_screen_simple;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::TMapViews.Example.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_screen_toolbar = global::TMapViews.Example.Droid.Resource.Layout.abc_screen_toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::TMapViews.Example.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_search_view = global::TMapViews.Example.Droid.Resource.Layout.abc_search_view;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.abc_select_dialog_material = global::TMapViews.Example.Droid.Resource.Layout.abc_select_dialog_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_action = global::TMapViews.Example.Droid.Resource.Layout.notification_action;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_action_tombstone = global::TMapViews.Example.Droid.Resource.Layout.notification_action_tombstone;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_media_action = global::TMapViews.Example.Droid.Resource.Layout.notification_media_action;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_media_cancel_action = global::TMapViews.Example.Droid.Resource.Layout.notification_media_cancel_action;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_big_media = global::TMapViews.Example.Droid.Resource.Layout.notification_template_big_media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_big_media_custom = global::TMapViews.Example.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_big_media_narrow = global::TMapViews.Example.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::TMapViews.Example.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_custom_big = global::TMapViews.Example.Droid.Resource.Layout.notification_template_custom_big;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_icon_group = global::TMapViews.Example.Droid.Resource.Layout.notification_template_icon_group;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_lines_media = global::TMapViews.Example.Droid.Resource.Layout.notification_template_lines_media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_media = global::TMapViews.Example.Droid.Resource.Layout.notification_template_media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_media_custom = global::TMapViews.Example.Droid.Resource.Layout.notification_template_media_custom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_part_chronometer = global::TMapViews.Example.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.notification_template_part_time = global::TMapViews.Example.Droid.Resource.Layout.notification_template_part_time;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.select_dialog_item_material = global::TMapViews.Example.Droid.Resource.Layout.select_dialog_item_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.select_dialog_multichoice_material = global::TMapViews.Example.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.select_dialog_singlechoice_material = global::TMapViews.Example.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::TMapViews.Example.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Layout.tooltip = global::TMapViews.Example.Droid.Resource.Layout.tooltip;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_action_bar_home_description = global::TMapViews.Example.Droid.Resource.String.abc_action_bar_home_description;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_action_bar_up_description = global::TMapViews.Example.Droid.Resource.String.abc_action_bar_up_description;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_action_menu_overflow_description = global::TMapViews.Example.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_action_mode_done = global::TMapViews.Example.Droid.Resource.String.abc_action_mode_done;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_activity_chooser_view_see_all = global::TMapViews.Example.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_activitychooserview_choose_application = global::TMapViews.Example.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_capital_off = global::TMapViews.Example.Droid.Resource.String.abc_capital_off;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_capital_on = global::TMapViews.Example.Droid.Resource.String.abc_capital_on;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_body_1_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_body_1_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_body_2_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_body_2_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_button_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_button_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_caption_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_caption_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_display_1_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_display_1_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_display_2_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_display_2_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_display_3_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_display_3_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_display_4_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_display_4_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_headline_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_headline_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_menu_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_menu_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_subhead_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_subhead_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_font_family_title_material = global::TMapViews.Example.Droid.Resource.String.abc_font_family_title_material;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_search_hint = global::TMapViews.Example.Droid.Resource.String.abc_search_hint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_searchview_description_clear = global::TMapViews.Example.Droid.Resource.String.abc_searchview_description_clear;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_searchview_description_query = global::TMapViews.Example.Droid.Resource.String.abc_searchview_description_query;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_searchview_description_search = global::TMapViews.Example.Droid.Resource.String.abc_searchview_description_search;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_searchview_description_submit = global::TMapViews.Example.Droid.Resource.String.abc_searchview_description_submit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_searchview_description_voice = global::TMapViews.Example.Droid.Resource.String.abc_searchview_description_voice;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_shareactionprovider_share_with = global::TMapViews.Example.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::TMapViews.Example.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.abc_toolbar_collapse_description = global::TMapViews.Example.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.app_name = global::TMapViews.Example.Droid.Resource.String.app_name;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_enable_button = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_enable_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_enable_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_enable_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_enable_title = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_enable_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_install_button = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_install_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_install_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_install_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_install_title = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_install_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_notification_ticker = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_notification_ticker;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_unknown_issue = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_unsupported_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_unsupported_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_update_button = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_update_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_update_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_update_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_update_title = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_update_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_updating_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_updating_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_google_play_services_wear_update_text = global::TMapViews.Example.Droid.Resource.String.common_google_play_services_wear_update_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_open_on_phone = global::TMapViews.Example.Droid.Resource.String.common_open_on_phone;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_signin_button_text = global::TMapViews.Example.Droid.Resource.String.common_signin_button_text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.common_signin_button_text_long = global::TMapViews.Example.Droid.Resource.String.common_signin_button_text_long;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.hello = global::TMapViews.Example.Droid.Resource.String.hello;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.search_menu_title = global::TMapViews.Example.Droid.Resource.String.search_menu_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.String.status_bar_notification_info_overflow = global::TMapViews.Example.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.AlertDialog_AppCompat = global::TMapViews.Example.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Animation_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::TMapViews.Example.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::TMapViews.Example.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::TMapViews.Example.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::TMapViews.Example.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::TMapViews.Example.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::TMapViews.Example.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::TMapViews.Example.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::TMapViews.Example.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::TMapViews.Example.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::TMapViews.Example.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::TMapViews.Example.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::TMapViews.Example.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V11_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V14_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V21_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V25_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::TMapViews.Example.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::TMapViews.Example.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::TMapViews.Example.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::TMapViews.Example.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::TMapViews.Example.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::TMapViews.Example.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::TMapViews.Example.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_EditText = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ListView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_SearchView = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Spinner = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::TMapViews.Example.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::TMapViews.Example.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::TMapViews.Example.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_background = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_displayOptions = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_divider = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_divider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_elevation = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_elevation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_height = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_homeLayout = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_icon = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_itemPadding = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_logo = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_logo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_navigationMode = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_popupTheme = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_subtitle = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_title = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBarLayout = global::TMapViews.Example.Droid.Resource.Styleable.ActionBarLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::TMapViews.Example.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMenuItemView = global::TMapViews.Example.Droid.Resource.Styleable.ActionMenuItemView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::TMapViews.Example.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMenuView = global::TMapViews.Example.Droid.Resource.Styleable.ActionMenuView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_background = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_height = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActivityChooserView = global::TMapViews.Example.Droid.Resource.Styleable.ActivityChooserView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::TMapViews.Example.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::TMapViews.Example.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_android_layout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_listLayout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_showTitle = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::TMapViews.Example.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatImageView = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatImageView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatImageView_android_src = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatImageView_tint = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatSeekBar = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorError = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::TMapViews.Example.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ButtonBarLayout = global::TMapViews.Example.Droid.Resource.Styleable.ButtonBarLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::TMapViews.Example.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ColorStateListItem = global::TMapViews.Example.Droid.Resource.Styleable.ColorStateListItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ColorStateListItem_alpha = global::TMapViews.Example.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::TMapViews.Example.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ColorStateListItem_android_color = global::TMapViews.Example.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.CompoundButton = global::TMapViews.Example.Droid.Resource.Styleable.CompoundButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.CompoundButton_android_button = global::TMapViews.Example.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.CompoundButton_buttonTint = global::TMapViews.Example.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::TMapViews.Example.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_color = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::TMapViews.Example.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::TMapViews.Example.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_android_font = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_font = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::TMapViews.Example.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::TMapViews.Example.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ListPopupWindow = global::TMapViews.Example.Droid.Resource.Styleable.ListPopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::TMapViews.Example.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::TMapViews.Example.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LoadingImageView = global::TMapViews.Example.Droid.Resource.Styleable.LoadingImageView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LoadingImageView_circleCrop = global::TMapViews.Example.Droid.Resource.Styleable.LoadingImageView_circleCrop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio = global::TMapViews.Example.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::TMapViews.Example.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_ambientEnabled = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_ambientEnabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraBearing = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraBearing;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraMaxZoomPreference = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraMaxZoomPreference;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraMinZoomPreference = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraMinZoomPreference;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraTargetLat = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraTargetLat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraTargetLng = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraTargetLng;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraTilt = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraTilt;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_cameraZoom = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_cameraZoom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_latLngBoundsNorthEastLatitude = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_latLngBoundsNorthEastLatitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_latLngBoundsNorthEastLongitude = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_latLngBoundsNorthEastLongitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_latLngBoundsSouthWestLatitude = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_latLngBoundsSouthWestLatitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_latLngBoundsSouthWestLongitude = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_latLngBoundsSouthWestLongitude;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_liteMode = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_liteMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_mapType = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_mapType;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiCompass = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiCompass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiMapToolbar = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiMapToolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiRotateGestures = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiRotateGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiScrollGestures = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiScrollGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiTiltGestures = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiTiltGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiZoomControls = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiZoomControls;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_uiZoomGestures = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_uiZoomGestures;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_useViewLifecycle = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_useViewLifecycle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MapAttrs_zOrderOnTop = global::TMapViews.Example.Droid.Resource.Styleable.MapAttrs_zOrderOnTop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_enabled = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_id = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuGroup_android_visible = global::TMapViews.Example.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_actionLayout = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_actionViewClass = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_checkable = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_checked = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_enabled = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_icon = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_id = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_id;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_onClick = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_title = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_android_visible = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_contentDescription = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_iconTint = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_iconTintMode = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_numericModifiers = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_showAsAction = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuItem_tooltipText = global::TMapViews.Example.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView = global::TMapViews.Example.Droid.Resource.Styleable.MenuView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_headerBackground = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_itemBackground = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MenuView_subMenuArrow = global::TMapViews.Example.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxBinding = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxBinding_MvxBind = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxBinding_MvxLang = global::TMapViews.Example.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxControl = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxControl_MvxTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxExpandableListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxListView = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::TMapViews.Example.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindow = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindow;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindowBackgroundState = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::TMapViews.Example.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.RecycleListView = global::TMapViews.Example.Droid.Resource.Styleable.RecycleListView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::TMapViews.Example.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::TMapViews.Example.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView = global::TMapViews.Example.Droid.Resource.Styleable.SearchView;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_android_focusable = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_android_imeOptions = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_android_inputType = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_android_maxWidth = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_closeIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_commitIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_goIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_goIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_layout = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_layout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_queryBackground = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_queryHint = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_queryHint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_searchHintIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_searchIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_submitBackground = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SearchView_voiceIcon = global::TMapViews.Example.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SignInButton = global::TMapViews.Example.Droid.Resource.Styleable.SignInButton;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SignInButton_buttonSize = global::TMapViews.Example.Droid.Resource.Styleable.SignInButton_buttonSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SignInButton_colorScheme = global::TMapViews.Example.Droid.Resource.Styleable.SignInButton_colorScheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SignInButton_scopeUris = global::TMapViews.Example.Droid.Resource.Styleable.SignInButton_scopeUris;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner = global::TMapViews.Example.Droid.Resource.Styleable.Spinner;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::TMapViews.Example.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner_android_entries = global::TMapViews.Example.Droid.Resource.Styleable.Spinner_android_entries;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner_android_popupBackground = global::TMapViews.Example.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner_android_prompt = global::TMapViews.Example.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Spinner_popupTheme = global::TMapViews.Example.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_showText = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_track = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_track;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_trackTint = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::TMapViews.Example.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_textColor = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_textSize = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_android_typeface = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_fontFamily = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::TMapViews.Example.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_android_gravity = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_android_minHeight = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_buttonGravity = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_collapseIcon = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_logo = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_logo;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_logoDescription = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_navigationIcon = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_popupTheme = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_subtitle = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_title = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_title;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMargin = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleMargins = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.Toolbar_titleTextColor = global::TMapViews.Example.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View = global::TMapViews.Example.Droid.Resource.Styleable.View;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View_android_focusable = global::TMapViews.Example.Droid.Resource.Styleable.View_android_focusable;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View_android_theme = global::TMapViews.Example.Droid.Resource.Styleable.View_android_theme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View_paddingEnd = global::TMapViews.Example.Droid.Resource.Styleable.View_paddingEnd;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View_paddingStart = global::TMapViews.Example.Droid.Resource.Styleable.View_paddingStart;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.View_theme = global::TMapViews.Example.Droid.Resource.Styleable.View_theme;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewBackgroundHelper = global::TMapViews.Example.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::TMapViews.Example.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::TMapViews.Example.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::TMapViews.Example.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewStubCompat = global::TMapViews.Example.Droid.Resource.Styleable.ViewStubCompat;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewStubCompat_android_id = global::TMapViews.Example.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::TMapViews.Example.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::TMapViews.MvxPlugins.Bindings.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::TMapViews.Example.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 		}
 		
 		public partial class Animation
@@ -6638,8 +8300,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0044
 			public const int SYM = 2131492932;
 			
-			// aapt resource value: 0x7f0c00ae
-			public const int action0 = 2131493038;
+			// aapt resource value: 0x7f0c00b1
+			public const int action0 = 2131493041;
 			
 			// aapt resource value: 0x7f0c0088
 			public const int action_bar = 2131493000;
@@ -6662,17 +8324,17 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0066
 			public const int action_bar_title = 2131492966;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int action_container = 2131493035;
+			// aapt resource value: 0x7f0c00ae
+			public const int action_container = 2131493038;
 			
 			// aapt resource value: 0x7f0c0089
 			public const int action_context_bar = 2131493001;
 			
-			// aapt resource value: 0x7f0c00b2
-			public const int action_divider = 2131493042;
+			// aapt resource value: 0x7f0c00b5
+			public const int action_divider = 2131493045;
 			
-			// aapt resource value: 0x7f0c00ac
-			public const int action_image = 2131493036;
+			// aapt resource value: 0x7f0c00af
+			public const int action_image = 2131493039;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int action_menu_divider = 2131492867;
@@ -6689,11 +8351,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0068
 			public const int action_mode_close_button = 2131492968;
 			
-			// aapt resource value: 0x7f0c00ad
-			public const int action_text = 2131493037;
+			// aapt resource value: 0x7f0c00b0
+			public const int action_text = 2131493040;
 			
-			// aapt resource value: 0x7f0c00bb
-			public const int actions = 2131493051;
+			// aapt resource value: 0x7f0c00be
+			public const int actions = 2131493054;
 			
 			// aapt resource value: 0x7f0c0069
 			public const int activity_chooser_view_content = 2131492969;
@@ -6716,8 +8378,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0045
 			public const int always = 2131492933;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int appbar = 2131493054;
+			// aapt resource value: 0x7f0c00c1
+			public const int appbar = 2131493057;
 			
 			// aapt resource value: 0x7f0c0062
 			public const int async = 2131492962;
@@ -6728,8 +8390,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c003c
 			public const int beginning = 2131492924;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int binding_map_view = 2131493029;
+			// aapt resource value: 0x7f0c00a6
+			public const int binding_map_view = 2131493030;
 			
 			// aapt resource value: 0x7f0c0063
 			public const int blocking = 2131492963;
@@ -6740,8 +8402,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c006f
 			public const int buttonPanel = 2131492975;
 			
-			// aapt resource value: 0x7f0c00af
-			public const int cancel_action = 2131493039;
+			// aapt resource value: 0x7f0c00b2
+			public const int cancel_action = 2131493042;
 			
 			// aapt resource value: 0x7f0c0051
 			public const int center = 2131492945;
@@ -6755,8 +8417,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c007f
 			public const int checkbox = 2131492991;
 			
-			// aapt resource value: 0x7f0c00b7
-			public const int chronometer = 2131493047;
+			// aapt resource value: 0x7f0c00ba
+			public const int chronometer = 2131493050;
 			
 			// aapt resource value: 0x7f0c005a
 			public const int clip_horizontal = 2131492954;
@@ -6773,14 +8435,14 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0072
 			public const int contentPanel = 2131492978;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int content_frame = 2131493034;
+			// aapt resource value: 0x7f0c00ab
+			public const int content_frame = 2131493035;
 			
 			// aapt resource value: 0x7f0c009a
 			public const int coordinator = 2131493018;
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int coordinator_layout = 2131493033;
+			// aapt resource value: 0x7f0c00aa
+			public const int coordinator_layout = 2131493034;
 			
 			// aapt resource value: 0x7f0c0079
 			public const int custom = 2131492985;
@@ -6821,8 +8483,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c003d
 			public const int end = 2131492925;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int end_padder = 2131493053;
+			// aapt resource value: 0x7f0c00c0
+			public const int end_padder = 2131493056;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int enterAlways = 2131492940;
@@ -6869,8 +8531,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c006e
 			public const int icon = 2131492974;
 			
-			// aapt resource value: 0x7f0c00bc
-			public const int icon_group = 2131493052;
+			// aapt resource value: 0x7f0c00bf
+			public const int icon_group = 2131493055;
 			
 			// aapt resource value: 0x7f0c0026
 			public const int icon_only = 2131492902;
@@ -6881,8 +8543,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c006b
 			public const int image = 2131492971;
 			
-			// aapt resource value: 0x7f0c00b8
-			public const int info = 2131493048;
+			// aapt resource value: 0x7f0c00bb
+			public const int info = 2131493051;
 			
 			// aapt resource value: 0x7f0c0065
 			public const int italic = 2131492965;
@@ -6893,8 +8555,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0098
 			public const int largeLabel = 2131493016;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int layout_info = 2131493030;
+			// aapt resource value: 0x7f0c00a7
+			public const int layout_info = 2131493031;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int left = 2131492949;
@@ -6914,14 +8576,23 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c006d
 			public const int list_item = 2131492973;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int masked = 2131493059;
+			// aapt resource value: 0x7f0c00ac
+			public const int location_trackig_button = 2131493036;
 			
-			// aapt resource value: 0x7f0c00b1
-			public const int media_actions = 2131493041;
+			// aapt resource value: 0x7f0c00ad
+			public const int map_pins_button = 2131493037;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int message = 2131493057;
+			// aapt resource value: 0x7f0c00a5
+			public const int map_view = 2131493029;
+			
+			// aapt resource value: 0x7f0c00c6
+			public const int masked = 2131493062;
+			
+			// aapt resource value: 0x7f0c00b4
+			public const int media_actions = 2131493044;
+			
+			// aapt resource value: 0x7f0c00c4
+			public const int message = 2131493060;
 			
 			// aapt resource value: 0x7f0c003e
 			public const int middle = 2131492926;
@@ -6944,14 +8615,14 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0021
 			public const int normal = 2131492897;
 			
-			// aapt resource value: 0x7f0c00ba
-			public const int notification_background = 2131493050;
+			// aapt resource value: 0x7f0c00bd
+			public const int notification_background = 2131493053;
 			
-			// aapt resource value: 0x7f0c00b4
-			public const int notification_main_column = 2131493044;
+			// aapt resource value: 0x7f0c00b7
+			public const int notification_main_column = 2131493047;
 			
-			// aapt resource value: 0x7f0c00b3
-			public const int notification_main_column_container = 2131493043;
+			// aapt resource value: 0x7f0c00b6
+			public const int notification_main_column_container = 2131493046;
 			
 			// aapt resource value: 0x7f0c0058
 			public const int parallax = 2131492952;
@@ -6977,11 +8648,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0056
 			public const int right = 2131492950;
 			
-			// aapt resource value: 0x7f0c00b9
-			public const int right_icon = 2131493049;
+			// aapt resource value: 0x7f0c00bc
+			public const int right_icon = 2131493052;
 			
-			// aapt resource value: 0x7f0c00b5
-			public const int right_side = 2131493045;
+			// aapt resource value: 0x7f0c00b8
+			public const int right_side = 2131493048;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int satellite = 2131492898;
@@ -7091,8 +8762,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0057
 			public const int start = 2131492951;
 			
-			// aapt resource value: 0x7f0c00b0
-			public const int status_bar_latest_event_content = 2131493040;
+			// aapt resource value: 0x7f0c00b3
+			public const int status_bar_latest_event_content = 2131493043;
 			
 			// aapt resource value: 0x7f0c0082
 			public const int submenuarrow = 2131492994;
@@ -7130,11 +8801,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0015
 			public const int textinput_error = 2131492885;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int textview_toolbar_title = 2131493056;
+			// aapt resource value: 0x7f0c00c3
+			public const int textview_toolbar_title = 2131493059;
 			
-			// aapt resource value: 0x7f0c00b6
-			public const int time = 2131493046;
+			// aapt resource value: 0x7f0c00b9
+			public const int time = 2131493049;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int title = 2131492892;
@@ -7145,8 +8816,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c007b
 			public const int title_template = 2131492987;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int toolbar = 2131493055;
+			// aapt resource value: 0x7f0c00c2
+			public const int toolbar = 2131493058;
 			
 			// aapt resource value: 0x7f0c004b
 			public const int top = 2131492939;
@@ -7172,11 +8843,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0013
 			public const int transition_transform = 2131492883;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int txt_latitude = 2131493031;
-			
 			// aapt resource value: 0x7f0c00a8
-			public const int txt_longitude = 2131493032;
+			public const int txt_latitude = 2131493032;
+			
+			// aapt resource value: 0x7f0c00a9
+			public const int txt_longitude = 2131493033;
 			
 			// aapt resource value: 0x7f0c003a
 			public const int uniform = 2131492922;
@@ -7190,8 +8861,8 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int visible = 2131493058;
+			// aapt resource value: 0x7f0c00c5
+			public const int visible = 2131493061;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int wide = 2131492904;
@@ -7382,73 +9053,76 @@ namespace TMapViews.Example.Droid
 			public const int design_text_input_password_icon = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int fragment_multiple_map_locations = 2130968616;
+			public const int fragment_location_tracking = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int layout_activity = 2130968617;
+			public const int fragment_multiple_map_locations = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int notification_action = 2130968618;
+			public const int layout_activity = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_action_tombstone = 2130968619;
+			public const int notification_action = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_media_action = 2130968620;
+			public const int notification_action_tombstone = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_media_cancel_action = 2130968621;
+			public const int notification_media_action = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_template_big_media = 2130968622;
+			public const int notification_media_cancel_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_big_media_custom = 2130968623;
+			public const int notification_template_big_media = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_big_media_narrow = 2130968624;
+			public const int notification_template_big_media_custom = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media_narrow_custom = 2130968625;
+			public const int notification_template_big_media_narrow = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_custom_big = 2130968626;
+			public const int notification_template_big_media_narrow_custom = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_icon_group = 2130968627;
+			public const int notification_template_custom_big = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_lines_media = 2130968628;
+			public const int notification_template_icon_group = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_media = 2130968629;
+			public const int notification_template_lines_media = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_media_custom = 2130968630;
+			public const int notification_template_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_part_chronometer = 2130968631;
+			public const int notification_template_media_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_part_time = 2130968632;
+			public const int notification_template_part_chronometer = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_item_material = 2130968633;
+			public const int notification_template_part_time = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_multichoice_material = 2130968634;
+			public const int select_dialog_item_material = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int select_dialog_singlechoice_material = 2130968635;
+			public const int select_dialog_multichoice_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int support_simple_spinner_dropdown_item = 2130968636;
+			public const int select_dialog_singlechoice_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int toolbar = 2130968637;
+			public const int support_simple_spinner_dropdown_item = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int tooltip = 2130968638;
+			public const int toolbar = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int tooltip = 2130968639;
 			
 			static Layout()
 			{
@@ -7566,17 +9240,20 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f090021
 			public const int abc_toolbar_collapse_description = 2131296289;
 			
+			// aapt resource value: 0x7f090039
+			public const int app_name = 2131296313;
+			
 			// aapt resource value: 0x7f09002f
 			public const int appbar_scrolling_view_behavior = 2131296303;
 			
 			// aapt resource value: 0x7f090030
 			public const int bottom_sheet_behavior = 2131296304;
 			
-			// aapt resource value: 0x7f09003b
-			public const int button_back = 2131296315;
+			// aapt resource value: 0x7f09003d
+			public const int button_back = 2131296317;
 			
-			// aapt resource value: 0x7f09003a
-			public const int button_forward = 2131296314;
+			// aapt resource value: 0x7f09003c
+			public const int button_forward = 2131296316;
 			
 			// aapt resource value: 0x7f090031
 			public const int character_counter_pattern = 2131296305;
@@ -7632,8 +9309,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f090010
 			public const int common_signin_button_text_long = 2131296272;
 			
+			// aapt resource value: 0x7f09003a
+			public const int fab_scroll_shrink_grow_autohide_behavior = 2131296314;
+			
 			// aapt resource value: 0x7f090038
-			public const int fab_scroll_shrink_grow_autohide_behavior = 2131296312;
+			public const int hello = 2131296312;
 			
 			// aapt resource value: 0x7f090032
 			public const int password_toggle_content_description = 2131296306;
@@ -7656,11 +9336,11 @@ namespace TMapViews.Example.Droid
 			// aapt resource value: 0x7f090037
 			public const int status_bar_notification_info_overflow = 2131296311;
 			
-			// aapt resource value: 0x7f09003c
-			public const int toolbar_text = 2131296316;
+			// aapt resource value: 0x7f09003e
+			public const int toolbar_text = 2131296318;
 			
-			// aapt resource value: 0x7f090039
-			public const int view_scroll_translation_autohide_behavior = 2131296313;
+			// aapt resource value: 0x7f09003b
+			public const int view_scroll_translation_autohide_behavior = 2131296315;
 			
 			static String()
 			{

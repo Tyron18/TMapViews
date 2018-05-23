@@ -10,7 +10,7 @@ namespace TMapViews.Example.Core
     {
         public override void Initialize()
         {
-            RegisterAppStart<MultipleMapLocationsViewModel>();
+            RegisterAppStart<LocationTrackingViewModel>();
         }
     }
 }
