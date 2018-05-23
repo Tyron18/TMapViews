@@ -23,7 +23,6 @@ namespace TMapViews.Droid
                 location.Latitude,
                 location.Longitude,
                 location.HasAccuracy? (double?)location.Accuracy : null,
-                location.HasVerticalAccuracy ? (double?)location.VerticalAccuracyMeters : null,
-                location.HasSpeed ? (double?)location.Speed : null);
+                speed: location.HasSpeed ? (double?)location.Speed : null);
     }
 }

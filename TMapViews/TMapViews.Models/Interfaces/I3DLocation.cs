@@ -1,10 +1,8 @@
 ﻿namespace TMapViews.Models.Interfaces
 {
-    public interface I3DLocation
+    public interface I3DLocation: I2DLocation
     {
         double? Altitude { get; }
-        double Latitude { get; }
-        double Longitude { get; }
         double? HorizontalAccuracy { get; }
         double? VerticalAccuracy { get; }
         double? Speed { get; }

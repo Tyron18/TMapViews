@@ -60,6 +60,7 @@ namespace TMapViews.Droid.Views
         private void OnLocationChanged(object sender, MyLocationChangeEventArgs e)
         {
             var loc = e.Location.ToBinding3DLocation();
+            UserLocation = loc;
             if (LocationChanged?.CanExecute(loc) ?? false)
                 LocationChanged.Execute(loc);
         }

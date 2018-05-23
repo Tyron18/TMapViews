@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
@@ -192,9 +193,9 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        private Binding2DLocation _centerMapLocation;
+        private I2DLocation _centerMapLocation;
 
-        public Binding2DLocation CenterMapLocation
+        public I2DLocation CenterMapLocation
         {
             get => _centerMapLocation;
             set
@@ -204,9 +205,26 @@ namespace TMapViews.Droid.Views
             }
         }
 
+        private Binding3DLocation _userLocation;
+        public Binding3DLocation UserLocation
+        {
+            get => _userLocation;
+            protected set
+            {
+                _userLocation = value;
+                UserLocationChanged?.Invoke(this, value);
+            }
+        }
+
+        /// <summary>
+        /// WARNING :: Do not use this event handler. Rather use the LocationChanged Command.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public event EventHandler<Binding3DLocation> UserLocationChanged;
+
         public float Zoom { get; set; } = 0.2f;
 
-        private void CenterOn(Binding2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.ToLatLng(), GetGoogleMapZoom(zoom ?? Zoom)));
+        private void CenterOn(I2DLocation centerMapLocation, float? zoom = null) => GoogleMap?.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(centerMapLocation.ToLatLng(), GetGoogleMapZoom(zoom ?? Zoom)));
 
         private float GetGoogleMapZoom(float degrees)
         {

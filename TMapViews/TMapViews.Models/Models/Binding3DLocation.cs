@@ -25,9 +25,9 @@ namespace TMapViews.Models.Models
 
         public double? Altitude { get; private set; }
 
-        public double Latitude { get; private set; }
+        public double Latitude { get; set; }
 
-        public double Longitude { get; private set; }
+        public double Longitude { get; set; }
 
         public double? HorizontalAccuracy { get; private set; }
 
