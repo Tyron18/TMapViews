@@ -60,9 +60,11 @@ namespace TMapViews.iOS
         
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
+            var coordinate = userLocation.ToBinding3DLocation();
+            if (mapView is BindingMKMapView v)
+                v.UserCurrentLocation = coordinate;
             if (LocationChanged != null)
             {
-                var coordinate = userLocation as I3DLocation;
                 if (LocationChanged.CanExecute(coordinate))
                     LocationChanged.Equals(coordinate);
             }

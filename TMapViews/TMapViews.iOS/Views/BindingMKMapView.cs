@@ -1,6 +1,7 @@
 ﻿using MapKit;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Input;
 using TMapViews.Models;
 using TMapViews.Models.Interfaces;
@@ -11,12 +12,15 @@ namespace TMapViews.iOS
 {
     public class BindingMKMapView : MKMapView
     {
-        public BindingMKMapView()
+        public BindingMKMapView(BindingMKMapViewDelegate mapDelegate = null)
         {
             var mapClickRecognizer = new UITapGestureRecognizer(OnMapClicked);
             AddGestureRecognizer(mapClickRecognizer);
             var mapLongClickRecognizer = new UILongPressGestureRecognizer(OnMapLongClick);
             AddGestureRecognizer(mapLongClickRecognizer);
+
+            if (mapDelegate == null)
+                Delegate = new BindingMKMapViewDelegate();
         }
 
         private bool _shouldShowPins = true;
@@ -43,9 +47,9 @@ namespace TMapViews.iOS
             }
         }
 
-        private Binding2DLocation _centerMapLocation;
+        private I2DLocation _centerMapLocation;
 
-        public Binding2DLocation CenterMapLocation
+        public I2DLocation CenterMapLocation
         {
             get => _centerMapLocation;
             set
@@ -54,6 +58,23 @@ namespace TMapViews.iOS
                 CenterMap();
             }
         }
+
+        private I3DLocation _userLocation;
+        public I3DLocation UserCurrentLocation
+        {
+            get => _userLocation;
+            set
+            {
+                _userLocation = value;
+                UserLocationChanged?.Invoke(this, _userLocation);
+            }
+        }
+
+        /// <summary>
+        /// WARNING :: Do not use this event handler. Rather use the LocationChanged Command.
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public event EventHandler<I3DLocation> UserLocationChanged;
 
         private ObservableCollection<IBindingMapAnnotation> _annotationSource;
 
