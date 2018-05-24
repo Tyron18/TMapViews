@@ -20,7 +20,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <MtouchDebug>True</MtouchDebug>
     <MtouchSdkVersion>10.3</MtouchSdkVersion>
     <MtouchProfiling>False</MtouchProfiling>
@@ -35,6 +35,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchFloat32>False</MtouchFloat32>
     <MtouchExtraArgs>-linkskip=TMapViews.Example.Core</MtouchExtraArgs>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -232,6 +233,7 @@
     <BundleResource Include="Resources\Default-Portrait@2x.png" />
     <BundleResource Include="Resources\Default-Landscape@2x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
+    <Compile Include="Views\LocationTrackingView.cs" />
     <Compile Include="Views\MultipleMapLocationsView.cs" />
     <BundleResource Include="Resources\Images\marker_c.png" />
     <BundleResource Include="Resources\Images\marker_d.png" />
@@ -334,6 +336,12 @@
     <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
       <Project>{159D0897-7607-4E7D-80D7-D4F6F15FA14D}</Project>
       <Name>TMapViews.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TMapViews.MvxPlugins.Bindings.iOS\TMapViews.MvxPlugins.Bindings.iOS.csproj">
+      <Project>{acbce9ea-ed33-4c13-a938-fc01d67b219b}</Project>
+      <Name>TMapViews.MvxPlugins.Bindings.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\TMapViews.Example.Core\TMapViews.Example.Core.csproj">
       <Project>{CAAADA23-B087-4028-9D0D-D6E9C7A1E8AD}</Project>

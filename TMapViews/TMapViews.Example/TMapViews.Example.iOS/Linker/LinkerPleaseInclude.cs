@@ -5,6 +5,7 @@ using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.IoC;
+using TMapViews.MvxPlugins.Bindings.iOS;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Linker
@@ -105,6 +106,11 @@ namespace TMapViews.Example.iOS.Linker
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
+
+        public void Include(MvxPlugins.Bindings.iOS.Plugin mapMvxPlugin)
+        {
+            mapMvxPlugin = new MvxPlugins.Bindings.iOS.Plugin();
         }
     }
 }
