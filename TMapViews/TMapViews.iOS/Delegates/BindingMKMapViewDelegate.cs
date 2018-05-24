@@ -66,7 +66,7 @@ namespace TMapViews.iOS
             if (LocationChanged != null)
             {
                 if (LocationChanged.CanExecute(coordinate))
-                    LocationChanged.Equals(coordinate);
+                    LocationChanged.Execute(coordinate);
             }
         }
 

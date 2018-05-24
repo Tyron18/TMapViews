@@ -227,6 +227,7 @@
     <Compile Include="Views\Activities\SplashActivity.cs" />
     <Compile Include="Views\Fragments\BaseFragment.cs" />
     <Compile Include="Views\Fragments\LocationTrackingFragment.cs" />
+    <Compile Include="Views\Fragments\LocationTrackingFragment.MapAdapter.cs" />
     <Compile Include="Views\Fragments\MultipleMapLocationsFragment.cs" />
     <Compile Include="Views\Fragments\MultipleMapLocationsFragment.MapAdapter.cs" />
   </ItemGroup>
@@ -299,6 +300,9 @@
     <AndroidResource Include="Resources\layout\fragment_location_tracking.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sphere.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
-﻿using MvvmCross.IoC;
+﻿using MvvmCross.Commands;
+using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.Permissions;
@@ -7,7 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using TMapViews.Example.Core.Models;
 using TMapViews.Models;
+using TMapViews.Models.Interfaces;
 using TMapViews.Models.Models;
 
 namespace TMapViews.Example.Core.ViewModels
@@ -17,6 +20,9 @@ namespace TMapViews.Example.Core.ViewModels
 
         private Binding3DLocation _userLocation;
         private bool _canTrackLocation;
+        private MvxObservableCollection<IBindingMapAnnotation> _pins;
+        private IMvxCommand<I3DLocation> _userLocationChangedCommand;
+        private int _changeCount;
 
         public Binding3DLocation UserLocation
         {
@@ -28,6 +34,20 @@ namespace TMapViews.Example.Core.ViewModels
         {
             get => _canTrackLocation;
             set => SetProperty(ref _canTrackLocation, value);
+        }
+
+        public MvxObservableCollection<IBindingMapAnnotation> Pins
+        {
+            get => _pins;
+            set => SetProperty(ref _pins, value);
+        }
+
+        public IMvxCommand<I3DLocation> UserLocationChangedCommand
+            => _userLocationChangedCommand ?? (_userLocationChangedCommand = new MvxCommand<I3DLocation>(OnUserLocationChanged));
+
+        public LocationTrackingViewModel()
+        {
+            Pins = new MvxObservableCollection<IBindingMapAnnotation>();
         }
 
         public override void ViewAppearing()
@@ -42,6 +62,20 @@ namespace TMapViews.Example.Core.ViewModels
                 CanTrackLocation = true;
             else
                 CanTrackLocation = (await CrossPermissions.Current.RequestPermissionsAsync(Permission.LocationWhenInUse))[Permission.LocationWhenInUse] == PermissionStatus.Granted;
+        }
+
+        private void OnUserLocationChanged(I2DLocation loc)
+        {
+            if (_changeCount >= 5)
+            {
+                Pins.Add(new ExampleBindingAnnotation { Location = loc, Id = Pins.Count });
+                RaisePropertyChanged(() => Pins);
+                _changeCount = 0;
+            }
+            else
+            {
+                _changeCount++;
+            }
         }
     }
 }

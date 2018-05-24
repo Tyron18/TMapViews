@@ -234,6 +234,7 @@
     <BundleResource Include="Resources\Default-Landscape@2x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
     <Compile Include="Views\LocationTrackingView.cs" />
+    <Compile Include="Views\LocationTrackingView.MapDelegate.cs" />
     <Compile Include="Views\MultipleMapLocationsView.cs" />
     <BundleResource Include="Resources\Images\marker_c.png" />
     <BundleResource Include="Resources\Images\marker_d.png" />
@@ -241,6 +242,7 @@
     <BundleResource Include="Resources\Images\marker_b.png" />
     <BundleResource Include="Resources\Images\marker_e.png" />
     <Compile Include="Views\MultipleMapLocationsView.MapDelegate.cs" />
+    <BundleResource Include="Resources\Images\sphere.png" />
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>

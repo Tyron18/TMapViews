@@ -4,6 +4,6 @@ namespace TMapViews.Models.Interfaces
 {
     public interface IBindingMapAnnotation
     {
-        Binding2DLocation Location { get; set; }
+        I2DLocation Location { get; set; }
     }
 }

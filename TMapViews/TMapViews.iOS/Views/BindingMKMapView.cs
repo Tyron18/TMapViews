@@ -19,8 +19,7 @@ namespace TMapViews.iOS
             var mapLongClickRecognizer = new UILongPressGestureRecognizer(OnMapLongClick);
             AddGestureRecognizer(mapLongClickRecognizer);
 
-            if (mapDelegate == null)
-                Delegate = new BindingMKMapViewDelegate();
+            Delegate = mapDelegate ?? new BindingMKMapViewDelegate();
         }
 
         private bool _shouldShowPins = true;

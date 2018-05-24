@@ -8,7 +8,7 @@ using TMapViews.Example.Core.ViewModels;
 namespace TMapViews.Example.Droid.Views.Fragments
 {
     [MvxFragmentPresentation(typeof(MainContainerViewModel), Resource.Id.content_frame)]
-    public class LocationTrackingFragment : BaseFragment<LocationTrackingViewModel>
+    public partial class LocationTrackingFragment : BaseFragment<LocationTrackingViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_location_tracking;
         private BindingMapView _mapView;
@@ -18,6 +18,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             View view = base.OnCreateView(inflater, container, savedInstanceState);
 
             _mapView = view.FindViewById<BindingMapView>(Resource.Id.map_view);
+            _mapView.Adapter = new LocationTrackingAdapter(Context);
 
             BindViews();
 
@@ -30,6 +31,8 @@ namespace TMapViews.Example.Droid.Views.Fragments
             bindingSet.Bind(_mapView).For(v => v.UserLocation).To(vm => vm.UserLocation);
             bindingSet.Bind(_mapView).For(v => v.MyLocationEnabled).To(vm => vm.CanTrackLocation);
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.UserLocation);
+            bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_mapView).For(v => v.LocationChanged).To(vm => vm.UserLocationChangedCommand);
 
             bindingSet.Apply();
         }

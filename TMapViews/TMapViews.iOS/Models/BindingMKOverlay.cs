@@ -14,6 +14,6 @@ namespace TMapViews.iOS
 
         public override CLLocationCoordinate2D Coordinate => _coordinate;
 
-        public Binding2DLocation Location { get => Coordinate.ToBinding2DLocation(); set => _coordinate = (value as Binding2DLocation).ToCLLocationCoordinate2D(); }
+        public I2DLocation Location { get => Coordinate.ToBinding2DLocation(); set => _coordinate = (value as Binding2DLocation).ToCLLocationCoordinate2D(); }
     }
 }
