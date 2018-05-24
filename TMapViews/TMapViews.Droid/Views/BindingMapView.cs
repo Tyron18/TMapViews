@@ -205,8 +205,8 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        private Binding3DLocation _userLocation;
-        public Binding3DLocation UserLocation
+        private I3DLocation _userLocation;
+        public I3DLocation UserLocation
         {
             get => _userLocation;
             protected set
@@ -220,7 +220,7 @@ namespace TMapViews.Droid.Views
         /// WARNING :: Do not use this event handler. Rather use the LocationChanged Command.
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public event EventHandler<Binding3DLocation> UserLocationChanged;
+        public event EventHandler<I3DLocation> UserLocationChanged;
 
         public float Zoom { get; set; } = 0.2f;
 
