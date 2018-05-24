@@ -47,11 +47,7 @@
   <ItemGroup>
     <Compile Include="BindingMapViewUserLocationChangedTargetBinding.cs" />
     <Compile Include="Plugin.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
@@ -62,12 +58,7 @@
       <Version>60.1142.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TMapViews.Droid\TMapViews.Droid.csproj">
       <Project>{837348FB-870C-47AE-91B0-FCA8AD49872E}</Project>

@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross;
+﻿using MvvmCross;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Plugin;
 using TMapViews.Droid.Views;
@@ -17,7 +16,6 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         private void RegisterFactories(IMvxTargetBindingFactoryRegistry registry)
         {
-
             registry?.RegisterCustomBindingFactory<BindingMapView>(nameof(BindingMapView.UserLocation), target => new BindingMapViewUserLocationChangedTargetBinding(target));
         }
     }
