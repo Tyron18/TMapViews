@@ -57,7 +57,7 @@ _mapView.Adapter = new MyMapAdapter(Context);
 
 The map adapter has 2 methods, `public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)` and `public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)`.
 
-**AddBindingMapOverlay** detrmines the shape and location of a IBindingMapOverlay to be added to the map. It *must* return on of the following or will cause an OverlayAdapterException:
+**AddBindingMapOverlay** detrmines the shape and location of a IBindingMapOverlay to be added to the map. It *must* return one of the following or will cause an OverlayAdapterException:
 ```csharp
 Android.Gms.Maps.Model.Circle
 Android.Gms.Maps.Model.Polygon
