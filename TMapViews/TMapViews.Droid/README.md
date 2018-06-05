@@ -7,44 +7,44 @@ The BindingMapView requires that you regiter for a Google Maps Api Key. Instruct
 ### Adding the map to your layout.
 The map can be added to your view using the following name in xml : `TMapViews.Droid.Views.BindingMapView`
 ```xml
-        <TMapViews.Droid.Views.BindingMapView
-        android:id="@+id/map_view"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent" />
+<TMapViews.Droid.Views.BindingMapView
+android:id="@+id/map_view"
+android:layout_height="match_parent"
+android:layout_width="match_parent" />
 ```
 
 ### Setting up the map view on your view.
 The BindingMapView needs lifecycle events to be triggered by your view like below:
 ```csharp
-        public override void OnResume()
-        {
-            base.OnResume();
-            _mapView?.Initialize(Activity);
-        }
+public override void OnResume()
+{
+	base.OnResume();
+	_mapView?.Initialize(Activity);
+}
 
-        public override void OnPause()
-        {
-            _mapView?.OnPause();
-            base.OnPause();
-        }
+public override void OnPause()
+{
+	_mapView?.OnPause();
+	base.OnPause();
+}
 
-        public override void OnSaveInstanceState(Bundle outState)
-        {
-            base.OnSaveInstanceState(outState);
-            _mapView?.OnSaveInstanceState(outState);
-        }
+public override void OnSaveInstanceState(Bundle outState)
+{
+	base.OnSaveInstanceState(outState);
+	_mapView?.OnSaveInstanceState(outState);
+}
 
-        public override void OnDestroy()
-        {
-            _mapView?.OnDestroy();
-            base.OnDestroy();
-        }
+public override void OnDestroy()
+{
+	_mapView?.OnDestroy();
+	base.OnDestroy();
+}
 
-        public override void OnLowMemory()
-        {
-            base.OnLowMemory();
-            _mapView?.OnLowMemory();
-        }
+public override void OnLowMemory()
+{
+	base.OnLowMemory();
+	_mapView?.OnLowMemory();
+}
 ```
 *Note*: It is recomended to call the maps `Initialize(Activity)` method on resume.
 
@@ -66,43 +66,43 @@ Android.Gms.Maps.Model.GroundOverlay
 ```
 Example:
 ```csharp
-	    public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
-            {
-                CircleOptions circleOptions = null;
+public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
+{
+	CircleOptions circleOptions = null;
 
-                if (overlay is ExampleBindingOverlay mOverlay)
-                {
-                    circleOptions = new CircleOptions()
-                        .InvokeCenter(mOverlay.Location.ToLatLng())
-                        .InvokeRadius(mOverlay.Radius)
-                        .InvokeStrokeWidth(0)
-                        .Clickable(true)
+	if (overlay is ExampleBindingOverlay mOverlay)
+	{
+		circleOptions = new CircleOptions()
+			.InvokeCenter(mOverlay.Location.ToLatLng())
+			.InvokeRadius(mOverlay.Radius)
+			.InvokeStrokeWidth(0)
+			.Clickable(true)
 			.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
-                }
+	}
 
-                return circleOptions;
-            }
+	return circleOptions;
+}
 ```
 
 **GetMarkerOptionsForPin** determines the properties of a marker annotation from your datasource.
 
 Example:
 ```csharp
-	    public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
-            {
-                MarkerOptions markerOptions = null;
+public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
+{
+	MarkerOptions markerOptions = null;
 
-                if (pin is ExampleBindingAnnotation mPin)
-                {
-                    markerOptions = new MarkerOptions();
-                    markerOptions.SetPosition(new LatLng(pin.Location.Latitude, pin.Location.Longitude))
-                    .SetTitle(mPin.Id.ToString())
-                    .Draggable(true)
+	if (pin is ExampleBindingAnnotation mPin)
+	{
+		markerOptions = new MarkerOptions();
+		markerOptions.SetPosition(new LatLng(pin.Location.Latitude, pin.Location.Longitude))
+			.SetTitle(mPin.Id.ToString())
+			.Draggable(true)
 		    .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue));
-                }
+	}
 
-                return markerOptions;
-            }
+	return markerOptions;
+}
 ```
 
 ## Properties
@@ -139,3 +139,11 @@ Example:
 |`MyLocationButtonClick`|`void`             |Fires when the user taps on the native "center on my location" button.                                                  |
 |`MyLocationClick`      |`IBinding3dLocation`   |Fires when the user taps on the native user location marker annotation, returning the user's location                   |
 |`OverlayClick`         |`IBindingMapAnnotation`|Fires when the user taps on an overlay, returning the annotation object from the data source.                           |
+
+## Public Methods
+
+`int Initialize(Activity context, IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)`
+Initializes the map if GooglePlayServices are available. Return result codes from [`Android.Gms.Common.ResultCode`](https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult.html#API_UNAVAILABLE). Returns 0 on success.
+
+`void GetMapsAsync(IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)`
+Initiates the `GoogleMap` creation. This is called by `Initialize` which is the preffered method of refreshing your map.
