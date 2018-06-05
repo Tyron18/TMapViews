@@ -1,4 +1,7 @@
 # TMapViews
+
+[![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE)
+
 **In Progress**
 
 TMapViews aims to create a more convenients implimentation of maps on IOS and Android in Xamarin. *Boilerplate* code has been rolled into a more userfirendly set-up structure, allowing for easier set-up and life-cycle managment of maps.
