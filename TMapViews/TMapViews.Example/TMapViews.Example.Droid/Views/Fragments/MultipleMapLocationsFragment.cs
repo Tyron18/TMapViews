@@ -35,7 +35,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.Center);
             bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
             bindingSet.Bind(_mapView).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
-            bindingSet.Bind(_mapView).For(v => v.OverlayClicked).To(vm => vm.MarkerTappedCommand);
+            bindingSet.Bind(_mapView).For(v => v.OverlayClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapView).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
             bindingSet.Bind(_mapView).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
             bindingSet.Bind(_mapView).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);

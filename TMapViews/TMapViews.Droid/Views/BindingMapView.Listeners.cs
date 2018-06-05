@@ -13,9 +13,6 @@ namespace TMapViews.Droid.Views
 {
     public partial class BindingMapView :
         IOnCameraMoveListener,
-        IOnInfoWindowClickListener,
-        IOnInfoWindowCloseListener,
-        IOnInfoWindowLongClickListener,
         IOnMapClickListener,
         IOnMapLongClickListener,
         IOnMarkerClickListener,
@@ -30,9 +27,6 @@ namespace TMapViews.Droid.Views
         private void SetListeners()
         {
             GoogleMap.SetOnCameraMoveListener(this);
-            GoogleMap.SetOnInfoWindowClickListener(this);
-            GoogleMap.SetOnInfoWindowCloseListener(this);
-            GoogleMap.SetOnInfoWindowLongClickListener(this);
             GoogleMap.SetOnMapClickListener(this);
             GoogleMap.SetOnMapLongClickListener(this);
             GoogleMap.SetOnMarkerClickListener(this);
@@ -81,36 +75,6 @@ namespace TMapViews.Droid.Views
             );
             if (CameraMoved?.CanExecute(loc) ?? false)
                 CameraMoved.Execute(loc);
-        }
-
-        public void OnInfoWindowClick(Marker marker)
-        {
-            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (InfoWindowClick?.CanExecute(anno) ?? false))
-            {
-                InfoWindowClick.Execute(anno);
-            }
-        }
-
-        public void OnInfoWindowClose(Marker marker)
-        {
-            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (InfoWindowClose?.CanExecute(anno) ?? false))
-            {
-                InfoWindowClose.Execute(anno);
-            }
-        }
-
-        public void OnInfoWindowLongClick(Marker marker)
-        {
-            var mAnnotation = (marker.Tag as AnnotationTag).Annotation;
-            if (mAnnotation is IBindingMapAnnotation anno
-                && (InfoWindowLongClick?.CanExecute(anno) ?? false))
-            {
-                InfoWindowLongClick.Execute(anno);
-            }
         }
 
         public void OnMapLongClick(LatLng point)
@@ -180,9 +144,9 @@ namespace TMapViews.Droid.Views
         {
             var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
-                && (OverlayClicked?.CanExecute(anno) ?? false))
+                && (OverlayClick?.CanExecute(anno) ?? false))
             {
-                OverlayClicked.Execute(anno);
+                OverlayClick.Execute(anno);
             }
         }
 
@@ -190,9 +154,9 @@ namespace TMapViews.Droid.Views
         {
             var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
-                && (OverlayClicked?.CanExecute(anno) ?? false))
+                && (OverlayClick?.CanExecute(anno) ?? false))
             {
-                OverlayClicked.Execute(anno);
+                OverlayClick.Execute(anno);
             }
         }
 
@@ -200,9 +164,9 @@ namespace TMapViews.Droid.Views
         {
             var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
-                && (OverlayClicked?.CanExecute(anno) ?? false))
+                && (OverlayClick?.CanExecute(anno) ?? false))
             {
-                OverlayClicked.Execute(anno);
+                OverlayClick.Execute(anno);
             }
         }
 
@@ -210,9 +174,9 @@ namespace TMapViews.Droid.Views
         {
             var mAnnotation = (overlay.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno
-                && (OverlayClicked?.CanExecute(anno) ?? false))
+                && (OverlayClick?.CanExecute(anno) ?? false))
             {
-                OverlayClicked.Execute(anno);
+                OverlayClick.Execute(anno);
             }
         }
     }
