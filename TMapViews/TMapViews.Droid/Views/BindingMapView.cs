@@ -61,7 +61,10 @@ namespace TMapViews.Droid.Views
         /// Attempts to initialize maps.
         /// </summary>
         /// <param name="context"></param>
-        /// <returns>Returns a result code from Android.Gms.Common.ResultCode where a 0 is a success.</returns>
+        /// <returns>
+        /// Returns a result code from Android.Gms.Common.ResultCode where a 0 is
+        /// a success.
+        /// </returns>
         public int Initialize(Activity context, IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
         {
             MapsInitializer.Initialize(context);
@@ -206,6 +209,7 @@ namespace TMapViews.Droid.Views
         }
 
         private I3DLocation _userLocation;
+
         public I3DLocation UserLocation
         {
             get => _userLocation;
@@ -217,7 +221,8 @@ namespace TMapViews.Droid.Views
         }
 
         /// <summary>
-        /// WARNING :: Do not use this event handler. Rather use the LocationChanged Command.
+        /// WARNING :: Do not use this event handler. Rather use the
+        /// LocationChanged Command.
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public event EventHandler<I3DLocation> UserLocationChanged;
@@ -235,16 +240,16 @@ namespace TMapViews.Droid.Views
                 metrics = null;
 
             double dp = 410;
-            if(metrics != null )
+            if (metrics != null)
             {
                 var shortestMeasure = metrics.WidthPixels > metrics.HeightPixels ? metrics.HeightPixels : metrics.WidthPixels;
                 dp = shortestMeasure / metrics.Density;
             }
-            var x = (float)System.Math.Log((dp * 45)/(degrees*32) , 2);
+            var x = (float)System.Math.Log((dp * 45) / (degrees * 32), 2);
             return x;
         }
 
-        public bool IsReady { get; set; }
+        public bool IsReady { get; private set; }
 
         private IEnumerable<IBindingMapAnnotation> _annotationSource;
 
@@ -287,7 +292,7 @@ namespace TMapViews.Droid.Views
                                 Annotation = mOverlay
                             };
                         else if (overlay is GroundOverlay groundOverlay)
-                            groundOverlay.Tag  = new AnnotationTag
+                            groundOverlay.Tag = new AnnotationTag
                             {
                                 Annotation = mOverlay
                             };
@@ -302,7 +307,6 @@ namespace TMapViews.Droid.Views
                             Annotation = annotation
                         };
                     }
-
                 }
             }
         }
