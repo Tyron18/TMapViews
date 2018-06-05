@@ -1,8 +1,9 @@
-#TMapViews.Models
+# TMapViews.Models
 
 The following models are intended to create common return types from all platforms, allowing for easier use of map views with a shared codebase.
 
-##Interfaces
+## Interfaces
+
 |Interface            |Description                                                   |
 |---------------------|--------------------------------------------------------------|
 |I2DLocation          |A basic coordinate with latitude and longitude.               |
@@ -10,7 +11,8 @@ The following models are intended to create common return types from all platfor
 |IBindingMapAnnotation|Describes an annotation used as a data source for map markers.|
 |IBindinMapOverlay    |Extends IBindingMapOverlay to describe map overlays.          |
 
-##Models
+## Models
+
 |Model            |Description                                                       |
 |-----------------|------------------------------------------------------------------|
 |Binding2DLocation|Default implimentation of I2DLocation returned by most tap events.|
