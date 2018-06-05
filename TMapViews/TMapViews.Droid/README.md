@@ -66,7 +66,7 @@ Android.Gms.Maps.Model.GroundOverlay
 ```
 Example:
 ```csharp
-		public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
+	    public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
             {
                 CircleOptions circleOptions = null;
 
@@ -88,7 +88,7 @@ Example:
 
 Example:
 ```csharp
-			public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
+	    public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
             {
                 MarkerOptions markerOptions = null;
 
