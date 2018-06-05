@@ -1,5 +1,6 @@
 # TMapViews
-[license](https://github.com/Tyron18/TMapViews/blob/master/LICENSE)
+
+[![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE)
 
 **In Progress**
 
