@@ -77,7 +77,7 @@ Example:
                         .InvokeRadius(mOverlay.Radius)
                         .InvokeStrokeWidth(0)
                         .Clickable(true)
-						.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
+			.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
                 }
 
                 return circleOptions;
@@ -98,7 +98,7 @@ Example:
                     markerOptions.SetPosition(new LatLng(pin.Location.Latitude, pin.Location.Longitude))
                     .SetTitle(mPin.Id.ToString())
                     .Draggable(true)
-					.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue));
+		    .SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue));
                 }
 
                 return markerOptions;
