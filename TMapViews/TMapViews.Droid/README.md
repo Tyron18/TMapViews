@@ -2,7 +2,7 @@
 The BindingMapView extends the android native MapView, initializing a Google map view, with the aim to reduce the amount of view-side boilerplate code and to wrap events and properties to make them more shared-code friendly.
 
 ## Getting Started
-The BindingMapView requires that you regiter for a Google Maps Api Key. Instructions on how to do this can be found [here](https://developers.google.com/maps/documentation/android-sdk/signup).
+The BindingMapView requires that you register for a Google Maps Api Key. Instructions on how to do this can be found [here](https://developers.google.com/maps/documentation/android-sdk/signup).
 
 ### Adding the map to your layout.
 The map can be added to your view using the following name in xml : `TMapViews.Droid.Views.BindingMapView`
