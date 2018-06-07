@@ -1,7 +1,10 @@
 ﻿using MapKit;
+using ObjCRuntime;
 using System;
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
+using TMapViews.iOS.Models;
+using TMapViews.Models.Interfaces;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views
@@ -10,19 +13,19 @@ namespace TMapViews.Example.iOS.Views
     {
         public class ExampleBindingMapDelegate : BindingMKMapViewDelegate
         {
-            public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+            public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
             {
-                string annotaionIdentifier = "anno";
-                if (annotation is BindingMKAnnotation bAnno && bAnno.Annotation is ExampleBindingAnnotation eAnno)
+                if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
                 {
-                    MKAnnotationView view = mapView.DequeueReusableAnnotation(bAnno.AnnotationIdentifier);
-                    bAnno.SetTitle(eAnno.Id + "");
-                    bAnno.SetSubtitle(eAnno.Id + "");
+                    MKAnnotationView view = mapView.DequeueReusableAnnotation(eAnno.Id + "");
+                    var annotation = new BindingMKAnnotation(bindingMapAnnotation);
+                    annotation.SetTitle(eAnno.Id + "");
+                    annotation.SetSubtitle(eAnno.Id + "");
                     if (view == null)
-                        view = new MKAnnotationView(bAnno, Guid.NewGuid().ToString());
+                        view = new MKAnnotationView(annotation, eAnno.Id + "");
                     else
                     {
-                        view.Annotation = bAnno;
+                        view.Annotation = annotation;
                     }
 
                     view.CanShowCallout = false;
@@ -32,15 +35,19 @@ namespace TMapViews.Example.iOS.Views
                         case 1:
                             view.Image = UIImage.FromBundle("Images/marker_a");
                             break;
+
                         case 2:
                             view.Image = UIImage.FromBundle("Images/marker_b");
                             break;
+
                         case 3:
                             view.Image = UIImage.FromBundle("Images/marker_c");
                             break;
+
                         case 4:
                             view.Image = UIImage.FromBundle("Images/marker_d");
                             break;
+
                         case 5:
                             view.Image = UIImage.FromBundle("Images/marker_e");
                             break;
@@ -50,6 +57,31 @@ namespace TMapViews.Example.iOS.Views
                 }
 
                 return null;        //Lets the map default behavior take over if the annotation isnt a BindingMKAnnotation.
+            }
+
+            public override MKOverlayRenderer OverlayRenderer(MKMapView mapView, IBindingMapOverlay overlay, IntPtr handle)
+            {
+                if (overlay is ExampleBindingOverlay eOverlay)
+                {
+                    var nsOverlay = Runtime.GetNSObject(handle) as IMKOverlay;
+                    var renderer = new MKCircleRenderer(nsOverlay as BindingMKCircle)
+                    {
+                        StrokeColor = UIColor.Blue,
+                        LineWidth = 1f,
+                        FillColor = UIColor.Gray
+                    };
+                    return renderer;
+                }
+                return null;
+            }
+
+            public override IBindingMKMapOverlay GetViewForOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
+            {
+                if (bindingMapOverlay is ExampleBindingOverlay eOverlay)
+                {
+                    return BindingMKCircle.Circle(eOverlay.Location.ToCLLocationCoordinate2D(), eOverlay.Radius);
+                }
+                return base.GetViewForOverlay(mapView, bindingMapOverlay);
             }
         }
     }

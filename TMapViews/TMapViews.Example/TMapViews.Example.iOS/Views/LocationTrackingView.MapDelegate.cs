@@ -7,6 +7,7 @@ using Foundation;
 using MapKit;
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
+using TMapViews.Models.Interfaces;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views
@@ -15,18 +16,19 @@ namespace TMapViews.Example.iOS.Views
     {
         public class LocationTrackingMapDelegate : BindingMKMapViewDelegate
         {
-            public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+            public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
             {
-                if (annotation is BindingMKAnnotation bAnno && bAnno.Annotation is ExampleBindingAnnotation eAnno )
+                if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
                 {
-                    var view = mapView.DequeueReusableAnnotation(bAnno.AnnotationIdentifier);
-                    bAnno.SetTitle(eAnno.Id + "");
-                    bAnno.SetSubtitle(eAnno.Id + "");
+                    var view = mapView.DequeueReusableAnnotation(eAnno.Id + "");
+                    var annotation = new BindingMKAnnotation(bindingMapAnnotation);
+                    annotation.SetTitle(eAnno.Id + "");
+                    annotation.SetSubtitle(eAnno.Id + "");
                     if (view == null)
-                        view = new MKAnnotationView(bAnno, Guid.NewGuid().ToString());
+                        view = new MKAnnotationView(annotation, eAnno.Id + "");
                     else
                     {
-                        view.Annotation = bAnno;
+                        view.Annotation = annotation;
                     }
                     view.Image = UIImage.FromBundle("Images/sphere");
                     return view;
