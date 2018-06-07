@@ -132,7 +132,7 @@ namespace TMapViews.iOS
         {
             if (pin is IBindingMapOverlay overlay)
             {
-                var mapOverlay = Delegate.GetViewForOverlay(this, overlay);
+                var mapOverlay = Delegate.GetViewForBindingOverlay(this, overlay);
                 if (mapOverlay != null)
                 {
                     mapOverlay.Annotation = overlay;

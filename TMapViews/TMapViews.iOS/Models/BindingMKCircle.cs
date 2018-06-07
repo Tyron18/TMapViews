@@ -22,6 +22,7 @@ namespace TMapViews.iOS.Models
         public override double Radius => _radius;
 
         public IBindingMapAnnotation Annotation { get; set; }
+        public MKOverlayRenderer Renderer { get; set; }
 
         private BindingMKCircle(MKCircle circle)
 

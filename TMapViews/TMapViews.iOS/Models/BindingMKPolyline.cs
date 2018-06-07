@@ -20,6 +20,8 @@ namespace TMapViews.iOS.Models
         public override MKMapRect BoundingMapRect => _boundingMapRect;
         public override CLLocationCoordinate2D Coordinate => _coordinate;
 
+        public MKOverlayRenderer Renderer { get; set; }
+
         private BindingMKPolyline(MKPolyline polyline)
         {
             _boundingMapRect = polyline.BoundingMapRect;

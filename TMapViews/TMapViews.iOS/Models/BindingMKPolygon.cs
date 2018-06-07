@@ -22,6 +22,8 @@ namespace TMapViews.iOS.Models
         public override CLLocationCoordinate2D Coordinate => _coordinate;
         public override MKPolygon[] InteriorPolygons => _interiorPolygons;
 
+        public MKOverlayRenderer Renderer { get; set; }
+
         private BindingMKPolygon(MKPolygon polygon)
         {
             _boundingMapRect = polygon.BoundingMapRect;

@@ -149,11 +149,11 @@ namespace TMapViews.iOS
         public sealed override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
         {
             if (annotation is BindingMKAnnotation bAnno)
-                return GetViewForAnnotation(mapView, bAnno.Annotation);
+                return GetViewForBindingAnnotation(mapView, bAnno.Annotation);
             return null;
         }
 
-        public virtual MKAnnotationView GetViewForAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+        public virtual MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
         => null;
 
         public sealed override MKOverlayView GetViewForOverlay(MKMapView mapView, IMKOverlay overlay)
@@ -162,13 +162,10 @@ namespace TMapViews.iOS
         public sealed override MKOverlayRenderer OverlayRenderer(MKMapView mapView, IMKOverlay overlay)
         {
             if (overlay is IBindingMKMapOverlay bOverlay)
-                return OverlayRenderer(mapView, bOverlay.Annotation as IBindingMapOverlay, overlay.Handle);
+                return bOverlay.Renderer;
             return null;
         }
 
-        public virtual MKOverlayRenderer OverlayRenderer(MKMapView mapView, IBindingMapOverlay bindingMapAnnotation, IntPtr handle)
-            => null;
-
-        public virtual IBindingMKMapOverlay GetViewForOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay) => null;
+        public virtual IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay) => null;
     }
 }

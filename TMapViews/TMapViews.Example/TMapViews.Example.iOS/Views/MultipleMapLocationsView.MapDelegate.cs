@@ -13,7 +13,7 @@ namespace TMapViews.Example.iOS.Views
     {
         public class ExampleBindingMapDelegate : BindingMKMapViewDelegate
         {
-            public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+            public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
             {
                 if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
                 {
@@ -59,29 +59,20 @@ namespace TMapViews.Example.iOS.Views
                 return null;        //Lets the map default behavior take over if the annotation isnt a BindingMKAnnotation.
             }
 
-            public override MKOverlayRenderer OverlayRenderer(MKMapView mapView, IBindingMapOverlay overlay, IntPtr handle)
+            public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
             {
-                if (overlay is ExampleBindingOverlay eOverlay)
+                if (bindingMapOverlay is ExampleBindingOverlay eOverlay)
                 {
-                    var nsOverlay = Runtime.GetNSObject(handle) as IMKOverlay;
-                    var renderer = new MKCircleRenderer(nsOverlay as BindingMKCircle)
+                    var result = BindingMKCircle.Circle(eOverlay.Location.ToCLLocationCoordinate2D(), eOverlay.Radius);
+                    result.Renderer = new MKCircleRenderer(result)
                     {
                         StrokeColor = UIColor.Blue,
                         LineWidth = 1f,
                         FillColor = UIColor.Gray
                     };
-                    return renderer;
+                    return result;
                 }
-                return null;
-            }
-
-            public override IBindingMKMapOverlay GetViewForOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
-            {
-                if (bindingMapOverlay is ExampleBindingOverlay eOverlay)
-                {
-                    return BindingMKCircle.Circle(eOverlay.Location.ToCLLocationCoordinate2D(), eOverlay.Radius);
-                }
-                return base.GetViewForOverlay(mapView, bindingMapOverlay);
+                return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
             }
         }
     }
