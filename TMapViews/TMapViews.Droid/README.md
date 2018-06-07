@@ -1,8 +1,8 @@
 # TMapView.Droid
-The BindingMapView extends the android native MapView, initializing a Google map view, with the aim to reduce the amount of view-side boilerplate code and to wrap events and properties to make them more shared-code friendly.
+The `BindingMapView` extends the android native `MapView`, initializing a Google map view, with the aim to reduce the amount of view-side boilerplate code and to wrap events and properties to make them more shared-code friendly.
 
 ## Getting Started
-The BindingMapView requires that you regiter for a Google Maps Api Key. Instructions on how to do this can be found [here](https://developers.google.com/maps/documentation/android-sdk/signup).
+The `BindingMapView` requires that you register for a Google Maps Api Key. Instructions on how to do this can be found [here](https://developers.google.com/maps/documentation/android-sdk/signup).
 
 ### Adding the map to your layout.
 The map can be added to your view using the following name in xml : `TMapViews.Droid.Views.BindingMapView`
@@ -14,7 +14,7 @@ android:layout_width="match_parent" />
 ```
 
 ### Setting up the map view on your view.
-The BindingMapView needs lifecycle events to be triggered by your view like below:
+The `BindingMapView` needs lifecycle events to be triggered by your view like below:
 ```csharp
 public override void OnResume()
 {
@@ -57,7 +57,7 @@ _mapView.Adapter = new MyMapAdapter(Context);
 
 The map adapter has 2 methods, `public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)` and `public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)`.
 
-**AddBindingMapOverlay** detrmines the shape and location of a IBindingMapOverlay to be added to the map. It *must* return one of the following or will cause an OverlayAdapterException:
+`AddBindingMapOverlay` determines the shape and location of an `IBindingMapOverlay` to be added to the map. It *must* return one of the following or will cause an OverlayAdapterException:
 ```csharp
 Android.Gms.Maps.Model.Circle
 Android.Gms.Maps.Model.Polygon
@@ -84,7 +84,7 @@ public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay 
 }
 ```
 
-**GetMarkerOptionsForPin** determines the properties of a marker annotation from your datasource.
+`GetMarkerOptionsForPin` determines the properties of a marker annotation from your datasource.
 
 Example:
 ```csharp
