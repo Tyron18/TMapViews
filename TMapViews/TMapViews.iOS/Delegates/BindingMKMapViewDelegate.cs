@@ -1,5 +1,7 @@
 ﻿using MapKit;
+using System;
 using System.Windows.Input;
+using TMapViews.iOS.Models;
 using TMapViews.Models.Interfaces;
 using TMapViews.Models.Models;
 
@@ -57,7 +59,7 @@ namespace TMapViews.iOS
         /// Executes when the camera moves. Passes a <paramref name="Binding3DLocation"/>.
         /// </summary>
         public ICommand CameraMoved { get; set; }
-        
+
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
             var coordinate = userLocation.ToBinding3DLocation();
@@ -80,11 +82,11 @@ namespace TMapViews.iOS
                     view.Selected = false;
                 }
             }
-            else if (view.Annotation is BindingMKOverlay overlay)
+            else if (view.Annotation is IBindingMKMapOverlay overlay)
             {
-                if (OverlayClicked?.CanExecute(overlay) ?? false)
+                if (OverlayClicked?.CanExecute(overlay.Annotation) ?? false)
                 {
-                    OverlayClicked.Execute(overlay);
+                    OverlayClicked.Execute(overlay.Annotation);
                     view.Selected = false;
                 }
             }
@@ -106,18 +108,18 @@ namespace TMapViews.iOS
                 switch (newState)
                 {
                     case MKAnnotationViewDragState.Starting:
-                        if (MarkerDragStart?.CanExecute(annotation) ?? false)
-                            MarkerDragStart.Execute(annotation);
+                        if (MarkerDragStart?.CanExecute(annotation.Annotation) ?? false)
+                            MarkerDragStart.Execute(annotation.Annotation);
                         break;
 
                     case MKAnnotationViewDragState.Ending:
-                        if (MarkerDragEnd?.CanExecute(annotation) ?? false)
-                            MarkerDragEnd.Execute(annotation);
+                        if (MarkerDragEnd?.CanExecute(annotation.Annotation) ?? false)
+                            MarkerDragEnd.Execute(annotation.Annotation);
                         break;
 
                     case MKAnnotationViewDragState.Dragging:
-                        if (MarkerDrag?.CanExecute(annotation) ?? false)
-                            MarkerDrag.Execute(annotation);
+                        if (MarkerDrag?.CanExecute(annotation.Annotation) ?? false)
+                            MarkerDrag.Execute(annotation.Annotation);
                         break;
                 }
             }
@@ -127,13 +129,13 @@ namespace TMapViews.iOS
         {
             if (view.Annotation is BindingMKAnnotation annotation)
             {
-                if (MarkerDeselected?.CanExecute(annotation) ?? false)
-                    MarkerDeselected.Execute(annotation);
+                if (MarkerDeselected?.CanExecute(annotation.Annotation) ?? false)
+                    MarkerDeselected.Execute(annotation.Annotation);
             }
-            else if (view.Annotation is BindingMKOverlay overlay)
+            else if (view.Annotation is IBindingMKMapOverlay overlay)
             {
-                if (OverlayDeslected?.CanExecute(overlay) ?? false)
-                    OverlayDeslected.Execute(overlay);
+                if (OverlayDeslected?.CanExecute(overlay.Annotation) ?? false)
+                    OverlayDeslected.Execute(overlay.Annotation);
             }
         }
 
@@ -143,5 +145,30 @@ namespace TMapViews.iOS
             if (CameraMoved?.CanExecute(pos) ?? false)
                 CameraMoved.Execute(pos);
         }
+
+        public sealed override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+        {
+            if (annotation is BindingMKAnnotation bAnno)
+                return GetViewForAnnotation(mapView, bAnno.Annotation);
+            return null;
+        }
+
+        public virtual MKAnnotationView GetViewForAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+        => null;
+
+        public sealed override MKOverlayView GetViewForOverlay(MKMapView mapView, IMKOverlay overlay)
+            => base.GetViewForOverlay(mapView, overlay);
+
+        public sealed override MKOverlayRenderer OverlayRenderer(MKMapView mapView, IMKOverlay overlay)
+        {
+            if (overlay is IBindingMKMapOverlay bOverlay)
+                return OverlayRenderer(mapView, bOverlay.Annotation as IBindingMapOverlay, overlay.Handle);
+            return null;
+        }
+
+        public virtual MKOverlayRenderer OverlayRenderer(MKMapView mapView, IBindingMapOverlay bindingMapAnnotation, IntPtr handle)
+            => null;
+
+        public virtual IBindingMKMapOverlay GetViewForOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay) => null;
     }
 }

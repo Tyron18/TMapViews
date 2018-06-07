@@ -59,6 +59,7 @@ namespace TMapViews.iOS
         }
 
         private I3DLocation _userLocation;
+
         public I3DLocation UserCurrentLocation
         {
             get => _userLocation;
@@ -70,7 +71,8 @@ namespace TMapViews.iOS
         }
 
         /// <summary>
-        /// WARNING :: Do not use this event handler. Rather use the LocationChanged Command.
+        /// WARNING :: Do not use this event handler. Rather use the
+        /// LocationChanged Command.
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public event EventHandler<I3DLocation> UserLocationChanged;
@@ -128,7 +130,17 @@ namespace TMapViews.iOS
 
         private void AddBindingAnnotation(IBindingMapAnnotation pin)
         {
-            AddAnnotation(new BindingMKAnnotation(pin));
+            if (pin is IBindingMapOverlay overlay)
+            {
+                var mapOverlay = Delegate.GetViewForOverlay(this, overlay);
+                if (mapOverlay != null)
+                {
+                    mapOverlay.Annotation = overlay;
+                    AddOverlay(mapOverlay);
+                }
+            }
+            else
+                AddAnnotation(new BindingMKAnnotation(pin));
         }
 
         private void OnMapClicked(UITapGestureRecognizer gesture)
