@@ -9,14 +9,15 @@ using UIKit;
 
 namespace TMapViews.Example.iOS.Views
 {
-    [MvxRootPresentation(WrapInNavigationController =true)]
+    [MvxRootPresentation(WrapInNavigationController = true)]
     public partial class MultipleMapLocationsView : MvxViewController<MultipleMapLocationsViewModel>
     {
-        ExampleBindingMapDelegate _mapDelegate;
-        BindingMKMapView _mapView;
-        UIView _info;
-        UITextView _latitude, _longitude, _colon;
-        FluentLayout _hiddenInfo;
+        private ExampleBindingMapDelegate _mapDelegate;
+        private BindingMKMapView _mapView;
+        private UIButton _toggleButton;
+        private UIView _info;
+        private UITextView _latitude, _longitude, _colon;
+        private FluentLayout _hiddenInfo;
 
         public override void ViewDidLoad()
         {
@@ -62,19 +63,31 @@ namespace TMapViews.Example.iOS.Views
                 Text = ":",
             };
 
-            View.AddSubviews(_mapView, _info);
+            _toggleButton = new UIButton()
+            {
+                TranslatesAutoresizingMaskIntoConstraints = false,
+                BackgroundColor = UIColor.Black
+            };
+            _toggleButton.SetTitle("User Location", UIControlState.Normal);
+
+            View.AddSubviews(_mapView, _info, _toggleButton);
             _info.AddSubviews(_latitude, _longitude, _colon);
         }
+
         private void LayoutSubviews()
         {
             _hiddenInfo = _info.Height().EqualTo(0f);
 
-            View.AddConstraints(_mapView.FullHeightOf(View));
+            View.AddConstraints(_toggleButton.FullWidthOf(View));
             View.AddConstraints(_mapView.FullWidthOf(View));
             View.AddConstraints(new FluentLayout[]
             {
+                _toggleButton.AtBottomOf(View),
+                _mapView.AtTopOf(View),
+                _mapView.Above(_toggleButton),
+
                 _hiddenInfo,
-                _info.AtBottomOf(View),
+                _info.AtBottomOf(_toggleButton),
                 _info.AtLeftOf(View),
                 _info.AtRightOf(View)
             });
@@ -107,6 +120,7 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);
+            bindingSet.Bind(_toggleButton).To(vm => vm.NavigateToLocationTrackingCommand);
             bindingSet.Bind(_info).For(v => v.Hidden).To(vm => vm.Dragging).WithDictionaryConversion
                 (
                     new Dictionary<bool, bool>
@@ -128,6 +142,4 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Apply();
         }
     }
-
-   
 }

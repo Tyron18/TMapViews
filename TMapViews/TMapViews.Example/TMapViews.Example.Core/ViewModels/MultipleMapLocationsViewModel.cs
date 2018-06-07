@@ -1,5 +1,7 @@
 ﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using System.Threading.Tasks;
 using TMapViews.Example.Core.Models;
 using TMapViews.Models.Interfaces;
 using TMapViews.Models.Models;
@@ -8,32 +10,50 @@ namespace TMapViews.Example.Core.ViewModels
 {
     public class MultipleMapLocationsViewModel : MvxViewModel
     {
-        MvxObservableCollection<IBindingMapAnnotation> _pins;
+        private MvxObservableCollection<IBindingMapAnnotation> _pins;
 
         public MvxObservableCollection<IBindingMapAnnotation> Pins { get => _pins; set => SetProperty(ref _pins, value); }
 
-        Binding2DLocation _center;
+        private Binding2DLocation _center;
         public Binding2DLocation Center { get => _center; set => SetProperty(ref _center, value); }
 
-        IMvxCommand<ExampleBindingAnnotation> _markerTappedCommand;
+        private IMvxCommand<ExampleBindingAnnotation> _markerTappedCommand;
+
         public IMvxCommand<ExampleBindingAnnotation> MarkerTappedCommand
             => _markerTappedCommand ?? (_markerTappedCommand = new MvxCommand<ExampleBindingAnnotation>(MarkerTapped));
 
         private IMvxCommand<ExampleBindingAnnotation> _markerDragEndCommand;
+
         public IMvxCommand<ExampleBindingAnnotation> MarkerDragEndCommand
             => _markerDragEndCommand ?? (_markerDragEndCommand = new MvxCommand<ExampleBindingAnnotation>(MarkerDragEnd));
 
         private IMvxCommand<ExampleBindingAnnotation> _markerDragStartCommand;
+
         public IMvxCommand<ExampleBindingAnnotation> MarkerDragStartCommand
             => _markerDragStartCommand ?? (_markerDragStartCommand = new MvxCommand<ExampleBindingAnnotation>(MarkerDragStart));
 
         private IMvxCommand<ExampleBindingAnnotation> _markerDragCommand;
+
         public IMvxCommand<ExampleBindingAnnotation> MarkerDragCommand
             => _markerDragCommand ?? (_markerDragCommand = new MvxCommand<ExampleBindingAnnotation>(MarkerDrag));
+
+        private IMvxCommand _navigateToLocationTrackingCommand;
+
+        public IMvxCommand NavigateToLocationTrackingCommand
+            => _navigateToLocationTrackingCommand ?? (_navigateToLocationTrackingCommand = new MvxAsyncCommand(NavigateToLocationTracking));
+
+        private Task NavigateToLocationTracking()
+        => _navigationService.Navigate<LocationTrackingViewModel>();
 
         private double _latitude;
         private double _longitude;
         private bool _dragging;
+        private IMvxNavigationService _navigationService;
+
+        public MultipleMapLocationsViewModel(IMvxNavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
 
         public double Latitude
         {
@@ -111,6 +131,7 @@ namespace TMapViews.Example.Core.ViewModels
                 }
             };
         }
+
         private void MarkerTapped(ExampleBindingAnnotation obj)
         {
             if (obj.Id < 5)

@@ -17,7 +17,6 @@ namespace TMapViews.Example.Core.ViewModels
 {
     public class LocationTrackingViewModel : MvxViewModel
     {
-
         private Binding3DLocation _userLocation;
         private bool _canTrackLocation;
         private MvxObservableCollection<IBindingMapAnnotation> _pins;
@@ -36,6 +35,8 @@ namespace TMapViews.Example.Core.ViewModels
             set => SetProperty(ref _canTrackLocation, value);
         }
 
+        private IMvxNavigationService _navigationService;
+
         public MvxObservableCollection<IBindingMapAnnotation> Pins
         {
             get => _pins;
@@ -45,10 +46,19 @@ namespace TMapViews.Example.Core.ViewModels
         public IMvxCommand<I3DLocation> UserLocationChangedCommand
             => _userLocationChangedCommand ?? (_userLocationChangedCommand = new MvxCommand<I3DLocation>(OnUserLocationChanged));
 
-        public LocationTrackingViewModel()
+        public LocationTrackingViewModel(IMvxNavigationService navigationService)
         {
+            _navigationService = navigationService;
             Pins = new MvxObservableCollection<IBindingMapAnnotation>();
         }
+
+        private IMvxCommand _navigateToMapPinsCommand;
+
+        public IMvxCommand NavigateToMapPinsCommand
+            => _navigateToMapPinsCommand ?? (_navigateToMapPinsCommand = new MvxAsyncCommand(NavigateToMapPins));
+
+        private Task NavigateToMapPins()
+            => _navigationService.Navigate<MultipleMapLocationsViewModel>();
 
         public override void ViewAppearing()
         {
