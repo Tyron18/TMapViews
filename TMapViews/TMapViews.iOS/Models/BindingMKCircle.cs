@@ -33,16 +33,6 @@ namespace TMapViews.iOS.Models
         }
 
         public new static BindingMKCircle Circle(CLLocationCoordinate2D withcenterCoordinate, double radius)
-        {
-            var x = MKCircle.Circle(withcenterCoordinate, radius);
-            try
-            {
-                return new BindingMKCircle(x);
-            }
-            catch (Exception e)
-            {
-                throw;
-            }
-        }
+            => new BindingMKCircle(MKCircle.Circle(withcenterCoordinate, radius));
     }
 }
