@@ -1,11 +1,10 @@
 ﻿using MapKit;
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
 using TMapViews.Models;
 using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
 using UIKit;
 
 namespace TMapViews.iOS
@@ -22,14 +21,14 @@ namespace TMapViews.iOS
             Delegate = mapDelegate ?? new BindingMKMapViewDelegate();
         }
 
-        private bool _shouldShowPins = true;
+        private bool _annotationsVisible = true;
 
-        public bool ShouldShowPins
+        public bool AnnotationsVisible
         {
-            get => _shouldShowPins;
+            get => _annotationsVisible;
             set
             {
-                _shouldShowPins = value;
+                _annotationsVisible = value;
                 UpdatePins();
             }
         }
@@ -77,9 +76,9 @@ namespace TMapViews.iOS
         [EditorBrowsable(EditorBrowsableState.Never)]
         public event EventHandler<I3DLocation> UserLocationChanged;
 
-        private ObservableCollection<IBindingMapAnnotation> _annotationSource;
+        private IEnumerable<IBindingMapAnnotation> _annotationSource;
 
-        public ObservableCollection<IBindingMapAnnotation> AnnotationSource
+        public IEnumerable<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
             set
@@ -121,7 +120,7 @@ namespace TMapViews.iOS
         private void UpdatePins()
         {
             RemoveAnnotations(Annotations);
-            if (ShouldShowPins)
+            if (AnnotationsVisible)
             {
                 foreach (var pin in AnnotationSource)
                     AddBindingAnnotation(pin);
