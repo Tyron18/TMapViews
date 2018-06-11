@@ -2,7 +2,22 @@
 
 [![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE)
 
-**In Progress**
-
 TMapViews aims to create a more convenients implimentation of maps on IOS and Android in Xamarin. *Boilerplate* code has been rolled into a more userfirendly set-up structure, allowing for easier set-up and life-cycle managment of maps.
-TMapViews also wraps various map events, such as ***map clicked*** or ***user location changed*** into a command-based stucture, using a set of common return types that makes use of these events easier within a shared code layer, especially within an MVVM binding structure.
+
+Events such as location changed and map clicked have been rolled into commands that return common object typs, allowing for the handling of these events to be done by the shared code by means of single assignments.
+
+Annotations and overlays are managed by the `BindingMapViews` using a DataSource object that is a list of `IBindingAnnotations` that can be assigned to the map. `IBindingMapOverlay` objects are included in the same list.
+
+## Instalation
+
+*Nuget incoming*
+
+## Licensing
+
+TMapViews is licensed under the [MIT License](https://github.com/Tyron18/TMapViews/blob/master/LICENSE).
+
+ - TMapViews is based [Xamarin-Android](https://github.com/xamarin/xamarin-android) and [Xamarin-macios](https://github.com/xamarin/xamarin-macios) under the [MIT License](https://github.com/Tyron18/TMapViews/blob/master/LICENSE).
+ - MVVMCross is used for the `TMapViews.MvxPlugins.Bindings.Droid` and `TMapViews.MvxPlugins.Bindings.iOS` plugins under the [Microsoft Public License](https://github.com/MvvmCross/MvvmCross/blob/develop/LICENSE). 
+ 
+## Acknowledgements
+ - Thanks to [Plac3hold3r](https://github.com/Plac3hold3r) for help and guidance on this project.
