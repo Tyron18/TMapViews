@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TMapViews.Example.Core", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvxPlugins", "MvxPlugins", "{11AA69EE-DFBD-45E6-B15D-824BE6EB1DD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMapViews.MvxPlugins.Bindings.Droid", "TMapViews.MvxPlugins.Bindings.Droid\TMapViews.MvxPlugins.Bindings.Droid.csproj", "{B3B89001-7255-4EFC-94B1-69D00AD162C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMapViews.MvxPlugins.Bindings.Droid", "TMapViews.MvxPlugins\TMapViews.MvxPlugins.Bindings.Droid\TMapViews.MvxPlugins.Bindings.Droid.csproj", "{B3B89001-7255-4EFC-94B1-69D00AD162C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMapViews.MvxPlugins.Bindings.iOS", "TMapViews.MvxPlugins.Bindings.iOS\TMapViews.MvxPlugins.Bindings.iOS.csproj", "{ACBCE9EA-ED33-4C13-A938-FC01D67B219B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMapViews.MvxPlugins.Bindings.iOS", "TMapViews.MvxPlugins\TMapViews.MvxPlugins.Bindings.iOS\TMapViews.MvxPlugins.Bindings.iOS.csproj", "{ACBCE9EA-ED33-4C13-A938-FC01D67B219B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
