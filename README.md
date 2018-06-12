@@ -10,8 +10,9 @@ Events such as location changed and map clicked have been rolled into commands t
 Annotations and overlays are managed by the `BindingMapViews` using a DataSource object that is a list of `IBindingAnnotations` that can be assigned to the map. `IBindingMapOverlay` objects are included in the same list.
 
 ## Instalation
+Get the latest [Nuget Package](https://www.nuget.org/packages/TMapViews/) and install it on both your core and platform solutions.
 
-*Nuget incoming*
+> Install-Package TMapViews
 
 ## Licensing
 
