@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TMapViews.Models.Interfaces
+﻿namespace TMapViews.Models
 {
     public interface IBindingMapOverlay : IBindingMapAnnotation
     {

@@ -6,17 +6,12 @@ using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
-using Java.Lang;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
-using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
 
 namespace TMapViews.Droid.Views
 {
@@ -263,6 +258,18 @@ namespace TMapViews.Droid.Views
             }
         }
 
+        private IEnumerable<IBindingMapOverlay> _overlaySource;
+
+        public IEnumerable<IBindingMapOverlay> OverlaySource
+        {
+            get => _overlaySource;
+            set
+            {
+                _overlaySource = value;
+                UpdateAnnotations();
+            }
+        }
+
         private void UpdateAnnotations()
         {
             GoogleMap?.Clear();
@@ -272,40 +279,44 @@ namespace TMapViews.Droid.Views
             {
                 foreach (var annotation in AnnotationSource)
                 {
-                    if (annotation is IBindingMapOverlay mOverlay)
-                    {
-                        var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
-                        var overlay = AddOverlay(overlayOptions);
-                        if (overlay is Circle circle)
-                            circle.Tag = new AnnotationTag
-                            {
-                                Annotation = mOverlay
-                            };
-                        else if (overlay is Polygon polygon)
-                            polygon.Tag = new AnnotationTag
-                            {
-                                Annotation = mOverlay
-                            };
-                        else if (overlay is Polyline polyLine)
-                            polyLine.Tag = new AnnotationTag
-                            {
-                                Annotation = mOverlay
-                            };
-                        else if (overlay is GroundOverlay groundOverlay)
-                            groundOverlay.Tag = new AnnotationTag
-                            {
-                                Annotation = mOverlay
-                            };
-                        else
-                            throw new OverlayAdapterException(overlay);
-                    }
-                    else if (annotation is IBindingMapAnnotation mMarker)
+                    if (annotation is IBindingMapAnnotation mMarker)
                     {
                         var marker = GoogleMap.AddMarker(Adapter.GetMarkerOptionsForPin(annotation));
                         marker.Tag = new AnnotationTag
                         {
                             Annotation = annotation
                         };
+                    }
+                }
+
+                foreach (var overlay in OverlaySource)
+                {
+                    if (overlay is IBindingMapOverlay mOverlay)
+                    {
+                        var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
+                        var overlayView = AddOverlay(overlayOptions);
+                        if (overlayView is Circle circle)
+                            circle.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
+                        else if (overlayView is Polygon polygon)
+                            polygon.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
+                        else if (overlayView is Polyline polyLine)
+                            polyLine.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
+                        else if (overlayView is GroundOverlay groundOverlay)
+                            groundOverlay.Tag = new AnnotationTag
+                            {
+                                Annotation = mOverlay
+                            };
+                        else
+                            throw new OverlayAdapterException(overlayView);
                     }
                 }
             }

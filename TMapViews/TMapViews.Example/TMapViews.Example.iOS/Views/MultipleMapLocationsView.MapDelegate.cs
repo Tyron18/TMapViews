@@ -4,7 +4,7 @@ using System;
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
 using TMapViews.iOS.Models;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views

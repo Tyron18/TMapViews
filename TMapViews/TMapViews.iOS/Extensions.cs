@@ -1,7 +1,8 @@
 ﻿using CoreLocation;
 using MapKit;
 using TMapViews.Models;
-using TMapViews.Models.Models;
+
+using TMapViews.Models;
 
 namespace TMapViews.iOS
 {

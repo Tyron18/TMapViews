@@ -90,32 +90,32 @@
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
-    <Reference Include="MvvmCross, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.6.0.1\lib\monoandroid81\MvvmCross.dll</HintPath>
+    <Reference Include="MvvmCross, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.6.0.0\lib\monoandroid81\MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.CodeAnalysis, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.CodeAnalysis.6.0.1\lib\netstandard2.0\MvvmCross.CodeAnalysis.dll</HintPath>
+    <Reference Include="MvvmCross.CodeAnalysis, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.CodeAnalysis.6.0.0\lib\netstandard2.0\MvvmCross.CodeAnalysis.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.Core.UI, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.Core.UI.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.Core.UI.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.Core.UI, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.Core.UI.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.Core.UI.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.Core.Utils, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.Core.Utils.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.Core.Utils, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.Core.Utils.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.Design, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.Design.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.Design.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.Design, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.Design.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.Fragment, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.Fragment.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.Fragment.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.Fragment, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.Fragment.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.Fragment.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.V7.AppCompat, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.V7.AppCompat.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.V7.AppCompat, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.V7.AppCompat.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.V7.RecyclerView, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Droid.Support.V7.RecyclerView.6.0.1\lib\monoandroid81\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.V7.RecyclerView, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Droid.Support.V7.RecyclerView.6.0.0\lib\monoandroid81\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Plugin.Json.6.0.1\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
+    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Json.6.0.0\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
@@ -275,24 +275,6 @@
     <AndroidResource Include="Resources\drawable\splash.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TMapViews.Droid\TMapViews.Droid.csproj">
-      <Project>{837348fb-870c-47ae-91b0-fca8ad49872e}</Project>
-      <Name>TMapViews.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
-      <Project>{159d0897-7607-4e7d-80d7-d4f6f15fa14d}</Project>
-      <Name>TMapViews.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TMapViews.MvxPlugins.Bindings.Droid\TMapViews.MvxPlugins.Bindings.Droid.csproj">
-      <Project>{b3b89001-7255-4efc-94b1-69d00ad162c1}</Project>
-      <Name>TMapViews.MvxPlugins.Bindings.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TMapViews.Example.Core\TMapViews.Example.Core.csproj">
-      <Project>{caaada23-b087-4028-9d0d-d6e9c7a1e8ad}</Project>
-      <Name>TMapViews.Example.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
@@ -303,6 +285,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\sphere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TMapViews.Droid\TMapViews.Droid.csproj">
+      <Project>{837348fb-870c-47ae-91b0-fca8ad49872e}</Project>
+      <Name>TMapViews.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
+      <Project>{159d0897-7607-4e7d-80d7-d4f6f15fa14d}</Project>
+      <Name>TMapViews.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TMapViews.MvxPlugins\TMapViews.MvxPlugins.Bindings.Droid\TMapViews.MvxPlugins.Bindings.Droid.csproj">
+      <Project>{b3b89001-7255-4efc-94b1-69d00ad162c1}</Project>
+      <Name>TMapViews.MvxPlugins.Bindings.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMapViews.Example.Core\TMapViews.Example.Core.csproj">
+      <Project>{caaada23-b087-4028-9d0d-d6e9c7a1e8ad}</Project>
+      <Name>TMapViews.Example.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

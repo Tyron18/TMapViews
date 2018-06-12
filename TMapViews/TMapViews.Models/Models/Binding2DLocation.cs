@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TMapViews.Models.Models
+﻿namespace TMapViews.Models
 {
     public class Binding2DLocation : I2DLocation
     {

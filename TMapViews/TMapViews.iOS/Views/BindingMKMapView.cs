@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
+using TMapViews.iOS.Models;
 using TMapViews.Models;
-using TMapViews.Models.Interfaces;
 using UIKit;
 
 namespace TMapViews.iOS
@@ -88,6 +88,18 @@ namespace TMapViews.iOS
             }
         }
 
+        private IEnumerable<IBindingMapOverlay> _overlaySource;
+
+        public IEnumerable<IBindingMapOverlay> OverlaySource
+        {
+            get => _overlaySource;
+            set
+            {
+                _overlaySource = value;
+                UpdatePins();
+            }
+        }
+
         public new BindingMKMapViewDelegate Delegate { get => base.Delegate as BindingMKMapViewDelegate; set => base.Delegate = value; }
 
         /// <summary>
@@ -124,22 +136,25 @@ namespace TMapViews.iOS
             {
                 foreach (var pin in AnnotationSource)
                     AddBindingAnnotation(pin);
+
+                foreach (var overlay in OverlaySource)
+                    AddBindingOverlay(overlay);
             }
         }
 
         private void AddBindingAnnotation(IBindingMapAnnotation pin)
         {
-            if (pin is IBindingMapOverlay overlay)
+            AddAnnotation(new BindingMKAnnotation(pin));
+        }
+
+        private void AddBindingOverlay(IBindingMapOverlay overlay)
+        {
+            var mapOverlay = Delegate.GetViewForBindingOverlay(this, overlay);
+            if (mapOverlay != null)
             {
-                var mapOverlay = Delegate.GetViewForBindingOverlay(this, overlay);
-                if (mapOverlay != null)
-                {
-                    mapOverlay.Annotation = overlay;
-                    AddOverlay(mapOverlay);
-                }
+                mapOverlay.Annotation = overlay;
+                AddOverlay(mapOverlay);
             }
-            else
-                AddAnnotation(new BindingMKAnnotation(pin));
         }
 
         private void OnMapClicked(UITapGestureRecognizer gesture)

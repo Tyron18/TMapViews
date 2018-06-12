@@ -1,9 +1,8 @@
 ﻿using MapKit;
-using System;
+using System.Runtime;
 using System.Windows.Input;
 using TMapViews.iOS.Models;
-using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
+using TMapViews.Models;
 
 namespace TMapViews.iOS
 {

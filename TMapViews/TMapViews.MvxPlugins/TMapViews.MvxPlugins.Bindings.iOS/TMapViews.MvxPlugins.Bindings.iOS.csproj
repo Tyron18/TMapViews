@@ -31,8 +31,8 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MvvmCross, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.0.1\lib\xamarinios10\MvvmCross.dll</HintPath>
+    <Reference Include="MvvmCross, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.6.0.0\lib\xamarinios10\MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="netstandard" />
     <Reference Include="System" />
@@ -49,19 +49,19 @@
     <Compile Include="Plugin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TMapViews.iOS\TMapViews.iOS.csproj">
-      <Project>{CC15D61E-979C-4EE3-9577-8968DF030A0E}</Project>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TMapViews.iOS\TMapViews.iOS.csproj">
+      <Project>{cc15d61e-979c-4ee3-9577-8968df030a0e}</Project>
       <Name>TMapViews.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
-    <ProjectReference Include="..\TMapViews.Models\TMapViews.Models.csproj">
+    <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
       <Project>{159d0897-7607-4e7d-80d7-d4f6f15fa14d}</Project>
       <Name>TMapViews.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

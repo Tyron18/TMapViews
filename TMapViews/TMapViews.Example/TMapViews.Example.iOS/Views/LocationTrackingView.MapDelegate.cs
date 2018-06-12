@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
-using MapKit;
+﻿using MapKit;
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
-using TMapViews.Models.Interfaces;
+using TMapViews.iOS.Models;
+using TMapViews.Models;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views

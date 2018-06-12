@@ -1,10 +1,9 @@
 ﻿using System;
 using CoreLocation;
 using MapKit;
-using TMapViews.iOS.Models;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 
-namespace TMapViews.iOS
+namespace TMapViews.iOS.Models
 {
     public class BindingMKAnnotation : MKAnnotation, IBindingMKMapAnnotation
     {

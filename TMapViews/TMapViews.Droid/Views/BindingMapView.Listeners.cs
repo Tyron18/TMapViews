@@ -1,12 +1,7 @@
 ﻿using Android.Gms.Maps.Model;
 using Android.Locations;
-using Android.Runtime;
-using System;
-using System.Linq;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
-using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
 using static Android.Gms.Maps.GoogleMap;
 
 namespace TMapViews.Droid.Views

@@ -1,8 +1,7 @@
 ﻿using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Runtime;
-using TMapViews.Droid.Models;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 
 namespace TMapViews.Droid.Adapters
 {

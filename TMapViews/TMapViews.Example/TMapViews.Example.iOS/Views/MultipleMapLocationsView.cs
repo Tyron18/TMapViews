@@ -115,6 +115,7 @@ namespace TMapViews.Example.iOS.Views
             var bindingSet = this.CreateBindingSet<MultipleMapLocationsView, MultipleMapLocationsViewModel>();
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.Center);
             bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_mapView).For(v => v.OverlaySource).To(vm => vm.Overlays);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.OverlayClicked).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);

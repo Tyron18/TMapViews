@@ -6,7 +6,7 @@ using MvvmCross.Platforms.Android.Binding.Target;
 using MvvmCross.Platforms.Android.WeakSubscription;
 using MvvmCross.Plugin;
 using TMapViews.Droid.Views;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 
 namespace TMapViews.MvxPlugins.Bindings.Droid
 {
@@ -26,7 +26,7 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         public override void SubscribeToEvents()
         {
-            if(Target != null)
+            if (Target != null)
             {
                 subscribeUserLocationChanged = new MvxAndroidTargetEventSubscription<BindingMapView, I3DLocation>(Target, nameof(BindingMapView.UserLocationChanged), OnUserLocationChanged);
             }
@@ -40,13 +40,12 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         protected override void Dispose(bool isDisposing)
         {
-            if(isDisposing)
+            if (isDisposing)
             {
                 subscribeUserLocationChanged?.Dispose();
                 subscribeUserLocationChanged = null;
             }
             base.Dispose(isDisposing);
         }
-
     }
 }

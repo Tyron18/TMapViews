@@ -5,7 +5,7 @@ using Android.Runtime;
 using TMapViews.Droid;
 using TMapViews.Droid.Adapters;
 using TMapViews.Example.Core.Models;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 
 namespace TMapViews.Example.Droid.Views.Fragments
 {
@@ -37,15 +37,19 @@ namespace TMapViews.Example.Droid.Views.Fragments
                         case 1:
                             circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloBlueLight));
                             break;
+
                         case 2:
                             circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloRedLight));
                             break;
+
                         case 3:
                             circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloGreenLight));
                             break;
+
                         case 4:
                             circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloOrangeLight));
                             break;
+
                         case 5:
                             circleOptions.InvokeFillColor(Context.GetColor(Android.Resource.Color.HoloPurple));
                             break;
@@ -70,15 +74,19 @@ namespace TMapViews.Example.Droid.Views.Fragments
                         case 1:
                             markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue));
                             break;
+
                         case 2:
                             markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueRed));
                             break;
+
                         case 3:
                             markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueGreen));
                             break;
+
                         case 4:
                             markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueYellow));
                             break;
+
                         case 5:
                             markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueViolet));
                             break;

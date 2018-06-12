@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TMapViews.Models.Interfaces;
+﻿using System.Runtime;
 
-namespace TMapViews.Models.Models
+namespace TMapViews.Models
 {
     public class Binding3DLocation : I3DLocation
     {
         public Binding3DLocation(
-            double? altitude = null, 
-            double latitude = default(double), 
-            double longitude = default(double), 
-            double? horizontalAccuracy = null, 
+            double? altitude = null,
+            double latitude = default(double),
+            double longitude = default(double),
+            double? horizontalAccuracy = null,
             double? verticalAccuracy = null,
             double? speed = null)
         {

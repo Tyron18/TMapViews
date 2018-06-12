@@ -3,8 +3,7 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System.Threading.Tasks;
 using TMapViews.Example.Core.Models;
-using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
+using TMapViews.Models;
 
 namespace TMapViews.Example.Core.ViewModels
 {
@@ -13,6 +12,9 @@ namespace TMapViews.Example.Core.ViewModels
         private MvxObservableCollection<IBindingMapAnnotation> _pins;
 
         public MvxObservableCollection<IBindingMapAnnotation> Pins { get => _pins; set => SetProperty(ref _pins, value); }
+
+        private MvxObservableCollection<IBindingMapOverlay> _overlays;
+        public MvxObservableCollection<IBindingMapOverlay> Overlays { get => _overlays; set => SetProperty(ref _overlays, value); }
 
         private Binding2DLocation _center;
         public Binding2DLocation Center { get => _center; set => SetProperty(ref _center, value); }
@@ -122,7 +124,11 @@ namespace TMapViews.Example.Core.ViewModels
                         Longitude = Center.Longitude - 10
                     },
                     Id = 5
-                },
+                }
+            };
+
+            Overlays = new MvxObservableCollection<IBindingMapOverlay>
+            {
                 new ExampleBindingOverlay
                 {
                     Location = Center,

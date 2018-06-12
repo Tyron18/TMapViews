@@ -1,17 +1,11 @@
 ﻿using MvvmCross.Commands;
-using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using TMapViews.Example.Core.Models;
 using TMapViews.Models;
-using TMapViews.Models.Interfaces;
-using TMapViews.Models.Models;
 
 namespace TMapViews.Example.Core.ViewModels
 {

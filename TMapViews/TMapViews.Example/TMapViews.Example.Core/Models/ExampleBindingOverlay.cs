@@ -1,4 +1,4 @@
-﻿using TMapViews.Models.Interfaces;
+﻿using TMapViews.Models;
 
 namespace TMapViews.Example.Core.Models
 {

@@ -1,7 +1,6 @@
 ﻿using Android.Gms.Maps.Model;
 using Android.Locations;
 using TMapViews.Models;
-using TMapViews.Models.Models;
 
 namespace TMapViews.Droid
 {
@@ -19,10 +18,10 @@ namespace TMapViews.Droid
 
         public static Binding3DLocation ToBinding3DLocation(this Location location)
             => new Binding3DLocation(
-                location.HasAltitude ? (double?)location.Altitude : null, 
+                location.HasAltitude ? (double?)location.Altitude : null,
                 location.Latitude,
                 location.Longitude,
-                location.HasAccuracy? (double?)location.Accuracy : null,
+                location.HasAccuracy ? (double?)location.Accuracy : null,
                 speed: location.HasSpeed ? (double?)location.Speed : null);
     }
 }

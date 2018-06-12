@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CoreLocation;
-using Foundation;
+﻿using CoreLocation;
 using MapKit;
-using TMapViews.Models.Interfaces;
-using UIKit;
+using TMapViews.Models;
 
 namespace TMapViews.iOS.Models
 {

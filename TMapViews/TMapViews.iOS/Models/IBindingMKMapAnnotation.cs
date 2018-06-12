@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
-using TMapViews.Models.Interfaces;
-using UIKit;
+using TMapViews.Models;
 
 namespace TMapViews.iOS.Models
 {

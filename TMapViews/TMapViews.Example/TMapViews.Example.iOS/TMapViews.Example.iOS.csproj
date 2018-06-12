@@ -278,14 +278,14 @@
       <HintPath>..\..\packages\Microsoft.CodeAnalysis.Workspaces.Common.2.6.1\lib\netstandard1.3\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MvvmCross, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.6.0.1\lib\xamarinios10\MvvmCross.dll</HintPath>
+    <Reference Include="MvvmCross, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.6.0.0\lib\xamarinios10\MvvmCross.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.CodeAnalysis, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.CodeAnalysis.6.0.1\lib\netstandard2.0\MvvmCross.CodeAnalysis.dll</HintPath>
+    <Reference Include="MvvmCross.CodeAnalysis, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.CodeAnalysis.6.0.0\lib\netstandard2.0\MvvmCross.CodeAnalysis.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Plugin.Json.6.0.1\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
+    <Reference Include="MvvmCross.Plugin.Json, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Json.6.0.0\lib\netstandard2.0\MvvmCross.Plugin.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
@@ -330,16 +330,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\TMapViews.iOS\TMapViews.iOS.csproj">
-      <Project>{CC15D61E-979C-4EE3-9577-8968DF030A0E}</Project>
+      <Project>{cc15d61e-979c-4ee3-9577-8968df030a0e}</Project>
       <Name>TMapViews.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\..\TMapViews.Models\TMapViews.Models.csproj">
-      <Project>{159D0897-7607-4E7D-80D7-D4F6F15FA14D}</Project>
+      <Project>{159d0897-7607-4e7d-80d7-d4f6f15fa14d}</Project>
       <Name>TMapViews.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\TMapViews.MvxPlugins.Bindings.iOS\TMapViews.MvxPlugins.Bindings.iOS.csproj">
+    <ProjectReference Include="..\..\TMapViews.MvxPlugins\TMapViews.MvxPlugins.Bindings.iOS\TMapViews.MvxPlugins.Bindings.iOS.csproj">
       <Project>{acbce9ea-ed33-4c13-a938-fc01d67b219b}</Project>
       <Name>TMapViews.MvxPlugins.Bindings.iOS</Name>
       <IsAppExtension>false</IsAppExtension>

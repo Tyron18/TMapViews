@@ -5,13 +5,14 @@ using System.Windows.Input;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.IoC;
-using TMapViews.MvxPlugins.Bindings.iOS;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Linker
 {
-    // LinkerPleaseInclude is never actually executed, but when Xamarin linking is enabled it ensures types and properties are preserved in the deployed app
-    // Included are some examples of types and properties you may need preserved in a linked version of your app
+    // LinkerPleaseInclude is never actually executed, but when Xamarin linking
+    // is enabled it ensures types and properties are preserved in the deployed
+    // app Included are some examples of types and properties you may need
+    // preserved in a linked version of your app
     [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {

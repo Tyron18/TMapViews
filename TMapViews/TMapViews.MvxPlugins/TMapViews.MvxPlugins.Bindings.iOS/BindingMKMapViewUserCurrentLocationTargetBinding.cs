@@ -3,7 +3,7 @@ using MvvmCross;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings.Target;
 using TMapViews.iOS;
-using TMapViews.Models.Interfaces;
+using TMapViews.Models;
 
 namespace TMapViews.MvxPlugins.Bindings.iOS
 {
@@ -29,7 +29,7 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
             {
                 Target.UserLocationChanged += UserLocationChanged;
                 _subscribed = true;
-                    }
+            }
         }
 
         protected override void Dispose(bool isDisposing)
@@ -46,6 +46,5 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
         {
             FireValueChanged(Target.UserCurrentLocation);
         }
-
     }
 }
