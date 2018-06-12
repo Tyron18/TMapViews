@@ -17,7 +17,9 @@ The map delegate contatains 2 overridable methods. `MKAnnotationView GetViewForB
 *Note* The annotation **must** have a Title and Subtitle in order for IOS to render the marker.
 
 Example:
-`public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+
+```csharp
+public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
 {
     if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
     {
@@ -36,7 +38,8 @@ Example:
         return view;
     }
     return null;        //Lets the map default behavior take over if the annotation isnt a BindingMKAnnotation.
-}`
+}
+```
 
 `GetViewForBindingOverlay` creates the overlay to be placed on the map for an `IBindingMapOverlay`, returning an `IBindingMKMapOverlay`.
 The `IBindingMKMapOverlay` is an extended `MKMapOverlay` that includes an `IBindingMapAnnotation Annotation` and a `MKOverlayRenderer Renderer`.
@@ -54,7 +57,9 @@ There are 4 included `IBindingMKMapOverlay`:
 |`BindingMKTileOverlay`|`MKTileOverlayRenderer`|`new BindingMKTileOverlay(/*string*/URLTemplate);`|
 
 Example:
-`public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
+
+```csharp
+public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
 {
     if (bindingMapOverlay is ExampleBindingOverlay eOverlay)
     {
@@ -68,7 +73,8 @@ Example:
         return result:
     }
     return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
-}`
+}
+```
 
 ## Properties
 ### BindingMKMapView
