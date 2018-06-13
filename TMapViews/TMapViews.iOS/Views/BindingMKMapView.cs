@@ -134,11 +134,13 @@ namespace TMapViews.iOS
             RemoveAnnotations(Annotations);
             if (AnnotationsVisible)
             {
-                foreach (var pin in AnnotationSource)
-                    AddBindingAnnotation(pin);
+                if (AnnotationSource != null)
+                    foreach (var pin in AnnotationSource)
+                        AddBindingAnnotation(pin);
 
-                foreach (var overlay in OverlaySource)
-                    AddBindingOverlay(overlay);
+                if (OverlaySource != null)
+                    foreach (var overlay in OverlaySource)
+                        AddBindingOverlay(overlay);
             }
         }
 
