@@ -46,7 +46,8 @@ namespace TMapViews.Droid.Views
 
         public void GetMapAsync(IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
         {
-            Adapter = adapter;
+            if (adapter != null)
+                Adapter = adapter;
             OnCreate(savedInstanceState);
             base.GetMapAsync(this);
             OnResume();
@@ -60,7 +61,7 @@ namespace TMapViews.Droid.Views
         /// Returns a result code from Android.Gms.Common.ResultCode where a 0 is
         /// a success.
         /// </returns>
-        public int Initialize(Activity context, IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
+        public int Initialize(Activity context, IBindingMapAdapter adapter, Bundle savedInstanceState = null)
         {
             MapsInitializer.Initialize(context);
             var resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(context);
@@ -73,7 +74,12 @@ namespace TMapViews.Droid.Views
         }
 
         public GoogleMap GoogleMap { get; private set; }
-        public IBindingMapAdapter Adapter { get; set; }
+
+        public IBindingMapAdapter Adapter
+        {
+            get;
+            private set;
+        }
 
         private int _mapType = 1;
 
@@ -275,7 +281,7 @@ namespace TMapViews.Droid.Views
             GoogleMap?.Clear();
             if (AnnotationsVisible
                 && Adapter != null
-                && GoogleMap != null)
+                && IsReady)
             {
                 if (AnnotationSource != null)
                     foreach (var annotation in AnnotationSource)
