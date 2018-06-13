@@ -274,7 +274,8 @@ namespace TMapViews.Droid.Views
         {
             GoogleMap?.Clear();
             if (AnnotationsVisible
-                && Adapter != null)
+                && Adapter != null
+                && GoogleMap != null)
             {
                 if (AnnotationSource != null)
                     foreach (var annotation in AnnotationSource)
