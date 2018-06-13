@@ -40,7 +40,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
         public override void OnResume()
         {
             base.OnResume();
-            _mapView?.Initialize(Activity);
+            _mapView?.Initialize(Activity, null);
         }
 
         public override void OnPause()
