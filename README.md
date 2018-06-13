@@ -1,6 +1,7 @@
 # TMapViews
 
-[![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE) 
+[![NuGet](https://img.shields.io/nuget/v/TMapViews.svg)](https://www.nuget.org/packages/TMapViews/)
 
 TMapViews aims to create a more convenients implimentation of maps on IOS and Android in Xamarin. *Boilerplate* code has been rolled into a more userfirendly set-up structure, allowing for easier set-up and life-cycle managment of maps.
 
@@ -9,8 +10,9 @@ Events such as location changed and map clicked have been rolled into commands t
 Annotations and overlays are managed by the `BindingMapViews` using a DataSource object that is a list of `IBindingAnnotations` that can be assigned to the map. `IBindingMapOverlay` objects are included in the same list.
 
 ## Instalation
+Get the latest [Nuget Package](https://www.nuget.org/packages/TMapViews/) and install it on both your core and platform solutions.
 
-*Nuget incoming*
+> Install-Package TMapViews
 
 ## Licensing
 
