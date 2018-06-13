@@ -86,7 +86,8 @@ public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView,
 |`CenterMapLocation` |`I2DLocation`                       |Sets the center point of the camera.|
 |`ShowUserLocation`  |`bool`                              |Sets whether or not to track and show user location.|
 |`UserLocation`      |`I3DLocation`                       |Returns the user's current location. Requires `ShowUserLocation = true;`|
-|`AnnotationSource`  |`IEnumerable<IBindingMapAnnotation>`|Determines the source of the map annoptations and overlays.|
+|`AnnotationSource`  |`IEnumerable<IBindingMapAnnotation>`|Determines the source of the map annoptations.|
+|`OverlaySource`     |`IEnumerable<IBindingMapOverlay>`   |Determines the source of the map overlays.|
 |`Delegate`          |`BindingMkMapViewDelegate`          |Assigns the maps delegat.|
 |`MapType`           |`MKMapType`                         |Determines the [display type](https://developer.apple.com/documentation/mapkit/mkmaptype) of the map.|
 
