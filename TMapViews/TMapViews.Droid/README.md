@@ -117,13 +117,15 @@ public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
 |`RotateGesturesEnabled`|`bool`|Set true to allow the user to rotate the map with gesture controls.|
 |`TiltGesturesEnabled`|`bool`|Set true to allow the user to tilt the map viewport with gesture controls.|
 |`ScrollGesturesEnabled`|`bool`|Set true to allow the user to scroll the map viewport with gesture controls.|
+|`Zoom`|`float`|Sets the camera zoom for the auto-centering on `CenterMapLocation`. ***Note*** `BindingMapView` uses the same zoom values as an iOS `MKMapView`, not standard `GoogleMap` zoom values. In future versions I will add support to toggle between the 2 systems.|
 |`ZoomGesturesEnabled`|`bool`|Set true to allow the user to zoom the map viewport with gesture controls.|
 |`ZoomControlsEnabled`|`bool`|Set true to allow the user to zoom the map viewport with native button controls.|
 |`AnnotationsVisible`|`bool`|Set false to hide annotations.|
 |`CenterMapLocation`|`I2DLocation`|Set to center the camera on a set location.|
 |`UserLocation`|`I3DLocation`|The users current location. Requires MyLocationEnabled to be true.|
 |`IsReady`|`bool`|Used to determine if the GoogleMap has loaded.|
-|`AnnotationSource`|`IEnumerable<IBindingMapAnnotation>`|The list of annotations and overlays to be displayed on the map.|
+|`AnnotationSource`|`IEnumerable<IBindingMapAnnotation>`|The list of annotations to be displayed on the map.|
+|`OverlaySource`|`IEnumerable<IBindingMapOverlay>`|The list of overlays to be displayed on the map.|
 
 ## Supported Event Commands
 
