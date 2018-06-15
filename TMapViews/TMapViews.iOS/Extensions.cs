@@ -2,8 +2,6 @@
 using MapKit;
 using TMapViews.Models;
 
-using TMapViews.Models;
-
 namespace TMapViews.iOS
 {
     public static class Extensions

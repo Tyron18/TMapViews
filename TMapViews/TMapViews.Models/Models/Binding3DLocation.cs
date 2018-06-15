@@ -1,6 +1,4 @@
-﻿using System.Runtime;
-
-namespace TMapViews.Models
+﻿namespace TMapViews.Models
 {
     public class Binding3DLocation : I3DLocation
     {

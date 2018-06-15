@@ -1,5 +1,4 @@
-﻿using System;
-using CoreLocation;
+﻿using CoreLocation;
 using MapKit;
 using TMapViews.Models;
 

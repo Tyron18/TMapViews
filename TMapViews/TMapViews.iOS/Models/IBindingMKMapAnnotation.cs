@@ -1,5 +1,4 @@
-﻿using System;
-using TMapViews.Models;
+﻿using TMapViews.Models;
 
 namespace TMapViews.iOS.Models
 {
