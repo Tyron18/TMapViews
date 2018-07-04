@@ -154,8 +154,19 @@ namespace TMapViews.iOS
             var mapOverlay = Delegate.GetViewForBindingOverlay(this, overlay);
             if (mapOverlay != null)
             {
-                mapOverlay.Annotation = overlay;
-                AddOverlay(mapOverlay);
+                if (mapOverlay is BindingMKPolyline polyLine)
+                {
+                    AddOverlay(polyLine.PolyLine);
+                }
+                else if (mapOverlay is BindingMKPolygon polygon)
+                {
+                    AddOverlay(polygon.Polygon);
+                }
+                else
+                {
+                    mapOverlay.Annotation = overlay;
+                    AddOverlay(mapOverlay);
+                }
             }
         }
 
