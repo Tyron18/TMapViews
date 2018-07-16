@@ -5,7 +5,7 @@ The `BindingMapView` extends the android native `MapView`, initializing a Google
 The `BindingMapView` requires that you register for a Google Maps Api Key. Instructions on how to do this can be found [here](https://developers.google.com/maps/documentation/android-sdk/signup).
 
 ### Adding the map to your layout.
-The map can be added to your view using the following name in xml : `TMapViews.Droid.Views.BindingMapView`
+The map can be added to your view using the following name in xml : `TMapViews.Droid.Views.BindingMapView`.
 ```xml
 <TMapViews.Droid.Views.BindingMapView
 android:id="@+id/map_view"
@@ -59,10 +59,10 @@ The map adapter has 2 methods, `public IJavaObject AddBindingMapOverlay(GoogleMa
 
 `AddBindingMapOverlay` determines the shape and location of an `IBindingMapOverlay` to be added to the map. It *must* return one of the following or will cause an OverlayAdapterException:
 ```csharp
-Android.Gms.Maps.Model.Circle
-Android.Gms.Maps.Model.Polygon
-Android.Gms.Maps.Model.PolyLine
-Android.Gms.Maps.Model.GroundOverlay
+Android.Gms.Maps.Model.CircleOption
+Android.Gms.Maps.Model.PolygonOptions
+Android.Gms.Maps.Model.PolyLineOptions
+Android.Gms.Maps.Model.GroundOverlayOptions
 ```
 Example:
 ```csharp
