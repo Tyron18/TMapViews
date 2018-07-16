@@ -78,7 +78,6 @@ namespace TMapViews.iOS
                 if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
                 {
                     MarkerClick.Execute(annotation.Annotation);
-                    view.Selected = false;
                 }
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay && (overlay is BindingMKCircle))
@@ -86,7 +85,6 @@ namespace TMapViews.iOS
                 if (OverlayClicked?.CanExecute(overlay.Annotation) ?? false)
                 {
                     OverlayClicked.Execute(overlay.Annotation);
-                    view.Selected = false;
                 }
             }
             else if (view.Annotation == mapView.UserLocation)
@@ -95,9 +93,10 @@ namespace TMapViews.iOS
                 if (MyLocationClick?.CanExecute(loc) ?? false)
                 {
                     MyLocationClick.Execute(loc);
-                    view.Selected = false;
                 }
             }
+
+            mapView.DeselectAnnotation(view.Annotation, false);
         }
 
         public override void ChangedDragState(MKMapView mapView, MKAnnotationView annotationView, MKAnnotationViewDragState newState, MKAnnotationViewDragState oldState)
