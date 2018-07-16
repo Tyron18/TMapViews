@@ -108,11 +108,13 @@ namespace TMapViews.iOS
                     case MKAnnotationViewDragState.Starting:
                         if (MarkerDragStart?.CanExecute(annotation.Annotation) ?? false)
                             MarkerDragStart.Execute(annotation.Annotation);
+                        annotationView.SetDragState(MKAnnotationViewDragState.Dragging, true);
                         break;
 
                     case MKAnnotationViewDragState.Ending:
                         if (MarkerDragEnd?.CanExecute(annotation.Annotation) ?? false)
                             MarkerDragEnd.Execute(annotation.Annotation);
+                        annotationView.SetDragState(MKAnnotationViewDragState.None, true);
                         break;
 
                     case MKAnnotationViewDragState.Dragging:

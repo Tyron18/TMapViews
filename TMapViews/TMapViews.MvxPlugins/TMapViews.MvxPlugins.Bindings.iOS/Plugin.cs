@@ -18,6 +18,7 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
         private void RegisterFactories(IMvxTargetBindingFactoryRegistry obj)
         {
             obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.UserCurrentLocation), view => new BindingMKMapViewUserCurrentLocationTargetBinding(view));
+            obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.AnnotationSource), view => new BindingMKMapViewAnnotationTargetBinding(view));
         }
     }
 }
