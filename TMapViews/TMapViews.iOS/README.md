@@ -44,7 +44,7 @@ public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, 
 `GetViewForBindingOverlay` creates the overlay to be placed on the map for an `IBindingMapOverlay`, returning an `IBindingMKMapOverlay`.
 The `IBindingMKMapOverlay` is an extended `MKMapOverlay` that includes an `IBindingMapAnnotation Annotation` and a `MKOverlayRenderer Renderer`.
 The `Annotation` property will be set by the `BindingMKMapView` and does not need to be set by this method.
-The `Renderer` property must be set in order to render the overlay, it includes properties such as fill color and stroke width.
+The `Renderer` must then be set in the `OverlayRenderer` method, it includes properties such as fill color and stroke width.
     For more info on the render, check out the [Apple](https://developer.apple.com/documentation/mapkit/mkoverlayrenderer) and [Xamarin](https://developer.xamarin.com/api/type/MonoTouch.MapKit.MKOverlayRenderer/) documentation.
 
 There are 4 included `IBindingMKMapOverlay`:
@@ -63,16 +63,19 @@ public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView,
 {
     if (bindingMapOverlay is ExampleBindingOverlay eOverlay)
     {
-        var result = BindingMKCircle.Circle(eOverlay.Location.ToCLLocationCoordinate2D(), eOverlay.Radius);
-        result.Renderer = new MKCircleRenderer(result)
+        return BindingMKCircle.Circle(eOverlay.Location.ToCLLocationCoordinate2D(), eOverlay.Radius);
+    }
+    return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
+}
+
+public override MKOverlayRenderer OverlayRenderer(MKMapView mapView, IMKOverlay overlay)
+{
+    return new MKCircleRenderer(overlay)
         {
             StrokeColor = UIColor.Blue,
             LineWidth = 1f,
             FillColor = UIColor.Gray
         };
-        return result:
-    }
-    return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
 }
 ```
 
