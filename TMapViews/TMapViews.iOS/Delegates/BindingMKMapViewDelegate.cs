@@ -71,34 +71,34 @@ namespace TMapViews.iOS
             }
         }
 
-        //public sealed override void DidSelectAnnotationView(MKMapView mapView, MKAnnotationView view)
-        //{
-        //    if (view.Annotation is BindingMKAnnotation annotation)
-        //    {
-        //        if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
-        //        {
-        //            MarkerClick.Execute(annotation.Annotation);
-        //            view.Selected = false;
-        //        }
-        //    }
-        //    else if (view.Annotation is IBindingMKMapOverlay overlay && (overlay is BindingMKCircle))
-        //    {
-        //        if (OverlayClicked?.CanExecute(overlay.Annotation) ?? false)
-        //        {
-        //            OverlayClicked.Execute(overlay.Annotation);
-        //            view.Selected = false;
-        //        }
-        //    }
-        //    else if (view.Annotation == mapView.UserLocation)
-        //    {
-        //        var loc = view.Annotation.Coordinate.ToBinding2DLocation();
-        //        if (MyLocationClick?.CanExecute(loc) ?? false)
-        //        {
-        //            MyLocationClick.Execute(loc);
-        //            view.Selected = false;
-        //        }
-        //    }
-        //}
+        public sealed override void DidSelectAnnotationView(MKMapView mapView, MKAnnotationView view)
+        {
+            if (view.Annotation is BindingMKAnnotation annotation)
+            {
+                if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
+                {
+                    MarkerClick.Execute(annotation.Annotation);
+                    view.Selected = false;
+                }
+            }
+            else if (view.Annotation is IBindingMKMapOverlay overlay && (overlay is BindingMKCircle))
+            {
+                if (OverlayClicked?.CanExecute(overlay.Annotation) ?? false)
+                {
+                    OverlayClicked.Execute(overlay.Annotation);
+                    view.Selected = false;
+                }
+            }
+            else if (view.Annotation == mapView.UserLocation)
+            {
+                var loc = view.Annotation.Coordinate.ToBinding2DLocation();
+                if (MyLocationClick?.CanExecute(loc) ?? false)
+                {
+                    MyLocationClick.Execute(loc);
+                    view.Selected = false;
+                }
+            }
+        }
 
         public override void ChangedDragState(MKMapView mapView, MKAnnotationView annotationView, MKAnnotationViewDragState newState, MKAnnotationViewDragState oldState)
         {
