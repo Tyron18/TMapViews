@@ -11,7 +11,7 @@ using TMapViews.iOS;
 using TMapViews.iOS.Models;
 using TMapViews.Models;
 
-namespace TMapViews.MvxPlugins.Bindings.iOS
+namespace TMapViews.MvxPlugins.Bindings.iOS.Bindings
 {
     [Preserve(AllMembers = true)]
     public class BindingMKMapViewAnnotationTargetBinding : MvxTargetBinding<BindingMKMapView, IEnumerable<IBindingMapAnnotation>>

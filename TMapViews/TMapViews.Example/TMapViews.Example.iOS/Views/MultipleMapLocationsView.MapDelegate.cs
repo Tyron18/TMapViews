@@ -1,62 +1,27 @@
 ﻿using MapKit;
+using MvvmCross.Binding.BindingContext;
 using ObjCRuntime;
 using System;
+using System.Collections.Generic;
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
 using TMapViews.iOS.Models;
 using TMapViews.Models;
+using TMapViews.MvxPlugins.Bindings.iOS;
 using UIKit;
 
 namespace TMapViews.Example.iOS.Views
 {
     public partial class MultipleMapLocationsView
     {
-        public class ExampleBindingMapDelegate : BindingMKMapViewDelegate
+        public class ExampleBindingMapDelegate : MvxBindingMkMapViewDelegate
         {
-            public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+            public override MvxBindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView)
             {
-                if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
-                {
-                    MKAnnotationView view = mapView.DequeueReusableAnnotation(eAnno.Id + "");
-                    var annotation = new BindingMKAnnotation(bindingMapAnnotation);
-                    annotation.SetTitle(eAnno.Id + "");
-                    annotation.SetSubtitle(eAnno.Id + "");
-                    if (view == null)
-                        view = new MKAnnotationView(annotation, eAnno.Id + "");
-                    else
-                    {
-                        view.Annotation = annotation;
-                    }
-
-                    view.CanShowCallout = false;
-                    view.Draggable = true;
-                    switch (eAnno.Id)
-                    {
-                        case 1:
-                            view.Image = UIImage.FromBundle("Images/marker_a");
-                            break;
-
-                        case 2:
-                            view.Image = UIImage.FromBundle("Images/marker_b");
-                            break;
-
-                        case 3:
-                            view.Image = UIImage.FromBundle("Images/marker_c");
-                            break;
-
-                        case 4:
-                            view.Image = UIImage.FromBundle("Images/marker_d");
-                            break;
-
-                        case 5:
-                            view.Image = UIImage.FromBundle("Images/marker_e");
-                            break;
-                    }
-
-                    return view;
-                }
-
-                return null;        //Lets the map default behavior take over if the annotation isnt a BindingMKAnnotation.
+                var result = mapView.DequeueReusableAnnotation("Example") as ExamplePinMvxBindingAnnotationView;
+                if (result == null)
+                    result = new ExamplePinMvxBindingAnnotationView("Example");
+                return result;
             }
 
             public override IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)
@@ -73,6 +38,32 @@ namespace TMapViews.Example.iOS.Views
                     return result;
                 }
                 return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
+            }
+        }
+
+        public class ExamplePinMvxBindingAnnotationView : MvxBindingMKAnnotationView
+        {
+            public ExamplePinMvxBindingAnnotationView(string reuseIdentifier) : base(reuseIdentifier)
+            {
+                this.DelayBind(() =>
+                {
+                    var bindingSet = this.CreateBindingSet<ExamplePinMvxBindingAnnotationView, ExampleBindingAnnotation>();
+                    bindingSet.Bind(this).For(v => v.Image).To(vm => vm.Id).WithDictionaryConversion(new Dictionary<int, UIImage>
+                    {
+                        {1, UIImage.FromBundle("Images/marker_a")},
+                        {2, UIImage.FromBundle("Images/marker_b")},
+                        {3, UIImage.FromBundle("Images/marker_c")},
+                        {4, UIImage.FromBundle("Images/marker_d")},
+                        {5, UIImage.FromBundle("Images/marker_e")}
+                    });
+                    bindingSet.Apply();
+                });
+            }
+
+            public override void OnAnnotationSet()
+            {
+                Annotation.SetTitle("title");
+                Annotation.SetSubtitle("subTitle");
             }
         }
     }
