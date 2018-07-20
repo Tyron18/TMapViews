@@ -9,6 +9,7 @@ using Android.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using TMapViews.Droid.Adapters;
 using TMapViews.Droid.Models;
 using TMapViews.Models;
@@ -284,8 +285,11 @@ namespace TMapViews.Droid.Views
                 && IsReady)
             {
                 if (AnnotationSource != null)
-                    foreach (var annotation in AnnotationSource)
+                {
+                    int i = 0;
+                    while (i++ < AnnotationSource.Count())
                     {
+                        var annotation = AnnotationSource.ElementAt(i);
                         if (annotation is IBindingMapAnnotation mMarker)
                         {
                             var markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
@@ -299,10 +303,14 @@ namespace TMapViews.Droid.Views
                             }
                         }
                     }
+                }
 
                 if (OverlaySource != null)
-                    foreach (var overlay in OverlaySource)
+                {
+                    int i = 0;
+                    while (i++ < OverlaySource.Count())
                     {
+                        var overlay = OverlaySource.ElementAt(i);
                         if (overlay is IBindingMapOverlay mOverlay)
                         {
                             var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
@@ -334,6 +342,7 @@ namespace TMapViews.Droid.Views
                             }
                         }
                     }
+                }
             }
         }
 
