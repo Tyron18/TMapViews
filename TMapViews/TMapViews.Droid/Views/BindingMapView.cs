@@ -79,7 +79,7 @@ namespace TMapViews.Droid.Views
         public IBindingMapAdapter Adapter
         {
             get;
-            private set;
+            protected set;
         }
 
         private int _mapType = 1;
@@ -266,6 +266,7 @@ namespace TMapViews.Droid.Views
         }
 
         private IEnumerable<IBindingMapOverlay> _overlaySource;
+        protected List<Marker> _markers;
 
         public IEnumerable<IBindingMapOverlay> OverlaySource
         {
@@ -277,7 +278,7 @@ namespace TMapViews.Droid.Views
             }
         }
 
-        private void UpdateAnnotations()
+        public void UpdateAnnotations()
         {
             GoogleMap?.Clear();
             if (AnnotationsVisible
@@ -289,19 +290,7 @@ namespace TMapViews.Droid.Views
                     int i = 0;
                     while (i++ < AnnotationSource.Count())
                     {
-                        var annotation = AnnotationSource.ElementAt(i);
-                        if (annotation is IBindingMapAnnotation mMarker)
-                        {
-                            var markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
-                            if (markerOptions != null)
-                            {
-                                var marker = GoogleMap.AddMarker(markerOptions);
-                                marker.Tag = new AnnotationTag
-                                {
-                                    Annotation = annotation
-                                };
-                            }
-                        }
+                        AddAnnotation(annotation);
                     }
                 }
 
@@ -342,7 +331,35 @@ namespace TMapViews.Droid.Views
                             }
                         }
                     }
+            }
+        }
+
+        public virtual void AddAnnotation(IBindingMapAnnotation annotation)
+        {
+            if (annotation is IBindingMapAnnotation mMarker)
+            {
+                var markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
+                if (markerOptions != null)
+                {
+                    var marker = GoogleMap.AddMarker(markerOptions);
+                    marker.Tag = new AnnotationTag
+                    {
+                        Annotation = annotation
+                    };
+                    if (_markers == null)
+                        _markers = new List<Marker>();
+                    _markers.Add(marker);
                 }
+            }
+        }
+
+        public void RemoveAnnotation(IBindingMapAnnotation item)
+        {
+            var marker = _markers.SingleOrDefault(x => ReferenceEquals((x.Tag as AnnotationTag)?.Annotation, item));
+            if (marker != null)
+            {
+                marker.Remove();
+                _markers.Remove(marker);
             }
         }
 

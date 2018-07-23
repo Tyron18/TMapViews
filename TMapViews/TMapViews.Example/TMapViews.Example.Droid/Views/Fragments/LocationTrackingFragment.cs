@@ -12,13 +12,14 @@ namespace TMapViews.Example.Droid.Views.Fragments
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_location_tracking;
         private BindingMapView _mapView;
+        private LocationTrackingAdapter _adapter;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = base.OnCreateView(inflater, container, savedInstanceState);
 
             _mapView = view.FindViewById<BindingMapView>(Resource.Id.map_view);
-            _mapView.Adapter = new LocationTrackingAdapter(Context);
+            _adapter = new LocationTrackingAdapter(Context);
 
             BindViews();
 
@@ -40,7 +41,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
         public override void OnResume()
         {
             base.OnResume();
-            _mapView?.Initialize(Activity, null);
+            _mapView?.Initialize(Activity, _adapter);
         }
 
         public override void OnPause()
