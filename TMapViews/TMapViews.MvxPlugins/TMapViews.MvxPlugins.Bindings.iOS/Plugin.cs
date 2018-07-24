@@ -1,4 +1,5 @@
 ﻿using System;
+using MapKit;
 using MvvmCross;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Plugin;
@@ -19,10 +20,11 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
 
         private void RegisterFactories(IMvxTargetBindingFactoryRegistry obj)
         {
-            obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.UserCurrentLocation), view => new BindingMKMapViewUserCurrentLocationTargetBinding(view));
-            obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.AnnotationSource), view => new BindingMKMapViewAnnotationTargetBinding(view));
-            obj.RegisterCustomBindingFactory<BindingMKAnnotation>(nameof(BindingMKAnnotation.Title), view => new MKAnnotationTitleTargetBinding(view));
-            obj.RegisterCustomBindingFactory<BindingMKAnnotation>(nameof(BindingMKAnnotation.Subtitle), view => new MKAnnotationSubtitleTargetBinding(view));
+            obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.UserCurrentLocation), target => new BindingMKMapViewUserCurrentLocationTargetBinding(target));
+            obj.RegisterCustomBindingFactory<BindingMKMapView>(nameof(BindingMKMapView.AnnotationSource), target => new BindingMKMapViewAnnotationTargetBinding(target));
+            obj.RegisterCustomBindingFactory<BindingMKAnnotation>(nameof(BindingMKAnnotation.Title), target => new MKAnnotationTitleTargetBinding(target));
+            obj.RegisterCustomBindingFactory<BindingMKAnnotation>(nameof(BindingMKAnnotation.Subtitle), target => new MKAnnotationSubtitleTargetBinding(target));
+            obj.RegisterCustomBindingFactory<MKAnnotationView>(MKAnnotationViewScaleTargetBinding.MKAnnotationViewScaleTargetBindingString, target => new MKAnnotationViewScaleTargetBinding(target));
         }
     }
 }

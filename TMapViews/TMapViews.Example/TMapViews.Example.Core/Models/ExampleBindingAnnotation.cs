@@ -7,6 +7,13 @@ namespace TMapViews.Example.Core.Models
     {
         private I2DLocation location;
         private int id;
+        private bool _selected;
+
+        public bool Selected
+        {
+            get => _selected;
+            set => SetProperty(ref _selected, value);
+        }
 
         public I2DLocation Location { get => location; set => location = value; }
 

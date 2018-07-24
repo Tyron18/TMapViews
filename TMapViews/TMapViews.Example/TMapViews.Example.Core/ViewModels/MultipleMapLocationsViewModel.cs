@@ -145,6 +145,13 @@ namespace TMapViews.Example.Core.ViewModels
             else
                 obj.Id = 1;
 
+            foreach (ExampleBindingAnnotation item in Pins)
+            {
+                if (!ReferenceEquals(item, obj))
+                    item.Selected = false;
+            }
+            obj.Selected = true;
+
             RaisePropertyChanged(() => Pins);
         }
 

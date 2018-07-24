@@ -1,4 +1,5 @@
-﻿using MapKit;
+﻿using CoreGraphics;
+using MapKit;
 using MvvmCross.Binding.BindingContext;
 using ObjCRuntime;
 using System;
@@ -43,8 +44,11 @@ namespace TMapViews.Example.iOS.Views
 
         public class ExamplePinMvxBindingAnnotationView : MvxBindingMKAnnotationView
         {
+            private nfloat _imageHeight;
+
             public ExamplePinMvxBindingAnnotationView(string reuseIdentifier) : base(reuseIdentifier)
             {
+                _imageHeight = UIImage.FromBundle("Images/marker_a").Size.Height;
                 this.DelayBind(() =>
                 {
                     var bindingSet = this.CreateBindingSet<ExamplePinMvxBindingAnnotationView, ExampleBindingAnnotation>();
@@ -56,6 +60,16 @@ namespace TMapViews.Example.iOS.Views
                         {4, UIImage.FromBundle("Images/marker_d")},
                         {5, UIImage.FromBundle("Images/marker_e")}
                     });
+                    bindingSet.Bind(this).For(v => v.BindScale()).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, nfloat>
+                    {
+                        {true, 1.3f},
+                        {false, 1/1.3f}
+                    });
+                    bindingSet.Bind(this).For(v => v.CenterOffset).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, CGPoint>
+                    {
+                        {true,  CenterOffset = new CGPoint(0, -(_imageHeight * 1.3 / 2))},
+                        {false,  CenterOffset = new CGPoint(0, -(_imageHeight / 2))}
+                });
                     bindingSet.Apply();
                 });
             }

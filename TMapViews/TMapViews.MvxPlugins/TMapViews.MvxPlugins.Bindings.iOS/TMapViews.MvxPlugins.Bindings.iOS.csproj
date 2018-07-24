@@ -48,6 +48,8 @@
     <Compile Include="Bindings\BindingMKMapViewUserCurrentLocationTargetBinding.cs" />
     <Compile Include="Bindings\MKAnnotationSubtitleTargetBinding.cs" />
     <Compile Include="Bindings\MKAnnotationTitleTargetBinding.cs" />
+    <Compile Include="Bindings\MKAnnotationViewScaleTargetBinding.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="MvxBindingMKAnnotationView.cs" />
     <Compile Include="MvxBindingMkMapViewDelegate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
