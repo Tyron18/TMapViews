@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Bindings\BindingMapViewUserLocationChangedTargetBinding.cs" />
     <Compile Include="Bindings\BindingMapViewAnnotationSourceTargetBinding.cs" />
+    <Compile Include="Bindings\MarkerAnchorTargetBinding.cs" />
     <Compile Include="Bindings\MarkerIconTargetBinding.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="MvxBindingMapView.cs" />

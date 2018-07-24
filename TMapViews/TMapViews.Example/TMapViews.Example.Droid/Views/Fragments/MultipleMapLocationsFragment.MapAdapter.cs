@@ -1,6 +1,7 @@
 ﻿using Android.Content;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using Android.Graphics.Drawables;
 using Android.Runtime;
 using MvvmCross.Binding.BindingContext;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
 
             public override MvxBindingMarker GetMvxBindingMarker()
             {
-                return new ExampleMvxBindingMarker();
+                return new ExampleMvxBindingMarker(Context);
             }
 
             //public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
@@ -99,21 +100,29 @@ namespace TMapViews.Example.Droid.Views.Fragments
 
     internal class ExampleMvxBindingMarker : MvxBindingMarker
     {
-        public ExampleMvxBindingMarker()
+        public Context Context { get; }
+
+        public ExampleMvxBindingMarker(Context context)
         {
+            Context = context;
             this.DelayBind(() =>
-            {
-                var bindingSet = this.CreateBindingSet<ExampleMvxBindingMarker, ExampleBindingAnnotation>();
-                bindingSet.Bind(Marker).For(v => v.BindIcon()).To(vm => vm.Id).WithDictionaryConversion(new Dictionary<int, BitmapDescriptor>
-                {
-                    {1, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueBlue)},
-                    {2, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueRed)},
-                    {3, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueGreen)},
-                    {4, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueYellow)},
-                    {5, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueViolet)},
-                }, BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueMagenta));
-                bindingSet.Apply();
-            });
+    {
+        var bindingSet = this.CreateBindingSet<ExampleMvxBindingMarker, ExampleBindingAnnotation>();
+        bindingSet.Bind(this).For(v => v.Icon).To(vm => vm.Id).WithDictionaryConversion(new Dictionary<int, Drawable>
+        {
+                    {1, Context.GetDrawable(Resource.Drawable.marker_a)},
+                    {2, Context.GetDrawable(Resource.Drawable.marker_b)},
+                    {3, Context.GetDrawable(Resource.Drawable.marker_c)},
+                    {4, Context.GetDrawable(Resource.Drawable.marker_d)},
+                    {5, Context.GetDrawable(Resource.Drawable.marker_e)},
+        });
+        bindingSet.Bind(this).For(v => v.IconScale).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, float>
+        {
+                    { true, 1.3f },
+                    {false, 1/1.3f }
+        });
+        bindingSet.Apply();
+    });
         }
     }
 }

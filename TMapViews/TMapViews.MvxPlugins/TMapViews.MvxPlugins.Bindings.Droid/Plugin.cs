@@ -20,6 +20,7 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             registry?.RegisterCustomBindingFactory<BindingMapView>(nameof(BindingMapView.UserLocation), target => new BindingMapViewUserLocationChangedTargetBinding(target));
             registry?.RegisterCustomBindingFactory<BindingMapView>(nameof(BindingMapView.AnnotationSource), target => new BindingMapViewAnnotationSourceTargetBinding(target));
             registry?.RegisterCustomBindingFactory<Marker>(MarkerIconTargetBinding.MarkerIconTargetBindingName, target => new MarkerIconTargetBinding(target));
+            registry?.RegisterCustomBindingFactory<Marker>(MarkerAnchorTargetBinding.AnchorBinding, target => new MarkerAnchorTargetBinding(target));
         }
     }
 }

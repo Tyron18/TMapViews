@@ -22,5 +22,10 @@ namespace TMapViews.Example.Core.Models
             get => this.id;
             set => SetProperty(ref this.id, value);
         }
+
+        public (float x, float y) RandomTuple
+        {
+            get => Id == 1 ? (.5f, .5f) : (0, 0);
+        }
     }
 }
