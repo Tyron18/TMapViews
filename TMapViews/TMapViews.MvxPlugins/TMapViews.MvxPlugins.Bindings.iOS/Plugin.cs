@@ -1,5 +1,4 @@
-﻿using System;
-using MapKit;
+﻿using MapKit;
 using MvvmCross;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Plugin;

@@ -1,10 +1,6 @@
-﻿using System;
-using MvvmCross;
-using MvvmCross.Binding;
-using MvvmCross.Binding.Bindings.Target.Construction;
+﻿using MvvmCross.Binding;
 using MvvmCross.Platforms.Android.Binding.Target;
 using MvvmCross.Platforms.Android.WeakSubscription;
-using MvvmCross.Plugin;
 using TMapViews.Droid.Views;
 using TMapViews.Models;
 

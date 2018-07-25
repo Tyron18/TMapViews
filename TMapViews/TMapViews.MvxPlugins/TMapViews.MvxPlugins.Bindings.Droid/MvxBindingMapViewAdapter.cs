@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.Gms.Maps;
+﻿using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Runtime;
 using TMapViews.Droid;
@@ -14,6 +7,7 @@ using TMapViews.Models;
 
 namespace TMapViews.MvxPlugins.Bindings.Droid
 {
+    [Preserve(AllMembers = true)]
     public abstract class MvxBindingMapViewAdapter : IBindingMapAdapter
     {
         public abstract IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay);

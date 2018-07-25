@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using MvvmCross.Binding;
+﻿using MvvmCross.Binding;
 using MvvmCross.Platforms.Android.Binding.Target;
 using MvvmCross.WeakSubscription;
+using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 using TMapViews.Droid.Views;
 using TMapViews.Models;
 

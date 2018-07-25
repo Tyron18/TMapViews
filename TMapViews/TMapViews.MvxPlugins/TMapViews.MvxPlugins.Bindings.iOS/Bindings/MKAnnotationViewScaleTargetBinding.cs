@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CoreGraphics;
-using Foundation;
+﻿using CoreGraphics;
 using MapKit;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings.Target;
-using UIKit;
+using System;
 
 namespace TMapViews.MvxPlugins.Bindings.iOS.Bindings
 {

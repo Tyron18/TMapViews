@@ -1,13 +1,14 @@
-﻿using System;
-using Android.Gms.Maps.Model;
+﻿using Android.Gms.Maps.Model;
 using Android.Graphics;
 using Android.Graphics.Drawables;
+using Android.Runtime;
 using MvvmCross.Base;
 using MvvmCross.Binding.BindingContext;
-using TMapViews.Models;
+using System;
 
 namespace TMapViews.MvxPlugins.Bindings.Droid
 {
+    [Preserve(AllMembers = true)]
     public abstract class MvxBindingMarker : IMvxBindingContextOwner, IMvxDataConsumer
     {
         public MvxBindingMarker() : base()
@@ -46,9 +47,12 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         private void UpdateIcon()
         {
-            var bitmap = (Icon as BitmapDrawable).Bitmap;
-            var scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false);
-            Marker.SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap));
+            if (Icon != null)
+            {
+                var bitmap = (Icon as BitmapDrawable).Bitmap;
+                var scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false);
+                Marker.SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap));
+            }
         }
     }
 }

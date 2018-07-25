@@ -1,5 +1,4 @@
 ﻿using MapKit;
-using System.Linq;
 using System.Windows.Input;
 using TMapViews.iOS.Models;
 using TMapViews.Models;

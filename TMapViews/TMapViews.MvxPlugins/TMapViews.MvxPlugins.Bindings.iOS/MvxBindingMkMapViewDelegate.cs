@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
+﻿using Foundation;
 using MapKit;
 using TMapViews.iOS;
 using TMapViews.Models;
-using UIKit;
 
 namespace TMapViews.MvxPlugins.Bindings.iOS
 {
+    [Preserve(AllMembers = true)]
     public abstract class MvxBindingMkMapViewDelegate : BindingMKMapViewDelegate
     {
         public sealed override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
