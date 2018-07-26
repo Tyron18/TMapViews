@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/Tyron18/TMapViews</RepositoryUrl>
     <PackageTags>Xamarin, Android, iOS</PackageTags>
     <PackageId>TMapViews</PackageId>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
 </Project>

@@ -7,6 +7,7 @@ using MvvmCross.Platforms.Android.Presenters.Attributes;
 using TMapViews.Droid.Views;
 using TMapViews.Example.Core.Converters;
 using TMapViews.Example.Core.ViewModels;
+using TMapViews.MvxPlugins.Bindings.Droid;
 
 namespace TMapViews.Example.Droid.Views.Fragments
 {
@@ -14,7 +15,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
     public partial class MultipleMapLocationsFragment : BaseFragment<MultipleMapLocationsViewModel>
     {
         protected override int FragmentLayoutId => Resource.Layout.fragment_multiple_map_locations;
-        private BindingMapView _mapView;
+        private MvxBindingMapView _mapView;
         private MultpileMapMarkersAdapter _mapAdapter;
         private TextView _longitude, _latitude;
         private LinearLayout _info;
@@ -23,7 +24,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
 
-            _mapView = view.FindViewById<BindingMapView>(Resource.Id.binding_map_view);
+            _mapView = view.FindViewById<MvxBindingMapView>(Resource.Id.binding_map_view);
             _mapView.Zoom = 70;
             _mapAdapter = new MultpileMapMarkersAdapter(this.Activity);
 

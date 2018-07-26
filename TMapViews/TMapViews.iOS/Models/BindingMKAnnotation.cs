@@ -9,7 +9,6 @@ namespace TMapViews.iOS.Models
     {
         private string _title = "";
         private string _subtitle = "";
-        private CLLocationCoordinate2D _coordinate;
 
         public IBindingMapAnnotation Annotation { get; set; }
         public override string Title => _title;
@@ -21,7 +20,7 @@ namespace TMapViews.iOS.Models
             SetBindingCoordinate(anno.Location.ToCLLocationCoordinate2D());
         }
 
-        public override CLLocationCoordinate2D Coordinate { get => _coordinate; }
+        public override CLLocationCoordinate2D Coordinate => Annotation.Location.ToCLLocationCoordinate2D();
 
         public void SetTitle(string title) => _title = title;
 
@@ -29,14 +28,9 @@ namespace TMapViews.iOS.Models
 
         [Export("_original_setCoordinate:")]
         public void SetBindingCoordinate(CLLocationCoordinate2D value)
-        {
-            _coordinate = value;
-            Annotation.Location = value.ToBinding2DLocation();
-        }
+            => Annotation.Location = value.ToBinding2DLocation();
 
         public override void SetCoordinate(CLLocationCoordinate2D value)
-        {
-            this.SetBindingCoordinate(value);
-        }
+            => SetBindingCoordinate(value);
     }
 }

@@ -3,6 +3,7 @@ using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Platforms.Ios.Views;
+using TMapViews.Example.Core.Converters;
 using TMapViews.Example.Core.ViewModels;
 using TMapViews.iOS;
 using UIKit;
@@ -35,7 +36,7 @@ namespace TMapViews.Example.iOS.Views
             _mapView = new BindingMKMapView()
             {
                 TranslatesAutoresizingMaskIntoConstraints = false,
-                ScrollEnabled = false,
+                ScrollEnabled = true,
                 UserInteractionEnabled = true,
                 Delegate = _mapDelegate,
                 ZoomLevel = 72.25
@@ -118,9 +119,10 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Bind(_mapView).For(v => v.OverlaySource).To(vm => vm.Overlays);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.OverlayClicked).To(vm => vm.MarkerTappedCommand);
-            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
-            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
-            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);
+            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
+            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
+            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);
+            //bindingSet.Bind(_mapView).For(v => v.MapClick).To(vm => vm.MapClickCommand);
             bindingSet.Bind(_toggleButton).To(vm => vm.NavigateToLocationTrackingCommand);
             bindingSet.Bind(_info).For(v => v.Hidden).To(vm => vm.Dragging).WithDictionaryConversion
                 (
@@ -138,8 +140,8 @@ namespace TMapViews.Example.iOS.Views
                         {false, true }
                     }
                 );
-            //bindingSet.Bind(_latitude).For(v => v.Text).To(vm => vm.Latitude).WithConversion<ParseDoubleValueConverter>();
-            //bindingSet.Bind(_longitude).For(v => v.Text).To(vm => vm.Longitude).WithConversion<ParseDoubleValueConverter>();
+            bindingSet.Bind(_latitude).For(v => v.Text).To(vm => vm.Latitude).WithConversion<ParseDoubleValueConverter>();
+            bindingSet.Bind(_longitude).For(v => v.Text).To(vm => vm.Longitude).WithConversion<ParseDoubleValueConverter>();
             bindingSet.Apply();
         }
     }

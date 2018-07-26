@@ -129,7 +129,7 @@ namespace TMapViews.iOS
             }
         }
 
-        private void UpdatePins()
+        public void UpdatePins()
         {
             RemoveAnnotations(Annotations);
             if (AnnotationsVisible)

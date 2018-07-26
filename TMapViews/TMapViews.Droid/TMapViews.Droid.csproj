@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Adapters\IBindingMapAdapter.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="Models\Anchor.cs" />
     <Compile Include="Models\AnnotationTag.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_height="match_parent"
-              android:layout_width="match_parent">
-  
-  <TMapViews.Droid.Views.BindingMapView
-    android:id="@+id/binding_map_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-
-  <LinearLayout
-    android:id="@+id/layout_info"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:layout_alignParentBottom="true"
-    android:orientation="horizontal"
-    android:background="@android:color/background_light"
-    android:padding="10dp">
-    <TextView
-      android:id="@+id/txt_latitude"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:gravity="right"
-      android:textAlignment="gravity"
-      android:layout_margin="10dp"
-      android:layout_weight="1"/>
-    <TextView
-      android:text=":"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:gravity="center"
-      android:textAlignment="gravity"
-      android:layout_margin="10dp"/>
-    <TextView
-     android:id="@+id/txt_longitude"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_margin="10dp"
-     android:layout_weight="1"/>
-  </LinearLayout>
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <TMapViews.MvxPlugins.Bindings.Droid.MvxBindingMapView
+        android:id="@+id/binding_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/background_light"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/txt_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textAlignment="gravity"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+        <TextView
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:layout_margin="10dp" />
+        <TextView
+            android:id="@+id/txt_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+    </LinearLayout>
 </RelativeLayout>

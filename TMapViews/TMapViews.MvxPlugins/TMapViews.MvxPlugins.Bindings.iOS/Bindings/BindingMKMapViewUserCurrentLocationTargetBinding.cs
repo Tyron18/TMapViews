@@ -1,11 +1,10 @@
-﻿using System;
-using MvvmCross;
+﻿using MvvmCross;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings.Target;
 using TMapViews.iOS;
 using TMapViews.Models;
 
-namespace TMapViews.MvxPlugins.Bindings.iOS
+namespace TMapViews.MvxPlugins.Bindings.iOS.Bindings
 {
     [Preserve(AllMembers = true)]
     public class BindingMKMapViewUserCurrentLocationTargetBinding : MvxTargetBinding<BindingMKMapView, I3DLocation>
