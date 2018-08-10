@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using MapKit;
 using TMapViews.iOS;
+using TMapViews.iOS.Views;
 using TMapViews.Models;
 
 namespace TMapViews.MvxPlugins.Bindings.iOS
@@ -16,5 +17,15 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
         }
 
         public abstract MvxBindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView);
+
+        public sealed override BindingMKCalloutView GetViewForCallout(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+        {
+            var view = GetViewForCallout(mapView);
+            if (view != null)
+                view.DataContext = bindingMapAnnotation;
+            return view;
+        }
+
+        public virtual MvxBindingCalloutView GetViewForCallout(MKMapView mapView) => null;
     }
 }

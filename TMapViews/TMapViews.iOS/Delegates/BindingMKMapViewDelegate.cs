@@ -1,7 +1,13 @@
-﻿using MapKit;
+﻿using Cirrious.FluentLayouts.Touch;
+using CoreGraphics;
+using MapKit;
+using System;
+using System.Linq;
 using System.Windows.Input;
 using TMapViews.iOS.Models;
+using TMapViews.iOS.Views;
 using TMapViews.Models;
+using UIKit;
 
 namespace TMapViews.iOS
 {
@@ -13,7 +19,7 @@ namespace TMapViews.iOS
         public ICommand LocationChanged { get; set; }
 
         /// <summary>
-        /// Executes when an annotation is selected. Passes a <paramref name="BindingMkAnnotation"/>.
+        /// Executes when an annotation is clicked. Passes a <paramref name="BindingMKAnnotation"/>.
         /// </summary>
         public ICommand MarkerClick { get; set; }
 
@@ -23,7 +29,12 @@ namespace TMapViews.iOS
         public ICommand OverlayClicked { get; set; }
 
         /// <summary>
-        /// Executes when an annotation is deselected. Passes a <paramref name="BindingMkAnnotation"/>.
+        /// Executes whan an annotation is selected. Passes a <paramref name="BindingMKAnnotation"/>
+        /// </summary>
+        public ICommand MarkerSelected { get; set; }
+
+        /// <summary>
+        /// Executes when an annotation is deselected. Passes a <paramref name="BindingMKAnnotation"/>.
         /// </summary>
         public ICommand MarkerDeselected { get; set; }
 
@@ -39,7 +50,7 @@ namespace TMapViews.iOS
         public ICommand MyLocationClick { get; set; }
 
         /// <summary>
-        /// Executes when a marker is dragged. Passes a <paramref name="BindingMkAnnotation"/>.
+        /// Executes when a marker is dragged. Passes a <paramref name="BindingMKAnnotation"/>.
         /// </summary>
         public ICommand MarkerDrag { get; set; }
 
@@ -74,9 +85,22 @@ namespace TMapViews.iOS
         {
             if (view.Annotation is BindingMKAnnotation annotation)
             {
-                if (MarkerClick?.CanExecute(annotation.Annotation) ?? false)
+                if (MarkerSelected?.CanExecute(annotation.Annotation) ?? false)
                 {
-                    MarkerClick.Execute(annotation.Annotation);
+                    MarkerSelected.Execute(annotation.Annotation);
+                }
+                var callout = GetViewForCallout(mapView, annotation.Annotation);
+                if(callout != null)
+                {
+                    callout.SetNeedsLayout();
+                    callout.LayoutIfNeeded();
+                    view.AddSubview(callout);
+                    view.AddConstraints(
+                        new FluentLayout[]
+                        {
+                            callout.WithSameCenterY(view).Plus(callout.YOffset),
+                            callout.WithSameCenterX(view).Plus(callout.XOffset)
+                        });
                 }
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay && (overlay is BindingMKCircle))
@@ -94,8 +118,6 @@ namespace TMapViews.iOS
                     MyLocationClick.Execute(loc);
                 }
             }
-
-            mapView.DeselectAnnotation(view.Annotation, false);
         }
 
         public override void ChangedDragState(MKMapView mapView, MKAnnotationView annotationView, MKAnnotationViewDragState newState, MKAnnotationViewDragState oldState)
@@ -130,6 +152,8 @@ namespace TMapViews.iOS
             {
                 if (MarkerDeselected?.CanExecute(annotation.Annotation) ?? false)
                     MarkerDeselected.Execute(annotation.Annotation);
+                var callout = view.Subviews.FirstOrDefault(x => x is BindingMKCalloutView);
+                callout?.RemoveFromSuperview();
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay)
             {
@@ -148,8 +172,27 @@ namespace TMapViews.iOS
         public sealed override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
         {
             if (annotation is BindingMKAnnotation bAnno)
-                return GetViewForBindingAnnotation(mapView, bAnno.Annotation);
+            {
+                var view = GetViewForBindingAnnotation(mapView, bAnno.Annotation);
+                RegisterTapEvents(view);
+                return view;
+            }
             return null;
+        }
+
+        private void RegisterTapEvents(MKAnnotationView view)
+        {
+            var tap = new UITapGestureRecognizer(HandleAnnotationTap) { CancelsTouchesInView = true };
+            view.AddGestureRecognizer(tap);
+        }
+
+        private void HandleAnnotationTap(UITapGestureRecognizer gesture)
+        {
+            if (gesture.View is MKAnnotationView view && view.Annotation is BindingMKAnnotation anno)
+            {
+                if (MarkerClick?.CanExecute(anno.Annotation) ?? false)
+                    MarkerClick.Execute(anno.Annotation);
+            }
         }
 
         public virtual MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
@@ -166,5 +209,7 @@ namespace TMapViews.iOS
         }
 
         public virtual IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay) => null;
+
+        public virtual BindingMKCalloutView GetViewForCallout(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation) => null;
     }
 }

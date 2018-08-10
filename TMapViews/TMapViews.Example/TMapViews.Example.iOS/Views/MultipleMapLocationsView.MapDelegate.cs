@@ -1,4 +1,5 @@
-﻿using CoreGraphics;
+﻿using Cirrious.FluentLayouts.Touch;
+using CoreGraphics;
 using MapKit;
 using MvvmCross.Binding.BindingContext;
 using ObjCRuntime;
@@ -40,6 +41,11 @@ namespace TMapViews.Example.iOS.Views
                 }
                 return base.GetViewForBindingOverlay(mapView, bindingMapOverlay);
             }
+
+            public override MvxBindingCalloutView GetViewForCallout(MKMapView mapView)
+            {
+                return new ExampleMvxBindingCallout();
+            }
         }
 
         public class ExamplePinMvxBindingAnnotationView : MvxBindingMKAnnotationView
@@ -49,6 +55,7 @@ namespace TMapViews.Example.iOS.Views
             public ExamplePinMvxBindingAnnotationView(string reuseIdentifier) : base(reuseIdentifier)
             {
                 _imageHeight = UIImage.FromBundle("Images/marker_a").Size.Height;
+                CenterOffset = new CGPoint(0, -(_imageHeight / 2));
                 this.DelayBind(() =>
                 {
                     var bindingSet = this.CreateBindingSet<ExamplePinMvxBindingAnnotationView, ExampleBindingAnnotation>();
@@ -60,16 +67,16 @@ namespace TMapViews.Example.iOS.Views
                         {4, UIImage.FromBundle("Images/marker_d")},
                         {5, UIImage.FromBundle("Images/marker_e")}
                     });
-                    bindingSet.Bind(this).For(v => v.BindScale()).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, nfloat>
-                    {
-                        {true, 1.3f},
-                        {false, 1/1.3f}
-                    });
-                    bindingSet.Bind(this).For(v => v.CenterOffset).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, CGPoint>
-                    {
-                        {true,  CenterOffset = new CGPoint(0, -(_imageHeight * 1.3 / 2))},
-                        {false,  CenterOffset = new CGPoint(0, -(_imageHeight / 2))}
-                });
+                //    bindingSet.Bind(this).For(v => v.BindScale()).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, nfloat>
+                //    {
+                //        {true, 1.3f},
+                //        {false, 1/1.3f}
+                //    });
+                //    bindingSet.Bind(this).For(v => v.CenterOffset).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, CGPoint>
+                //    {
+                //        {true,  CenterOffset = new CGPoint(0, -(_imageHeight * 1.3 / 2))},
+                //        {false,  CenterOffset = new CGPoint(0, -(_imageHeight / 2))}
+                //});
                     bindingSet.Apply();
                 });
             }
@@ -78,6 +85,45 @@ namespace TMapViews.Example.iOS.Views
             {
                 Annotation.SetTitle("title");
                 Annotation.SetSubtitle("subTitle");
+            }
+        }
+
+        public class ExampleMvxBindingCallout : MvxBindingCalloutView
+        {
+            UILabel text;
+            public ExampleMvxBindingCallout() : base()
+            {
+                TranslatesAutoresizingMaskIntoConstraints = false;
+                Layer.CornerRadius = 5f;
+                BackgroundColor = UIColor.Black;
+
+                text = new UILabel
+                {
+                    TranslatesAutoresizingMaskIntoConstraints = false,
+                    TextColor = UIColor.White
+                };
+                Add(text);
+                this.AddConstraints(text.FullSizeOf(this, 5));
+
+                this.DelayBind(Bind);
+            }
+
+            public override nfloat XOffset => 0;
+
+            public override nfloat YOffset => -(Frame.Height + 10f);
+
+            private void Bind()
+            {
+                var bindingSet = this.CreateBindingSet<ExampleMvxBindingCallout, ExampleBindingAnnotation>();
+                bindingSet.Bind(text).To(vm => vm.Id).WithDictionaryConversion(new Dictionary<int, string>
+                {
+                    {1,"One" },
+                    {2,"Two" },
+                    {3,"Three" },
+                    {4,"Four" },
+                    {5,"Five" }
+                });
+                bindingSet.Apply();
             }
         }
     }

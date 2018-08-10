@@ -51,6 +51,7 @@
     <Compile Include="Bindings\MKAnnotationViewScaleTargetBinding.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="MvxBindingMKAnnotationView.cs" />
+    <Compile Include="MvxBindingMKCallout.cs" />
     <Compile Include="MvxBindingMkMapViewDelegate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Plugin.cs" />
