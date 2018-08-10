@@ -95,11 +95,13 @@ namespace TMapViews.iOS
                     callout.SetNeedsLayout();
                     callout.LayoutIfNeeded();
                     view.AddSubview(callout);
+                    callout.XPosLayout = callout.WithSameCenterX(view).Plus(callout.XOffset);
+                    callout.YPosLayout = callout.WithSameCenterY(view).Plus(callout.YOffset);
                     view.AddConstraints(
                         new FluentLayout[]
                         {
-                            callout.WithSameCenterY(view).Plus(callout.YOffset),
-                            callout.WithSameCenterX(view).Plus(callout.XOffset)
+                            callout.YPosLayout,
+                            callout.XPosLayout
                         });
                 }
             }
