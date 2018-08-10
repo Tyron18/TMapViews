@@ -2,6 +2,7 @@
 using TMapViews.Example.Core.Models;
 using TMapViews.iOS;
 using TMapViews.iOS.Models;
+using TMapViews.iOS.Views;
 using TMapViews.Models;
 using UIKit;
 
@@ -11,16 +12,16 @@ namespace TMapViews.Example.iOS.Views
     {
         public class LocationTrackingMapDelegate : BindingMKMapViewDelegate
         {
-            public override MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+            public override BindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
             {
                 if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
                 {
-                    var view = mapView.DequeueReusableAnnotation(eAnno.Id + "");
+                    var view = mapView.DequeueReusableAnnotation(eAnno.Id + "") as BindingMKAnnotationView;
                     var annotation = new BindingMKAnnotation(bindingMapAnnotation);
                     annotation.SetTitle(eAnno.Id + "");
                     annotation.SetSubtitle(eAnno.Id + "");
                     if (view == null)
-                        view = new MKAnnotationView(annotation, eAnno.Id + "");
+                        view = new BindingMKAnnotationView(annotation, eAnno.Id + "");
                     else
                     {
                         view.Annotation = annotation;

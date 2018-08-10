@@ -52,6 +52,7 @@
     <Compile Include="Models\IBindingMKMapAnnotation.cs" />
     <Compile Include="Models\IBindingMKMapOverlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BindingMKAnnotationView.cs" />
     <Compile Include="Views\BindingMKCallout.cs" />
     <Compile Include="Views\BindingMKMapView.cs" />
     <Compile Include="Delegates\BindingMKMapViewDelegate.cs" />

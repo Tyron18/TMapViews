@@ -77,6 +77,7 @@ namespace TMapViews.Example.iOS.Views
                 //        {true,  CenterOffset = new CGPoint(0, -(_imageHeight * 1.3 / 2))},
                 //        {false,  CenterOffset = new CGPoint(0, -(_imageHeight / 2))}
                 //});
+
                     bindingSet.Apply();
                 });
             }

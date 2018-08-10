@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using System;
 using System.Threading.Tasks;
 using TMapViews.Example.Core.Models;
 using TMapViews.Models;
@@ -44,6 +45,17 @@ namespace TMapViews.Example.Core.ViewModels
         public IMvxCommand NavigateToLocationTrackingCommand
             => _navigateToLocationTrackingCommand ?? (_navigateToLocationTrackingCommand = new MvxAsyncCommand(NavigateToLocationTracking));
 
+        public IMvxCommand<ExampleBindingAnnotation> CalloutClickedCommand
+            => _calloutClickedCommand ?? (_calloutClickedCommand = new MvxCommand<ExampleBindingAnnotation>(CalloutClicked));
+
+        private void CalloutClicked(ExampleBindingAnnotation obj)
+        {
+            if (obj.Id > 1)
+                obj.Id--;
+            else
+                obj.Id = 5;
+        }
+
         private Task NavigateToLocationTracking()
         => _navigationService.Navigate<LocationTrackingViewModel>();
 
@@ -51,6 +63,7 @@ namespace TMapViews.Example.Core.ViewModels
         private double _longitude;
         private bool _dragging;
         private IMvxNavigationService _navigationService;
+        private IMvxCommand<ExampleBindingAnnotation> _calloutClickedCommand;
 
         public MultipleMapLocationsViewModel(IMvxNavigationService navigationService)
         {

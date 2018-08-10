@@ -69,6 +69,11 @@ namespace TMapViews.iOS
         /// </summary>
         public ICommand CameraMoved { get; set; }
 
+        /// <summary>
+        /// Executes when a callout is clicked. Passes a <paramref name="IBindingMapAnnotation"/>
+        /// </summary>
+        public ICommand CalloutClicked { get; set; }
+
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
             var coordinate = userLocation.ToBinding3DLocation();
@@ -92,6 +97,7 @@ namespace TMapViews.iOS
                 var callout = GetViewForCallout(mapView, annotation.Annotation);
                 if(callout != null)
                 {
+                    callout.Annotation = annotation.Annotation;
                     callout.SetNeedsLayout();
                     callout.LayoutIfNeeded();
                     view.AddSubview(callout);
@@ -103,6 +109,7 @@ namespace TMapViews.iOS
                             callout.YPosLayout,
                             callout.XPosLayout
                         });
+                    RegisterTapEvents(callout);
                 }
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay && (overlay is BindingMKCircle))
@@ -182,7 +189,7 @@ namespace TMapViews.iOS
             return null;
         }
 
-        private void RegisterTapEvents(MKAnnotationView view)
+        private void RegisterTapEvents(UIView view)
         {
             var tap = new UITapGestureRecognizer(HandleAnnotationTap) { CancelsTouchesInView = true };
             view.AddGestureRecognizer(tap);
@@ -195,9 +202,14 @@ namespace TMapViews.iOS
                 if (MarkerClick?.CanExecute(anno.Annotation) ?? false)
                     MarkerClick.Execute(anno.Annotation);
             }
+            else if(gesture.View is BindingMKCalloutView callout)
+            {
+                if (CalloutClicked?.CanExecute(callout.Annotation) ?? false)
+                    CalloutClicked.Execute(callout.Annotation);
+            }
         }
 
-        public virtual MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
+        public virtual BindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
         => null;
 
         public sealed override MKOverlayView GetViewForOverlay(MKMapView mapView, IMKOverlay overlay)

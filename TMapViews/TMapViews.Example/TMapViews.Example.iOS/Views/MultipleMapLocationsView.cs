@@ -119,10 +119,10 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Bind(_mapView).For(v => v.OverlaySource).To(vm => vm.Overlays);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.OverlayClicked).To(vm => vm.MarkerTappedCommand);
-            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
-            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
-            //bindingSet.Bind(_mapDelegate).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);
-            //bindingSet.Bind(_mapView).For(v => v.MapClick).To(vm => vm.MapClickCommand);
+            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
+            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragEnd).To(vm => vm.MarkerDragEndCommand);
+            bindingSet.Bind(_mapDelegate).For(v => v.MarkerDrag).To(vm => vm.MarkerDragCommand);
+            bindingSet.Bind(_mapDelegate).For(v => v.CalloutClicked).To(vm => vm.CalloutClickedCommand);
             bindingSet.Bind(_toggleButton).To(vm => vm.NavigateToLocationTrackingCommand);
             bindingSet.Bind(_info).For(v => v.Hidden).To(vm => vm.Dragging).WithDictionaryConversion
                 (

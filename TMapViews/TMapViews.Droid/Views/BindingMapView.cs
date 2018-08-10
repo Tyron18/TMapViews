@@ -290,6 +290,7 @@ namespace TMapViews.Droid.Views
                     int i = 0;
                     while (i++ < AnnotationSource.Count())
                     {
+                        var annotation = AnnotationSource.ElementAt(i);
                         AddAnnotation(annotation);
                     }
                 }
@@ -331,6 +332,7 @@ namespace TMapViews.Droid.Views
                             }
                         }
                     }
+                }
             }
         }
 
