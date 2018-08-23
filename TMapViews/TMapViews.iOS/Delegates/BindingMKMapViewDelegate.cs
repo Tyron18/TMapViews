@@ -161,7 +161,7 @@ namespace TMapViews.iOS
             {
                 if (MarkerDeselected?.CanExecute(annotation.Annotation) ?? false)
                     MarkerDeselected.Execute(annotation.Annotation);
-                var callout = view.Subviews.FirstOrDefault(x => x is BindingMKCalloutView);
+                var callout = view?.Subviews.FirstOrDefault(x => x is BindingMKCalloutView);
                 callout?.RemoveFromSuperview();
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay)

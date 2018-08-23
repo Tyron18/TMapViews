@@ -56,6 +56,7 @@ namespace TMapViews.Example.iOS.Views
             {
                 _imageHeight = UIImage.FromBundle("Images/marker_a").Size.Height;
                 CenterOffset = new CGPoint(0, -(_imageHeight / 2));
+                Draggable = true;
                 this.DelayBind(() =>
                 {
                     var bindingSet = this.CreateBindingSet<ExamplePinMvxBindingAnnotationView, ExampleBindingAnnotation>();
