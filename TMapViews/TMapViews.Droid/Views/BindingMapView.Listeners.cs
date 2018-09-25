@@ -34,7 +34,7 @@ namespace TMapViews.Droid.Views
             GoogleMap.SetOnPolylineClickListener(this);
         }
 
-        public bool OnMarkerClick(Marker marker)
+        public virtual bool OnMarkerClick(Marker marker)
         {
             var mAnnotation = (marker.Tag as AnnotationTag)?.Annotation;
             if (mAnnotation is IBindingMapAnnotation anno

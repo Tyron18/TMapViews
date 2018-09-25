@@ -50,6 +50,8 @@
     <Compile Include="Bindings\MarkerAnchorTargetBinding.cs" />
     <Compile Include="Bindings\MarkerIconTargetBinding.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="MvxBindingInfoViewHolder.cs" />
+    <Compile Include="MvxBindingInfoWindowAdapter.cs" />
     <Compile Include="MvxBindingMapView.cs" />
     <Compile Include="MvxBindingMapViewAdapter.cs" />
     <Compile Include="MvxBindingMarker.cs" />

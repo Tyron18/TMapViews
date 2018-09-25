@@ -17,10 +17,23 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 {
     public class MvxBindingMapView : BindingMapView
     {
+        private MvxBindingInfoWindowAdapter _infoWindowAdapter;
+
         public new MvxBindingMapViewAdapter Adapter
         {
             get => base.Adapter as MvxBindingMapViewAdapter;
             private set => base.Adapter = value;
+        }
+        public MvxBindingInfoWindowAdapter InfoWindowAdapter
+        {
+            get => _infoWindowAdapter;
+            set
+            {
+                _infoWindowAdapter = value;
+                if (_infoWindowAdapter != null)
+                    _infoWindowAdapter.MapView = GoogleMap;
+                GoogleMap?.SetInfoWindowAdapter(_infoWindowAdapter);
+            }
         }
 
         public MvxBindingMapView(Context context) : base(context)
@@ -64,10 +77,10 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         {
             if (annotation is IBindingMapAnnotation mMarker)
             {
-                var markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
+                MarkerOptions markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
                 if (markerOptions != null)
                 {
-                    var marker = GoogleMap.AddMarker(markerOptions);
+                    Marker marker = GoogleMap.AddMarker(markerOptions);
                     Adapter.GetMvxBindingMarker(marker, annotation);
                     marker.Tag = new AnnotationTag
                     {
@@ -78,6 +91,23 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
                     _markers.Add(marker);
                 }
             }
+        }
+
+        protected override void UpdateUiSettings()
+        {
+            base.UpdateUiSettings();
+            if (InfoWindowAdapter != null)
+            {
+                InfoWindowAdapter.MapView = GoogleMap;
+                GoogleMap.SetInfoWindowAdapter(InfoWindowAdapter);
+            }
+        }
+
+        public override bool OnMarkerClick(Marker marker)
+        {
+            if (InfoWindowAdapter != null)
+                marker.ShowInfoWindow();
+            return base.OnMarkerClick(marker);
         }
     }
 }

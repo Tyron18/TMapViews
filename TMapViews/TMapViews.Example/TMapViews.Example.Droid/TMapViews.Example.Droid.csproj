@@ -16,8 +16,7 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -225,9 +224,11 @@
     <Compile Include="Views\Fragments\LocationTrackingFragment.cs" />
     <Compile Include="Views\Fragments\LocationTrackingFragment.MapAdapter.cs" />
     <Compile Include="Views\Fragments\MultipleMapLocationsFragment.cs" />
+    <Compile Include="Views\Fragments\MultipleMapLocationsFragment.InfowWindowAdapter.cs" />
     <Compile Include="Views\Fragments\MultipleMapLocationsFragment.MapAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\item_info_window.xml" />
     <AndroidResource Include="Resources\layout\layout_activity.xml">
       <SubType>Designer</SubType>
     </AndroidResource>

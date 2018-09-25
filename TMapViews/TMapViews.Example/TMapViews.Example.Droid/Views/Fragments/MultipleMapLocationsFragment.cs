@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using TMapViews.Droid.Views;
 using TMapViews.Example.Core.Converters;
@@ -17,6 +18,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
         protected override int FragmentLayoutId => Resource.Layout.fragment_multiple_map_locations;
         private MvxBindingMapView _mapView;
         private MultpileMapMarkersAdapter _mapAdapter;
+        private ExampleInfoWindowAdapter _infoWindowAdapter;
         private TextView _longitude, _latitude;
         private LinearLayout _info;
 
@@ -27,6 +29,8 @@ namespace TMapViews.Example.Droid.Views.Fragments
             _mapView = view.FindViewById<MvxBindingMapView>(Resource.Id.binding_map_view);
             _mapView.Zoom = 70;
             _mapAdapter = new MultpileMapMarkersAdapter(this.Activity);
+            _infoWindowAdapter = new ExampleInfoWindowAdapter(BindingContext as IMvxAndroidBindingContext, Context);
+            _mapView.InfoWindowAdapter = _infoWindowAdapter;
 
             _info = view.FindViewById<LinearLayout>(Resource.Id.layout_info);
             _latitude = view.FindViewById<TextView>(Resource.Id.txt_latitude);

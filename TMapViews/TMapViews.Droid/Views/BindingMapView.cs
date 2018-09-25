@@ -288,9 +288,9 @@ namespace TMapViews.Droid.Views
                 if (AnnotationSource != null)
                 {
                     int i = 0;
-                    while (i++ < AnnotationSource.Count())
+                    while (i < AnnotationSource.Count())
                     {
-                        var annotation = AnnotationSource.ElementAt(i);
+                        var annotation = AnnotationSource.ElementAt(i++);
                         AddAnnotation(annotation);
                     }
                 }
@@ -298,9 +298,9 @@ namespace TMapViews.Droid.Views
                 if (OverlaySource != null)
                 {
                     int i = 0;
-                    while (i++ < OverlaySource.Count())
+                    while (i < OverlaySource.Count())
                     {
-                        var overlay = OverlaySource.ElementAt(i);
+                        var overlay = OverlaySource.ElementAt(i++);
                         if (overlay is IBindingMapOverlay mOverlay)
                         {
                             var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
@@ -393,7 +393,7 @@ namespace TMapViews.Droid.Views
             UpdateAnnotations();
         }
 
-        private void UpdateUiSettings()
+        protected virtual void UpdateUiSettings()
         {
             if (GoogleMap != null)
             {
