@@ -9,7 +9,7 @@ The constructor for the `BindingMkMapView` takes an optional `BindingMkMapViewDe
 ## The Delegate
 If you want to use annotations and overlays on your map, you will need a custom map delegate. The map map delegate extends `BindingMkMapViewDelegate`, and determines the properies of the annotations added from your data source. The adapter is assigned to your map as follows:
 
-`_mapView.Delegate = new MyMapDeeaget();`
+`_mapView.Delegate = new MyMapDelegate();`
 
 The map delegate contatains 2 overridable methods. `MKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)` and `IBindingMKMapOverlay GetViewForBindingOverlay(MKMapView mapView, IBindingMapOverlay bindingMapOverlay)`. Used to generate markers and overlays respectively.
 
