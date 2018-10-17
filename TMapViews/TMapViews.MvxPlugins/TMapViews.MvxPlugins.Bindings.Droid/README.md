@@ -142,6 +142,8 @@ There are 2 ways of displaying a callout, either override the `GetInfoContentsVi
 * `GetInfoWindowViewHolder` will display the callout without any default layout.
 If both of these methods return a view, `GetInfoWindowViewHolder` will take priority. Both otherwise function the same.
 
+For more information on using InfoWindows, please see [Google's Documentation](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter).
+
 ***Example***
 ```csharp
 public class ExampleInfoWindowAdapter : MvxBindingInfoWindowAdapter
