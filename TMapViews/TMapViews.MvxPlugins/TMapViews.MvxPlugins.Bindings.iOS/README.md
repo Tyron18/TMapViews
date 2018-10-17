@@ -7,7 +7,7 @@ This package is designed to make TMapViews easily compatible with MvvmCross.
 * `MvxBindingMKMapViewDelegate`
 
 ## MvxBindingMKAnnotationView
-The `MvxBindingMKAnnotationView' is used to create MvvmCross-bindable markers against a `IBindingMapAnnotation` viewmodel.
+The `MvxBindingMKAnnotationView` is used to create MvvmCross-bindable markers against a `IBindingMapAnnotation` viewmodel.
 To use a `MvxBindingMKAnnotationView`, you simply extend the object, and in the constructor, set the view up as needed, creating your bindings in a `DelayBind` action.
 
 ### Example
