@@ -100,7 +100,7 @@ public class ExampleBindingMapDelegate : MvxBindingMkMapViewDelegate
 }
 ```
 
-##Custom Bindings
+## Custom Bindings
 The following custom binding have also been added:
 
 |Binding |For Object |Description|
