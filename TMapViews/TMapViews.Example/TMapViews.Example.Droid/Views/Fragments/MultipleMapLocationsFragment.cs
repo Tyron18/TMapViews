@@ -28,7 +28,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
 
             _mapView = view.FindViewById<MvxBindingMapView>(Resource.Id.binding_map_view);
             _mapView.Zoom = 70;
-            _mapAdapter = new MultpileMapMarkersAdapter(this.Activity);
+            _mapAdapter = new MultpileMapMarkersAdapter(Activity, _mapView);
             _infoWindowAdapter = new ExampleInfoWindowAdapter(BindingContext as IMvxAndroidBindingContext, Context);
             _mapView.InfoWindowAdapter = _infoWindowAdapter;
 
@@ -38,8 +38,8 @@ namespace TMapViews.Example.Droid.Views.Fragments
 
             var bindingSet = this.CreateBindingSet<MultipleMapLocationsFragment, MultipleMapLocationsViewModel>();
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.Center);
-            bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
-            bindingSet.Bind(_mapView).For(v => v.OverlaySource).To(vm => vm.Overlays);
+            bindingSet.Bind(_mapAdapter).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_mapAdapter).For(v => v.OverlaySource).To(vm => vm.Overlays);
             bindingSet.Bind(_mapView).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapView).For(v => v.OverlayClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapView).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);

@@ -45,7 +45,7 @@ namespace TMapViews.Droid.Views
                 base.OnResume();
         }
 
-        public void GetMapAsync(IBindingMapAdapter adapter = null, Bundle savedInstanceState = null)
+        public void GetMapAsync(BindingMapAdapter adapter = null, Bundle savedInstanceState = null)
         {
             if (adapter != null)
                 Adapter = adapter;
@@ -62,7 +62,7 @@ namespace TMapViews.Droid.Views
         /// Returns a result code from Android.Gms.Common.ResultCode where a 0 is
         /// a success.
         /// </returns>
-        public int Initialize(Activity context, IBindingMapAdapter adapter, Bundle savedInstanceState = null)
+        public int Initialize(Activity context, BindingMapAdapter adapter, Bundle savedInstanceState = null)
         {
             MapsInitializer.Initialize(context);
             var resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(context);
@@ -76,10 +76,15 @@ namespace TMapViews.Droid.Views
 
         public GoogleMap GoogleMap { get; private set; }
 
-        public IBindingMapAdapter Adapter
+        public BindingMapAdapter Adapter
         {
-            get;
-            protected set;
+            get => _adapter;
+            protected set
+            {
+                _adapter = value;
+                if (IsReady)
+                    _adapter.UpdateAnnotations();
+            }
         }
 
         private int _mapType = 1;
@@ -194,7 +199,7 @@ namespace TMapViews.Droid.Views
             set
             {
                 _annotationsVisible = value;
-                UpdateAnnotations();
+                Adapter?.UpdateAnnotations();
             }
         }
 
@@ -211,6 +216,7 @@ namespace TMapViews.Droid.Views
         }
 
         private I3DLocation _userLocation;
+        private BindingMapAdapter _adapter;
 
         public I3DLocation UserLocation
         {
@@ -253,132 +259,7 @@ namespace TMapViews.Droid.Views
 
         public bool IsReady { get; private set; }
 
-        private IEnumerable<IBindingMapAnnotation> _annotationSource;
-
-        public IEnumerable<IBindingMapAnnotation> AnnotationSource
-        {
-            get => _annotationSource;
-            set
-            {
-                _annotationSource = value;
-                UpdateAnnotations();
-            }
-        }
-
-        private IEnumerable<IBindingMapOverlay> _overlaySource;
-        protected List<Marker> _markers;
-
-        public IEnumerable<IBindingMapOverlay> OverlaySource
-        {
-            get => _overlaySource;
-            set
-            {
-                _overlaySource = value;
-                UpdateAnnotations();
-            }
-        }
-
-        public void UpdateAnnotations()
-        {
-            GoogleMap?.Clear();
-            if (AnnotationsVisible
-                && Adapter != null
-                && IsReady)
-            {
-                if (AnnotationSource != null)
-                {
-                    int i = 0;
-                    while (i < AnnotationSource.Count())
-                    {
-                        var annotation = AnnotationSource.ElementAt(i++);
-                        AddAnnotation(annotation);
-                    }
-                }
-
-                if (OverlaySource != null)
-                {
-                    int i = 0;
-                    while (i < OverlaySource.Count())
-                    {
-                        var overlay = OverlaySource.ElementAt(i++);
-                        if (overlay is IBindingMapOverlay mOverlay)
-                        {
-                            var overlayOptions = Adapter.AddBindingMapOverlay(GoogleMap, mOverlay);
-                            if (overlayOptions != null)
-                            {
-                                var overlayView = AddOverlay(overlayOptions);
-                                if (overlayView is Circle circle)
-                                    circle.Tag = new AnnotationTag
-                                    {
-                                        Annotation = mOverlay
-                                    };
-                                else if (overlayView is Polygon polygon)
-                                    polygon.Tag = new AnnotationTag
-                                    {
-                                        Annotation = mOverlay
-                                    };
-                                else if (overlayView is Polyline polyLine)
-                                    polyLine.Tag = new AnnotationTag
-                                    {
-                                        Annotation = mOverlay
-                                    };
-                                else if (overlayView is GroundOverlay groundOverlay)
-                                    groundOverlay.Tag = new AnnotationTag
-                                    {
-                                        Annotation = mOverlay
-                                    };
-                                else
-                                    throw new OverlayAdapterException(overlayView);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        public virtual void AddAnnotation(IBindingMapAnnotation annotation)
-        {
-            if (annotation is IBindingMapAnnotation mMarker)
-            {
-                var markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
-                if (markerOptions != null)
-                {
-                    var marker = GoogleMap.AddMarker(markerOptions);
-                    marker.Tag = new AnnotationTag
-                    {
-                        Annotation = annotation
-                    };
-                    if (_markers == null)
-                        _markers = new List<Marker>();
-                    _markers.Add(marker);
-                }
-            }
-        }
-
-        public void RemoveAnnotation(IBindingMapAnnotation item)
-        {
-            var marker = _markers.SingleOrDefault(x => ReferenceEquals((x.Tag as AnnotationTag)?.Annotation, item));
-            if (marker != null)
-            {
-                marker.Remove();
-                _markers.Remove(marker);
-            }
-        }
-
-        private IJavaObject AddOverlay(IJavaObject overlayOptions)
-        {
-            if (overlayOptions is CircleOptions circle)
-                return GoogleMap.AddCircle(circle);
-            if (overlayOptions is PolygonOptions poly)
-                return GoogleMap.AddPolygon(poly);
-            if (overlayOptions is PolylineOptions line)
-                return GoogleMap.AddPolyline(line);
-            if (overlayOptions is GroundOverlayOptions gOverlay)
-                return GoogleMap.AddGroundOverlay(gOverlay);
-            if (overlayOptions is TileOverlayOptions tOverlay)
-                return GoogleMap.AddTileOverlay(tOverlay);
-            throw new OverlayAdapterException(overlayOptions);
-        }
+      
 
         public void OnMapReady(GoogleMap googleMap)
         {
@@ -390,7 +271,7 @@ namespace TMapViews.Droid.Views
             if (CenterMapLocation != null)
                 CenterOn(CenterMapLocation);
             SetListeners();
-            UpdateAnnotations();
+            Adapter?.UpdateAnnotations();
         }
 
         protected virtual void UpdateUiSettings()

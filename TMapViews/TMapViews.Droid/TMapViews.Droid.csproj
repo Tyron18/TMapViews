@@ -76,7 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\IBindingMapAdapter.cs" />
+    <Compile Include="Adapters\BindingMapAdapter.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Models\Anchor.cs" />
     <Compile Include="Models\AnnotationTag.cs" />

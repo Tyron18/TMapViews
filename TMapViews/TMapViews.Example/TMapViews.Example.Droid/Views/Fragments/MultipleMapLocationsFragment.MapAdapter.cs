@@ -1,12 +1,11 @@
 ﻿using Android.Content;
-using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Graphics.Drawables;
 using Android.Runtime;
 using MvvmCross.Binding.BindingContext;
 using System.Collections.Generic;
 using TMapViews.Droid;
-using TMapViews.Droid.Adapters;
+using TMapViews.Droid.Views;
 using TMapViews.Example.Core.Models;
 using TMapViews.Models;
 using TMapViews.MvxPlugins.Bindings.Droid;
@@ -17,14 +16,14 @@ namespace TMapViews.Example.Droid.Views.Fragments
     {
         internal class MultpileMapMarkersAdapter : MvxBindingMapViewAdapter
         {
-            public MultpileMapMarkersAdapter(Context context)
+            public MultpileMapMarkersAdapter(Context context, BindingMapView mapView) : base(mapView)
             {
                 Context = context;
             }
 
             public Context Context { get; }
 
-            public override IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
+            public override IJavaObject AddBindingMapOverlay(IBindingMapOverlay overlay)
             {
                 CircleOptions circleOptions = null;
 
@@ -107,7 +106,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             Context = context;
             this.DelayBind(() =>
     {
-        var bindingSet = this.CreateBindingSet<ExampleMvxBindingMarker, ExampleBindingAnnotation>();
+        MvxFluentBindingDescriptionSet<ExampleMvxBindingMarker, ExampleBindingAnnotation> bindingSet = this.CreateBindingSet<ExampleMvxBindingMarker, ExampleBindingAnnotation>();
         bindingSet.Bind(this).For(v => v.Icon).To(vm => vm.Id).WithDictionaryConversion(new Dictionary<int, Drawable>
         {
                     {1, Context.GetDrawable(Resource.Drawable.marker_a)},

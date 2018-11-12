@@ -3,6 +3,7 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Runtime;
 using TMapViews.Droid.Adapters;
+using TMapViews.Droid.Views;
 using TMapViews.Example.Core.Models;
 using TMapViews.Models;
 
@@ -10,21 +11,21 @@ namespace TMapViews.Example.Droid.Views.Fragments
 {
     public partial class LocationTrackingFragment
     {
-        internal class LocationTrackingAdapter : IBindingMapAdapter
+        internal class LocationTrackingAdapter : BindingMapAdapter
         {
             public Context Context;
 
-            public LocationTrackingAdapter(Context context)
+            public LocationTrackingAdapter(Context context, BindingMapView mapView):base(mapView)
             {
                 Context = context;
             }
 
-            public IJavaObject AddBindingMapOverlay(GoogleMap googleMap, IBindingMapOverlay overlay)
+            public override IJavaObject AddBindingMapOverlay(IBindingMapOverlay overlay)
             {
                 return null;
             }
 
-            public MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
+            public override MarkerOptions GetMarkerOptionsForPin(IBindingMapAnnotation pin)
             {
                 MarkerOptions markerOptions = null;
 

@@ -19,7 +19,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             View view = base.OnCreateView(inflater, container, savedInstanceState);
 
             _mapView = view.FindViewById<BindingMapView>(Resource.Id.map_view);
-            _adapter = new LocationTrackingAdapter(Context);
+            _adapter = new LocationTrackingAdapter(Context, _mapView);
 
             BindViews();
 
@@ -32,7 +32,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             bindingSet.Bind(_mapView).For(v => v.UserLocation).To(vm => vm.UserLocation);
             bindingSet.Bind(_mapView).For(v => v.MyLocationEnabled).To(vm => vm.CanTrackLocation);
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.UserLocation);
-            bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_adapter).For(v => v.AnnotationSource).To(vm => vm.Pins);
             bindingSet.Bind(_mapView).For(v => v.LocationChanged).To(vm => vm.UserLocationChangedCommand);
 
             bindingSet.Apply();

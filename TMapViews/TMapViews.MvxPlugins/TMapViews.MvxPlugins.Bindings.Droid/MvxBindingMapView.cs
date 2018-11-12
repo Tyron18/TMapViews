@@ -71,27 +71,8 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         /// <param name="savedInstanceState"></param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public new int Initialize(Activity context, IBindingMapAdapter adapter, Bundle savedInstanceState = null) => throw new NotSupportedException("Please Use  Initialize(Activity context, MvxBindingMapViewAdapter adapter, Bundle savedInstanceState = null)");
+        public new int Initialize(Activity context, BindingMapAdapter adapter, Bundle savedInstanceState = null) => throw new NotSupportedException("Please Use  Initialize(Activity context, MvxBindingMapViewAdapter adapter, Bundle savedInstanceState = null)");
 
-        public override void AddAnnotation(IBindingMapAnnotation annotation)
-        {
-            if (annotation is IBindingMapAnnotation mMarker)
-            {
-                MarkerOptions markerOptions = Adapter.GetMarkerOptionsForPin(annotation);
-                if (markerOptions != null)
-                {
-                    Marker marker = GoogleMap.AddMarker(markerOptions);
-                    Adapter.GetMvxBindingMarker(marker, annotation);
-                    marker.Tag = new AnnotationTag
-                    {
-                        Annotation = annotation
-                    };
-                    if (_markers == null)
-                        _markers = new List<Marker>();
-                    _markers.Add(marker);
-                }
-            }
-        }
 
         protected override void UpdateUiSettings()
         {
