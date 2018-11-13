@@ -9,6 +9,10 @@ namespace TMapViews.MvxPlugins.Bindings.iOS
     [Preserve(AllMembers = true)]
     public abstract class MvxBindingMkMapViewDelegate : BindingMKMapViewDelegate
     {
+        public MvxBindingMkMapViewDelegate(BindingMKMapView mapView) : base(mapView)
+        {
+        }
+
         public sealed override BindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
         {
             var anno = GetViewForBindingAnnotation(mapView);

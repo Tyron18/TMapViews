@@ -18,6 +18,10 @@ namespace TMapViews.Example.iOS.Views
     {
         public class ExampleBindingMapDelegate : MvxBindingMkMapViewDelegate
         {
+            public ExampleBindingMapDelegate(BindingMKMapView mapView) : base(mapView)
+            {
+            }
+
             public override MvxBindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView)
             {
                 var result = mapView.DequeueReusableAnnotation("Example") as ExamplePinMvxBindingAnnotationView;

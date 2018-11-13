@@ -24,7 +24,6 @@ namespace TMapViews.Example.iOS.Views
         {
             base.ViewDidLoad();
 
-            _mapDelegate = new ExampleBindingMapDelegate();
 
             InitializeSubviews();
             LayoutSubviews();
@@ -41,6 +40,7 @@ namespace TMapViews.Example.iOS.Views
                 Delegate = _mapDelegate,
                 ZoomLevel = 72.25
             };
+            _mapDelegate = new ExampleBindingMapDelegate(_mapView);
 
             _info = new UIView()
             {
@@ -115,8 +115,8 @@ namespace TMapViews.Example.iOS.Views
         {
             var bindingSet = this.CreateBindingSet<MultipleMapLocationsView, MultipleMapLocationsViewModel>();
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.Center);
-            bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
-            bindingSet.Bind(_mapView).For(v => v.OverlaySource).To(vm => vm.Overlays);
+            bindingSet.Bind(_mapDelegate).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_mapDelegate).For(v => v.OverlaySource).To(vm => vm.Overlays);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerClick).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.OverlayClicked).To(vm => vm.MarkerTappedCommand);
             bindingSet.Bind(_mapDelegate).For(v => v.MarkerDragStart).To(vm => vm.MarkerDragStartCommand);
@@ -143,6 +143,7 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Bind(_latitude).For(v => v.Text).To(vm => vm.Latitude).WithConversion<ParseDoubleValueConverter>();
             bindingSet.Bind(_longitude).For(v => v.Text).To(vm => vm.Longitude).WithConversion<ParseDoubleValueConverter>();
             bindingSet.Apply();
+            _mapView.Delegate = _mapDelegate;
         }
     }
 }

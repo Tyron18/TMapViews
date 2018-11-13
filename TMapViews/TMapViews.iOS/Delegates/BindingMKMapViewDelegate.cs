@@ -2,6 +2,7 @@
 using CoreGraphics;
 using MapKit;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using TMapViews.iOS.Models;
@@ -13,6 +14,8 @@ namespace TMapViews.iOS
 {
     public class BindingMKMapViewDelegate : MKMapViewDelegate
     {
+        
+
         /// <summary>
         /// Executes when user location changes. Passes a <paramref name="I3DLocation"/>.
         /// </summary>
@@ -74,6 +77,85 @@ namespace TMapViews.iOS
         /// </summary>
         public ICommand CalloutClicked { get; set; }
 
+        private IEnumerable<IBindingMapAnnotation> _annotationSource;
+
+        public IEnumerable<IBindingMapAnnotation> AnnotationSource
+        {
+            get => _annotationSource;
+            set
+            {
+                _annotationSource = value;
+                UpdatePins();
+            }
+        }
+
+        private IEnumerable<IBindingMapOverlay> _overlaySource;
+        private BindingMKMapView _mapView;
+
+        public IEnumerable<IBindingMapOverlay> OverlaySource
+        {
+            get => _overlaySource;
+            set
+            {
+                _overlaySource = value;
+                UpdatePins();
+            }
+        }
+
+        public BindingMKMapViewDelegate(BindingMKMapView mapView)
+        {
+            _mapView = mapView;
+        }
+
+        public void UpdatePins()
+        {
+            _mapView.RemoveAnnotations(_mapView.Annotations);
+            if (_mapView.AnnotationsVisible)
+            {
+                if (AnnotationSource != null)
+                    foreach (var pin in AnnotationSource)
+                        AddBindingAnnotation(pin);
+
+                if (OverlaySource != null)
+                    foreach (var overlay in OverlaySource)
+                        AddBindingOverlay(overlay);
+            }
+        }
+
+        private void AddBindingAnnotation(IBindingMapAnnotation pin)
+        {
+            AddAnnotation(new BindingMKAnnotation(pin));
+        }
+
+        private void AddBindingOverlay(IBindingMapOverlay overlay)
+        {
+            var mapOverlay = GetViewForBindingOverlay(_mapView, overlay);
+            if (mapOverlay != null)
+            {
+                if (mapOverlay is BindingMKPolyline polyLine)
+                {
+                    AddOverlay(polyLine.PolyLine);
+                }
+                else if (mapOverlay is BindingMKPolygon polygon)
+                {
+                    AddOverlay(polygon.Polygon);
+                }
+                else
+                {
+                    mapOverlay.Annotation = overlay;
+                    AddOverlay(mapOverlay);
+                }
+            }
+        }
+
+        public void AddAnnotation(IMKAnnotation annotation) => _mapView.AddAnnotation(annotation);
+        public void AddOverlay(IMKOverlay overlay) => _mapView.AddOverlay(overlay);
+        public void RemoveAnnotation(IMKAnnotation annotation) => _mapView.RemoveAnnotation(annotation);
+        public void RemoveOverlay(IMKOverlay overlay) => _mapView.RemoveOverlay(overlay);
+
+        public IMKAnnotation[] Annotations => _mapView.Annotations;
+        public IMKOverlay[] Overlays => _mapView.Overlays;
+               
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
             var coordinate = userLocation.ToBinding3DLocation();

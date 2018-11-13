@@ -13,11 +13,11 @@ using TMapViews.Models;
 namespace TMapViews.MvxPlugins.Bindings.iOS.Bindings
 {
     [Preserve(AllMembers = true)]
-    public class BindingMKMapViewAnnotationTargetBinding : MvxTargetBinding<BindingMKMapView, IEnumerable<IBindingMapAnnotation>>
+    public class BindingMKMapViewAnnotationTargetBinding : MvxTargetBinding<BindingMKMapViewDelegate, IEnumerable<IBindingMapAnnotation>>
     {
         private IDisposable _collectionSubscription;
 
-        public BindingMKMapViewAnnotationTargetBinding(BindingMKMapView target) : base(target)
+        public BindingMKMapViewAnnotationTargetBinding(BindingMKMapViewDelegate target) : base(target)
         {
         }
 

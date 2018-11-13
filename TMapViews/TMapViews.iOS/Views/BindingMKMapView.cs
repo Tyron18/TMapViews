@@ -11,14 +11,14 @@ namespace TMapViews.iOS
 {
     public class BindingMKMapView : MKMapView
     {
-        public BindingMKMapView(BindingMKMapViewDelegate mapDelegate = null)
+        public BindingMKMapView()
         {
             var mapClickRecognizer = new UITapGestureRecognizer(OnMapClicked);
             AddGestureRecognizer(mapClickRecognizer);
             var mapLongClickRecognizer = new UILongPressGestureRecognizer(OnMapLongClick);
             AddGestureRecognizer(mapLongClickRecognizer);
 
-            Delegate = mapDelegate ?? new BindingMKMapViewDelegate();
+            Delegate = new BindingMKMapViewDelegate(this);
         }
 
         private bool _annotationsVisible = true;
@@ -29,7 +29,7 @@ namespace TMapViews.iOS
             set
             {
                 _annotationsVisible = value;
-                UpdatePins();
+                Delegate?.UpdatePins();
             }
         }
 
@@ -76,29 +76,7 @@ namespace TMapViews.iOS
         [EditorBrowsable(EditorBrowsableState.Never)]
         public event EventHandler<I3DLocation> UserLocationChanged;
 
-        private IEnumerable<IBindingMapAnnotation> _annotationSource;
-
-        public IEnumerable<IBindingMapAnnotation> AnnotationSource
-        {
-            get => _annotationSource;
-            set
-            {
-                _annotationSource = value;
-                UpdatePins();
-            }
-        }
-
-        private IEnumerable<IBindingMapOverlay> _overlaySource;
-
-        public IEnumerable<IBindingMapOverlay> OverlaySource
-        {
-            get => _overlaySource;
-            set
-            {
-                _overlaySource = value;
-                UpdatePins();
-            }
-        }
+       
 
         public new BindingMKMapViewDelegate Delegate { get => base.Delegate as BindingMKMapViewDelegate; set => base.Delegate = value; }
 
@@ -129,46 +107,7 @@ namespace TMapViews.iOS
             }
         }
 
-        public void UpdatePins()
-        {
-            RemoveAnnotations(Annotations);
-            if (AnnotationsVisible)
-            {
-                if (AnnotationSource != null)
-                    foreach (var pin in AnnotationSource)
-                        AddBindingAnnotation(pin);
 
-                if (OverlaySource != null)
-                    foreach (var overlay in OverlaySource)
-                        AddBindingOverlay(overlay);
-            }
-        }
-
-        private void AddBindingAnnotation(IBindingMapAnnotation pin)
-        {
-            AddAnnotation(new BindingMKAnnotation(pin));
-        }
-
-        private void AddBindingOverlay(IBindingMapOverlay overlay)
-        {
-            var mapOverlay = Delegate.GetViewForBindingOverlay(this, overlay);
-            if (mapOverlay != null)
-            {
-                if (mapOverlay is BindingMKPolyline polyLine)
-                {
-                    AddOverlay(polyLine.PolyLine);
-                }
-                else if (mapOverlay is BindingMKPolygon polygon)
-                {
-                    AddOverlay(polygon.Polygon);
-                }
-                else
-                {
-                    mapOverlay.Annotation = overlay;
-                    AddOverlay(mapOverlay);
-                }
-            }
-        }
 
         private void OnMapClicked(UITapGestureRecognizer gesture)
         {

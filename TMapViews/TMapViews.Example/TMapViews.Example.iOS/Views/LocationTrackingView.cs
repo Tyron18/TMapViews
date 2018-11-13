@@ -21,12 +21,12 @@ namespace TMapViews.Example.iOS.Views
         {
             base.ViewDidLoad();
 
-            _delegate = new LocationTrackingMapDelegate();
-
-            _mapView = new BindingMKMapView(_delegate)
+            _mapView = new BindingMKMapView()
             {
                 TranslatesAutoresizingMaskIntoConstraints = false
             };
+
+            _delegate = new LocationTrackingMapDelegate(_mapView);
 
             _toggleButton = new UIButton()
             {
@@ -54,7 +54,7 @@ namespace TMapViews.Example.iOS.Views
             bindingSet.Bind(_mapView).For(v => v.UserCurrentLocation).To(vm => vm.UserLocation);
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.UserLocation);
             bindingSet.Bind(_mapView).For(v => v.ShowsUserLocation).To(vm => vm.CanTrackLocation);
-            bindingSet.Bind(_mapView).For(v => v.AnnotationSource).To(vm => vm.Pins);
+            bindingSet.Bind(_delegate).For(v => v.AnnotationSource).To(vm => vm.Pins);
             bindingSet.Bind(_toggleButton).To(vm => vm.NavigateToMapPinsCommand);
             bindingSet.Bind(_delegate).For(v => v.LocationChanged).To(vm => vm.UserLocationChangedCommand);
 

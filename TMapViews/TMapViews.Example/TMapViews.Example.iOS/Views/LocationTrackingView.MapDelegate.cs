@@ -12,6 +12,10 @@ namespace TMapViews.Example.iOS.Views
     {
         public class LocationTrackingMapDelegate : BindingMKMapViewDelegate
         {
+            public LocationTrackingMapDelegate(BindingMKMapView mapView) : base(mapView)
+            {
+            }
+
             public override BindingMKAnnotationView GetViewForBindingAnnotation(MKMapView mapView, IBindingMapAnnotation bindingMapAnnotation)
             {
                 if (bindingMapAnnotation is ExampleBindingAnnotation eAnno)
