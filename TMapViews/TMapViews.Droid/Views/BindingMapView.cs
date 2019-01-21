@@ -259,8 +259,6 @@ namespace TMapViews.Droid.Views
 
         public bool IsReady { get; private set; }
 
-      
-
         public void OnMapReady(GoogleMap googleMap)
         {
             GoogleMap = googleMap;
@@ -272,6 +270,8 @@ namespace TMapViews.Droid.Views
                 CenterOn(CenterMapLocation);
             SetListeners();
             Adapter?.UpdateAnnotations();
+            if (MapReady != null && MapReady.CanExecute(null))
+                MapReady.Execute(null);
         }
 
         protected virtual void UpdateUiSettings()

@@ -15,5 +15,6 @@ namespace TMapViews.Droid.Views
         public ICommand MyLocationButtonClick { get; set; }
         public ICommand MyLocationClick { get; set; }
         public ICommand OverlayClick { get; set; }
+        public ICommand MapReady { get; set; }
     }
 }
