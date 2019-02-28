@@ -47,12 +47,21 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         private void UpdateIcon()
         {
+            var icon = GetIcon();
+            if (!(icon is null))
+                Marker.SetIcon(icon);
+        }
+
+        public BitmapDescriptor GetIcon()
+        {
             if (Icon != null)
             {
-                var bitmap = (Icon as BitmapDrawable).Bitmap;
-                var scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false);
-                Marker.SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap));
+                Bitmap bitmap = (Icon as BitmapDrawable).Bitmap;
+                Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false);
+                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.FromBitmap(scaledBitmap);
+                return bitmapDescriptor;
             }
+            return null;
         }
     }
 }

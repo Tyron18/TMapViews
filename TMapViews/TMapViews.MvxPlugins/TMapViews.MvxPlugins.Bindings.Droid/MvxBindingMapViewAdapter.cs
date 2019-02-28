@@ -1,5 +1,4 @@
-﻿using Android.Gms.Maps;
-using Android.Gms.Maps.Model;
+﻿using Android.Gms.Maps.Model;
 using Android.Runtime;
 using System.Collections.Generic;
 using TMapViews.Droid;
@@ -24,7 +23,7 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
 
         internal void GetMvxBindingMarker(Marker marker, IBindingMapAnnotation annotation)
         {
-            var result = GetMvxBindingMarker();
+            MvxBindingMarker result = GetMvxBindingMarker();
             result.Marker = marker;
             result.DataContext = annotation;
         }
@@ -38,8 +37,12 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
                 MarkerOptions markerOptions = GetMarkerOptionsForPin(annotation);
                 if (markerOptions != null)
                 {
+                    MvxBindingMarker result = GetMvxBindingMarker();
+                    result.DataContext = annotation;
+                    markerOptions.SetIcon(result.GetIcon());
                     Marker marker = MapView.GoogleMap.AddMarker(markerOptions);
-                    GetMvxBindingMarker(marker, annotation);
+                    result.Marker = marker;
+                    //GetMvxBindingMarker(marker, annotation);
                     marker.Tag = new AnnotationTag
                     {
                         Annotation = annotation
