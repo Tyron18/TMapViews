@@ -1,7 +1,5 @@
 ﻿using Cirrious.FluentLayouts.Touch;
-using CoreGraphics;
 using MapKit;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
@@ -14,7 +12,7 @@ namespace TMapViews.iOS
 {
     public class BindingMKMapViewDelegate : MKMapViewDelegate
     {
-        
+
 
         /// <summary>
         /// Executes when user location changes. Passes a <paramref name="I3DLocation"/>.
@@ -110,15 +108,16 @@ namespace TMapViews.iOS
         public void UpdatePins()
         {
             _mapView.RemoveAnnotations(_mapView.Annotations);
-            _mapView.RemoveOverlays(_mapView.Overlays);
+            if (!(_mapView.Overlays is null))
+                _mapView.RemoveOverlays(_mapView.Overlays);
             if (_mapView.AnnotationsVisible)
             {
                 if (AnnotationSource != null)
-                    foreach (var pin in AnnotationSource)
+                    foreach (IBindingMapAnnotation pin in AnnotationSource)
                         AddBindingAnnotation(pin);
 
                 if (OverlaySource != null)
-                    foreach (var overlay in OverlaySource)
+                    foreach (IBindingMapOverlay overlay in OverlaySource)
                         AddBindingOverlay(overlay);
             }
         }
@@ -130,7 +129,7 @@ namespace TMapViews.iOS
 
         private void AddBindingOverlay(IBindingMapOverlay overlay)
         {
-            var mapOverlay = GetViewForBindingOverlay(_mapView, overlay);
+            IBindingMKMapOverlay mapOverlay = GetViewForBindingOverlay(_mapView, overlay);
             if (mapOverlay != null)
             {
                 if (mapOverlay is BindingMKPolyline polyLine)
@@ -156,10 +155,10 @@ namespace TMapViews.iOS
 
         public IMKAnnotation[] Annotations => _mapView.Annotations;
         public IMKOverlay[] Overlays => _mapView.Overlays;
-               
+
         public sealed override void DidUpdateUserLocation(MKMapView mapView, MKUserLocation userLocation)
         {
-            var coordinate = userLocation.ToBinding3DLocation();
+            Binding3DLocation coordinate = userLocation.ToBinding3DLocation();
             if (mapView is BindingMKMapView v)
                 v.UserCurrentLocation = coordinate;
             if (LocationChanged != null)
@@ -177,8 +176,8 @@ namespace TMapViews.iOS
                 {
                     MarkerSelected.Execute(annotation.Annotation);
                 }
-                var callout = GetViewForCallout(mapView, annotation.Annotation);
-                if(callout != null)
+                BindingMKCalloutView callout = GetViewForCallout(mapView, annotation.Annotation);
+                if (callout != null)
                 {
                     callout.Annotation = annotation.Annotation;
                     callout.SetNeedsLayout();
@@ -204,7 +203,7 @@ namespace TMapViews.iOS
             }
             else if (view.Annotation == mapView.UserLocation)
             {
-                var loc = view.Annotation.Coordinate.ToBinding2DLocation();
+                Binding2DLocation loc = view.Annotation.Coordinate.ToBinding2DLocation();
                 if (MyLocationClick?.CanExecute(loc) ?? false)
                 {
                     MyLocationClick.Execute(loc);
@@ -244,7 +243,7 @@ namespace TMapViews.iOS
             {
                 if (MarkerDeselected?.CanExecute(annotation.Annotation) ?? false)
                     MarkerDeselected.Execute(annotation.Annotation);
-                var callout = view?.Subviews.FirstOrDefault(x => x is BindingMKCalloutView);
+                UIView callout = view?.Subviews.FirstOrDefault(x => x is BindingMKCalloutView);
                 callout?.RemoveFromSuperview();
             }
             else if (view.Annotation is IBindingMKMapOverlay overlay)
@@ -256,7 +255,7 @@ namespace TMapViews.iOS
 
         public sealed override void RegionChanged(MKMapView mapView, bool animated)
         {
-            var pos = new Binding3DLocation(mapView.Camera.CenterCoordinate.Latitude, mapView.Camera.CenterCoordinate.Longitude, mapView.Camera.Altitude);
+            Binding3DLocation pos = new Binding3DLocation(mapView.Camera.CenterCoordinate.Latitude, mapView.Camera.CenterCoordinate.Longitude, mapView.Camera.Altitude);
             if (CameraMoved?.CanExecute(pos) ?? false)
                 CameraMoved.Execute(pos);
         }
@@ -265,7 +264,7 @@ namespace TMapViews.iOS
         {
             if (annotation is BindingMKAnnotation bAnno)
             {
-                var view = GetViewForBindingAnnotation(mapView, bAnno.Annotation);
+                BindingMKAnnotationView view = GetViewForBindingAnnotation(mapView, bAnno.Annotation);
                 RegisterTapEvents(view);
                 return view;
             }
@@ -274,7 +273,7 @@ namespace TMapViews.iOS
 
         private void RegisterTapEvents(UIView view)
         {
-            var tap = new UITapGestureRecognizer(HandleAnnotationTap) { CancelsTouchesInView = true };
+            UITapGestureRecognizer tap = new UITapGestureRecognizer(HandleAnnotationTap) { CancelsTouchesInView = true };
             view.AddGestureRecognizer(tap);
         }
 
@@ -285,7 +284,7 @@ namespace TMapViews.iOS
                 if (MarkerClick?.CanExecute(anno.Annotation) ?? false)
                     MarkerClick.Execute(anno.Annotation);
             }
-            else if(gesture.View is BindingMKCalloutView callout)
+            else if (gesture.View is BindingMKCalloutView callout)
             {
                 if (CalloutClicked?.CanExecute(callout.Annotation) ?? false)
                     CalloutClicked.Execute(callout.Annotation);
