@@ -110,6 +110,7 @@ namespace TMapViews.iOS
         public void UpdatePins()
         {
             _mapView.RemoveAnnotations(_mapView.Annotations);
+            _mapView.RemoveOverlays(_mapView.Overlays);
             if (_mapView.AnnotationsVisible)
             {
                 if (AnnotationSource != null)

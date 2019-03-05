@@ -42,7 +42,6 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
                     markerOptions.SetIcon(result.GetIcon());
                     Marker marker = MapView.GoogleMap.AddMarker(markerOptions);
                     result.Marker = marker;
-                    //GetMvxBindingMarker(marker, annotation);
                     marker.Tag = new AnnotationTag
                     {
                         Annotation = annotation

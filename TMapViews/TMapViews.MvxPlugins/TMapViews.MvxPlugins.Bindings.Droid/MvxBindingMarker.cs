@@ -19,7 +19,15 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         public object DataContext { get => BindingContext.DataContext; set => BindingContext.DataContext = value; }
         public IMvxBindingContext BindingContext { get; set; }
 
-        public Marker Marker { get; internal set; }
+        public Marker Marker
+        {
+            get => _marker;
+            set
+            {
+                _marker = value;
+                _marker.SetAnchor(_anchor.X, _anchor.Y);
+            }
+        }
 
         private Drawable _icon;
 
@@ -34,6 +42,8 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         }
 
         private float _iconScale = 1;
+        private PointF _anchor;
+        private Marker _marker;
 
         public float IconScale
         {
@@ -45,9 +55,19 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             }
         }
 
+        public PointF Anchor
+        {
+            get => _anchor;
+            set
+            {
+                _anchor = value;
+                _marker?.SetAnchor(_anchor.X, _anchor.Y);
+            }
+        }
+
         private void UpdateIcon()
         {
-            var icon = GetIcon();
+            BitmapDescriptor icon = GetIcon();
             if (!(icon is null))
                 Marker.SetIcon(icon);
         }
