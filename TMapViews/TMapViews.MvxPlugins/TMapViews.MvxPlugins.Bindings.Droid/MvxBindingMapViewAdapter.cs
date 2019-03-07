@@ -34,22 +34,22 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         {
             if (annotation is IBindingMapAnnotation mMarker)
             {
-                MarkerOptions markerOptions = GetMarkerOptionsForPin(annotation);
-                if (markerOptions != null)
-                {
-                    MvxBindingMarker result = GetMvxBindingMarker();
-                    result.DataContext = annotation;
-                    markerOptions.SetIcon(result.GetIcon());
-                    Marker marker = MapView.GoogleMap.AddMarker(markerOptions);
-                    result.Marker = marker;
-                    marker.Tag = new AnnotationTag
+                using (MarkerOptions markerOptions = GetMarkerOptionsForPin(annotation))
+                    if (markerOptions != null)
                     {
-                        Annotation = annotation
-                    };
-                    if (_markers == null)
-                        _markers = new List<Marker>();
-                    _markers.Add(marker);
-                }
+                        MvxBindingMarker result = GetMvxBindingMarker();
+                        result.DataContext = annotation;
+                        markerOptions.SetIcon(result.GetIcon());
+                        Marker marker = MapView.GoogleMap.AddMarker(markerOptions);
+                        result.Marker = marker;
+                        marker.Tag = new AnnotationTag
+                        {
+                            Annotation = annotation
+                        };
+                        if (_markers == null)
+                            _markers = new List<Marker>();
+                        _markers.Add(marker);
+                    }
             }
         }
     }

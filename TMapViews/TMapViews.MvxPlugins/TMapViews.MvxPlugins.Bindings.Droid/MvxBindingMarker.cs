@@ -25,7 +25,8 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             set
             {
                 _marker = value;
-                _marker.SetAnchor(_anchor.X, _anchor.Y);
+                if(!(_anchor is null))
+                    _marker.SetAnchor(_anchor.X, _anchor.Y);
             }
         }
 
@@ -61,25 +62,30 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             set
             {
                 _anchor = value;
-                _marker?.SetAnchor(_anchor.X, _anchor.Y);
+                if(!(_anchor is null))
+                    _marker?.SetAnchor(_anchor.X, _anchor.Y);
             }
         }
 
         private void UpdateIcon()
         {
-            BitmapDescriptor icon = GetIcon();
-            if (!(icon is null))
-                Marker.SetIcon(icon);
+            using (BitmapDescriptor icon = GetIcon())
+            {
+                if (!(icon is null))
+                    Marker.SetIcon(icon);
+            }
         }
 
         public BitmapDescriptor GetIcon()
         {
             if (Icon != null)
             {
-                Bitmap bitmap = (Icon as BitmapDrawable).Bitmap;
-                Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false);
-                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.FromBitmap(scaledBitmap);
-                return bitmapDescriptor;
+                using (Bitmap bitmap = (Icon as BitmapDrawable).Bitmap)
+                using (Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, (int)Math.Round(bitmap.Width * IconScale), (int)Math.Round(bitmap.Height * IconScale), false))
+                {
+                    BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.FromBitmap(scaledBitmap);
+                    return bitmapDescriptor;
+                }
             }
             return null;
         }

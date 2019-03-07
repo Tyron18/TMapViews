@@ -132,6 +132,8 @@ namespace TMapViews.Droid.Adapters
             {
                 marker.Remove();
                 _markers.Remove(marker);
+                marker.Dispose();
+                marker = null;
             }
         }
 
