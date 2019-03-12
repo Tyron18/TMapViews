@@ -24,4 +24,5 @@ TMapViews is licensed under the [MIT License](https://github.com/Tyron18/TMapVie
  - MVVMCross is used for the `TMapViews.MvxPlugins.Bindings.Droid` and `TMapViews.MvxPlugins.Bindings.iOS` plugins under the [Microsoft Public License](https://github.com/MvvmCross/MvvmCross/blob/develop/LICENSE). 
  
 ## Acknowledgements
+ - Thanks to [realinfo](https://github.com/reallinfo) for the logos.
  - Thanks to [Plac3hold3r](https://github.com/Plac3hold3r) for help and guidance on this project.
