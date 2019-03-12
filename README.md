@@ -1,3 +1,5 @@
+<p align="left"><img src="logo/horizontal.png" alt="TMapViews" height="120px"></p>
+
 # TMapViews
 
 [![license](https://img.shields.io/github/license/Tyron18/TMapViews.svg)](https://github.com/Tyron18/TMapViews/blob/master/LICENSE) 
