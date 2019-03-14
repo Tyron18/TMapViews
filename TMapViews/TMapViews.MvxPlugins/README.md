@@ -1,3 +1,5 @@
+<p align="left"><img src="../../logo/horizontalv2.png" alt="TMapViews" height="120px"></p>
+
 # TMapViews.MvxPlugins
 
 Currently this pluggin just adds a binding for user location to source.
