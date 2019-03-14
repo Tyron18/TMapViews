@@ -14,7 +14,7 @@ namespace TMapViews.Example.Droid.Views
     [Activity(
         MainLauncher = true,
         Theme = "@style/SplashTheme",
-        Icon = "@mipmap/icon",
+        Icon = "@drawable/logomark",
         NoHistory = true,
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreenActivity : MvxSplashScreenAppCompatActivity
