@@ -14,7 +14,9 @@ Annotations and overlays are managed by the `BindingMapViews` using a DataSource
 ## Instalation
 Get the latest [Nuget Package](https://www.nuget.org/packages/TMapViews/) and install it on both your core and platform solutions.
 
-> Install-Package TMapViews
+``` shell
+Install-Package TMapViews
+```
 
 ## Licensing
 
