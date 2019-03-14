@@ -14,7 +14,9 @@ Annotations and overlays are managed by the `BindingMapViews` using a DataSource
 ## Instalation
 Get the latest [Nuget Package](https://www.nuget.org/packages/TMapViews/) and install it on both your core and platform solutions.
 
-> Install-Package TMapViews
+``` shell
+Install-Package TMapViews
+```
 
 ## Licensing
 
@@ -24,4 +26,5 @@ TMapViews is licensed under the [MIT License](https://github.com/Tyron18/TMapVie
  - MVVMCross is used for the `TMapViews.MvxPlugins.Bindings.Droid` and `TMapViews.MvxPlugins.Bindings.iOS` plugins under the [Microsoft Public License](https://github.com/MvvmCross/MvvmCross/blob/develop/LICENSE). 
  
 ## Acknowledgements
+ - Thanks to [realinfo](https://github.com/reallinfo) for the logos.
  - Thanks to [Plac3hold3r](https://github.com/Plac3hold3r) for help and guidance on this project.

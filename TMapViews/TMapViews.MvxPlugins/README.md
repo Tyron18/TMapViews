@@ -1,6 +1,9 @@
+<p align="left"><img src="../../logo/horizontalv2.png" alt="TMapViews" height="120px"></p>
+
 # TMapViews.MvxPlugins
 
-Currently this pluggin just adds a binding for user location to source.
+This pluggin is designed to add functionality to TMapViews to make better use of MvvmCross tools and patterns, including optimised source bindings and BindingContext-aware markers.
+
 On iOS you will need to add the following to your `LinkerPleaseInclude.cs`.
 
 ```csharp
