@@ -34,6 +34,7 @@ namespace TMapViews.Example.Droid.Views.Fragments
             bindingSet.Bind(_mapView).For(v => v.CenterMapLocation).To(vm => vm.UserLocation);
             bindingSet.Bind(_adapter).For(v => v.AnnotationSource).To(vm => vm.Pins);
             bindingSet.Bind(_mapView).For(v => v.LocationChanged).To(vm => vm.UserLocationChangedCommand);
+            bindingSet.Bind(_mapView).For(v => v.MapClick).To(vm => vm.MapClickCommand);
 
             bindingSet.Apply();
         }

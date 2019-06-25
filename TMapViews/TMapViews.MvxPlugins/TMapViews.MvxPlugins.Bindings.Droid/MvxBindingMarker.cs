@@ -25,8 +25,11 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             set
             {
                 _marker = value;
-                if(!(_anchor is null))
+                _marker.ZIndex = _zIndex;
+                if (!(_anchor is null))
                     _marker.SetAnchor(_anchor.X, _anchor.Y);
+                if (!(_icon is null))
+                    UpdateIcon();
             }
         }
 
@@ -45,6 +48,7 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
         private float _iconScale = 1;
         private PointF _anchor;
         private Marker _marker;
+        private float _zIndex;
 
         public float IconScale
         {
@@ -62,8 +66,19 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             set
             {
                 _anchor = value;
-                if(!(_anchor is null))
+                if (!(_anchor is null))
                     _marker?.SetAnchor(_anchor.X, _anchor.Y);
+            }
+        }
+
+        public float ZIndex
+        {
+            get => _zIndex;
+            set
+            {
+                _zIndex = value;
+                if (!(_marker is null))
+                    _marker.ZIndex = _zIndex;
             }
         }
 
@@ -72,7 +87,7 @@ namespace TMapViews.MvxPlugins.Bindings.Droid
             using (BitmapDescriptor icon = GetIcon())
             {
                 if (!(icon is null))
-                    Marker.SetIcon(icon);
+                    Marker?.SetIcon(icon);
             }
         }
 

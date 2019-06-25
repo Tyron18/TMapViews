@@ -29,6 +29,7 @@ namespace TMapViews.Droid.Adapters
             set
             {
                 _annotationSource = value;
+                _markers = new List<Marker>();
                 UpdateAnnotations();
             }
         }
