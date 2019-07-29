@@ -77,7 +77,7 @@ namespace TMapViews.iOS
 
         private IEnumerable<IBindingMapAnnotation> _annotationSource;
 
-        public IEnumerable<IBindingMapAnnotation> AnnotationSource
+        public virtual IEnumerable<IBindingMapAnnotation> AnnotationSource
         {
             get => _annotationSource;
             set
@@ -90,7 +90,7 @@ namespace TMapViews.iOS
         private IEnumerable<IBindingMapOverlay> _overlaySource;
         private BindingMKMapView _mapView;
 
-        public IEnumerable<IBindingMapOverlay> OverlaySource
+        public virtual IEnumerable<IBindingMapOverlay> OverlaySource
         {
             get => _overlaySource;
             set
