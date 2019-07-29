@@ -105,7 +105,7 @@ namespace TMapViews.iOS
             _mapView = mapView;
         }
 
-        public void UpdatePins()
+        public virtual void UpdatePins()
         {
             _mapView.RemoveAnnotations(_mapView.Annotations);
             if (!(_mapView.Overlays is null))
@@ -148,10 +148,10 @@ namespace TMapViews.iOS
             }
         }
 
-        public void AddAnnotation(IMKAnnotation annotation) => _mapView.AddAnnotation(annotation);
-        public void AddOverlay(IMKOverlay overlay) => _mapView.AddOverlay(overlay);
-        public void RemoveAnnotation(IMKAnnotation annotation) => _mapView.RemoveAnnotation(annotation);
-        public void RemoveOverlay(IMKOverlay overlay) => _mapView.RemoveOverlay(overlay);
+        public virtual void AddAnnotation(IMKAnnotation annotation) => _mapView.AddAnnotation(annotation);
+        public virtual void AddOverlay(IMKOverlay overlay) => _mapView.AddOverlay(overlay);
+        public virtual void RemoveAnnotation(IMKAnnotation annotation) => _mapView.RemoveAnnotation(annotation);
+        public virtual void RemoveOverlay(IMKOverlay overlay) => _mapView.RemoveOverlay(overlay);
 
         public IMKAnnotation[] Annotations => _mapView.Annotations;
         public IMKOverlay[] Overlays => _mapView.Overlays;
@@ -271,13 +271,13 @@ namespace TMapViews.iOS
             return null;
         }
 
-        private void RegisterTapEvents(UIView view)
+        protected virtual void RegisterTapEvents(UIView view)
         {
             UITapGestureRecognizer tap = new UITapGestureRecognizer(HandleAnnotationTap) { CancelsTouchesInView = true };
             view.AddGestureRecognizer(tap);
         }
 
-        private void HandleAnnotationTap(UITapGestureRecognizer gesture)
+        protected virtual void HandleAnnotationTap(UITapGestureRecognizer gesture)
         {
             if (gesture.View is MKAnnotationView view && view.Annotation is BindingMKAnnotation anno)
             {
