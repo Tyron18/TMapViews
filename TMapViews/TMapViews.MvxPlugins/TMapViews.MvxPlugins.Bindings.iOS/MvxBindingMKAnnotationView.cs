@@ -2,6 +2,7 @@
 using MapKit;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
+using System;
 using TMapViews.iOS.Models;
 using TMapViews.iOS.Views;
 using TMapViews.Models;
