@@ -243,6 +243,7 @@
     <BundleResource Include="Resources\Images\marker_e.png" />
     <Compile Include="Views\MultipleMapLocationsView.MapDelegate.cs" />
     <BundleResource Include="Resources\Images\sphere.png" />
+    <Compile Include="zIndexConverter.cs" />
     <None Include="app.config" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>

@@ -104,38 +104,22 @@ namespace TMapViews.Example.Core.ViewModels
                 },
                 new ExampleBindingAnnotation
                 {
-                    Location = new Binding2DLocation
-                    {
-                        Latitude = Center.Latitude + 10,
-                        Longitude = Center.Longitude
-                    },
+                    Location = Center,
                     Id = 2
                 },
                 new ExampleBindingAnnotation
                 {
-                    Location = new Binding2DLocation
-                    {
-                        Latitude = Center.Latitude - 10,
-                        Longitude = Center.Longitude
-                    },
+                    Location = Center,
                     Id = 3
                 },
                 new ExampleBindingAnnotation
                 {
-                    Location = new Binding2DLocation
-                    {
-                        Latitude = Center.Latitude,
-                        Longitude = Center.Longitude + 10,
-                    },
+                    Location = Center,
                     Id = 4
                 },
                 new ExampleBindingAnnotation
                 {
-                    Location = new Binding2DLocation
-                    {
-                        Latitude = Center.Latitude,
-                        Longitude = Center.Longitude - 10
-                    },
+                    Location = Center,
                     Id = 5
                 }
             };
@@ -160,6 +144,12 @@ namespace TMapViews.Example.Core.ViewModels
 
             foreach (ExampleBindingAnnotation item in Pins)
             {
+
+                if (item.Id < 5)
+                    item.Id++;
+                else
+                    item.Id = 1;
+
                 if (!ReferenceEquals(item, obj))
                     item.Selected = false;
             }
