@@ -72,7 +72,6 @@ namespace TMapViews.Example.iOS.Views
                         {4, UIImage.FromBundle("Images/marker_d")},
                         {5, UIImage.FromBundle("Images/marker_e")}
                     }).OneTime();
-                    bindingSet.Bind(this).For(v => v.ZIndex).To(vm => vm.Id).WithConversion<ZIndexConverter>();
                 //    bindingSet.Bind(this).For(v => v.BindScale()).To(vm => vm.Selected).WithDictionaryConversion(new Dictionary<bool, nfloat>
                 //    {
                 //        {true, 1.3f},

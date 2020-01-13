@@ -1,8 +1,15 @@
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows.Input;
+using Android.App;
 using Android.Widget;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Commands;
+using MvvmCross.Core;
 using MvvmCross.IoC;
+using MvvmCross.Navigation;
+using MvvmCross.Platforms.Android.Binding.Target;
+using MvvmCross.ViewModels;
 
 namespace TMapViews.Example.Droid.Linker
 {
@@ -59,5 +66,47 @@ namespace TMapViews.Example.Droid.Linker
                 var test = e.PropertyName;
             };
         }
+
+        public void Include(Activity act)
+            => act.Title = $"{act.Title}";
+
+        public void Include(MvxTaskBasedBindingContext context)
+        {
+            context.Dispose();
+            var context2 = new MvxTaskBasedBindingContext();
+            context2.Dispose();
+        }
+
+        public void Include(MvxViewModelViewTypeFinder viewModelViewTypeFinder)
+            => _ = new MvxViewModelViewTypeFinder(null, null);
+
+        public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
+        {
+            _ = new MvxNavigationService(null, loader);
+            service.Navigate(typeof(MvxViewModel));
+            service.Navigate("");
+            _ = new MvxAppStart<MvxNullViewModel>(null, null);
+        }
+
+        public void Include(MvxSettings settings)
+            => _ = new MvxSettings();
+
+        public void Include(MvxStringToTypeParser parser)
+            => _ = new MvxStringToTypeParser();
+
+        public void Include(MvxViewModelLoader loader)
+            => _ = new MvxViewModelLoader(null);
+
+        public void Include(MvxViewModelViewLookupBuilder builder)
+            => _ = new MvxViewModelViewLookupBuilder();
+
+        public void Include(MvxCommandCollectionBuilder builder)
+            => _ = new MvxCommandCollectionBuilder();
+
+        public void Include(MvxStringDictionaryNavigationSerializer serializer)
+            => _ = new MvxStringDictionaryNavigationSerializer();
+
+        public void Include(MvxChildViewModelCache cache)
+            => _ = new MvxChildViewModelCache();
     }
 }

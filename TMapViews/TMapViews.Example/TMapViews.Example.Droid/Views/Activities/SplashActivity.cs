@@ -19,9 +19,5 @@ namespace TMapViews.Example.Droid.Views
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreenActivity : MvxSplashScreenAppCompatActivity
     {
-        protected override void RunAppStart(Bundle bundle)
-        {
-            base.RunAppStart(bundle);
-        }
     }
 }
